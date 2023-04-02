@@ -1,21 +1,47 @@
-import { GetStaticProps, NextPage } from "next";
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
+import getAllPosts from "@/utils/getAllPosts";
+import getAbbreviatedPosts from "@/utils/getAbbreviatedPosts";
+import ReactMarkdown from "react-markdown";
+import { Post } from "@/types/posts";
+import { Text } from "@/styles/Text/Text.styles";
 
-export const HomePage: NextPage = ({posts}) => {
+type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
+
+type Props = {
+  outline?: boolean;
+};
+
+export const HomePage: NextPage = (
+  { abbreviatedPosts }: PageProps,
+  { outline }: Props
+) => {
   return (
     <div>
-      <h1>Test Page</h1>
+      {abbreviatedPosts.map((post: Post) => {
+        return (
+          <>
+            <h2>{post.post.title}</h2>
+            <img style={{ width: "200px" }} src={post.post.cover} />
+            <ReactMarkdown key={post.post.id}>{post.markdown}</ReactMarkdown>
+            <br />
+            <Text>This should be Lora</Text>
+          </>
+        );
+      })}
     </div>
   );
 };
-
-// use getStaticProps to fetch data from an API at build time
-const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("https://.../posts");
-  const posts = await res.json();
+export const getStaticProps: GetStaticProps = async () => {
+  const allPosts = await getAllPosts();
+  const slugs = allPosts.slice(0, 2).map((post) => {
+    return post.slug;
+  });
+  const abbreviatedPosts = await getAbbreviatedPosts(slugs);
 
   return {
     props: {
-      posts,
+      abbreviatedPosts,
     },
+    revalidate: 60,
   };
 };
