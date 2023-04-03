@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import * as Types from "@/types/styles";
 
-const subheadingFontSize = "1.8rem";
-const bodyFontSize = "1.3rem";
-
 export const PageTitle = styled.h1<Types.PageTitleProps>`
   font-size: 2rem;
   font-family: ${(props) => (props.outline ? "Asterone Outline" : "Asterone")};

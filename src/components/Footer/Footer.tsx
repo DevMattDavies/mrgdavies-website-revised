@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useContext, useState } from "react";
 import Link from "next/link";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -21,7 +21,10 @@ import {
   FooterText,
 } from "@/styles/Text/Text.styles";
 
+import { IsMobileContext } from "@/pages/_app";
+
 const Footer = (): JSX.Element => {
+  const isMobile: boolean = useContext(IsMobileContext);
   const [email, setEmail] = useState("");
   const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
 
@@ -36,21 +39,24 @@ const Footer = (): JSX.Element => {
   };
 
   // TODO: Add email subscription functionality
+  // TODO: Refactor styling to make sure footer sticks to bottom of page
 
   return (
-    <FooterContainer>
-      <InnerContainer>
-        <LeftContainer>
-          <TitleContainer>
-            <FooterTitle outline>Michael</FooterTitle>
-            <FooterTitle>Davies</FooterTitle>
-          </TitleContainer>
-          <FooterCopyright>
-            Copyright &copy; {new Date().getFullYear()}
-            {` Michael Davies - All Rights Reserved`}
-          </FooterCopyright>
-        </LeftContainer>
-        <SectionContainer>
+    <FooterContainer isMobile>
+      <InnerContainer isMobile>
+        {!isMobile && (
+          <LeftContainer>
+            <TitleContainer>
+              <FooterTitle outline>Michael</FooterTitle>
+              <FooterTitle>Davies</FooterTitle>
+            </TitleContainer>
+            <FooterCopyright>
+              Copyright &copy; {new Date().getFullYear()}
+              {` Michael Davies - All Rights Reserved`}
+            </FooterCopyright>
+          </LeftContainer>
+        )}
+        <SectionContainer isMobile>
           <FooterSubheading>Navigation</FooterSubheading>
           <Link
             style={{ textDecoration: "none" }}
@@ -101,33 +107,29 @@ const Footer = (): JSX.Element => {
             <FooterText>Contact</FooterText>
           </Link>
         </SectionContainer>
-        <SectionContainer>
+        <SectionContainer isMobile>
           <FooterSubheading>Get in touch</FooterSubheading>
           <SocialsContainer>
             <MailOutlineIcon style={{ color: "var(--red)" }} />
-            <Link
+            <FooterText
               style={{ textDecoration: "none" }}
               href="mailto:mrgdavies@aol.com"
-              passHref
-              legacyBehavior
             >
-              <FooterText>Email</FooterText>
-            </Link>
+              Email
+            </FooterText>
           </SocialsContainer>
           <SocialsContainer>
             <TwitterIcon style={{ color: "var(--red)" }} />
-            <Link
+            <FooterText
               style={{ textDecoration: "none" }}
               href="https://twitter.com/mrgdavies"
               target="_blank"
-              passHref
-              legacyBehavior
             >
-              <FooterText>Twitter</FooterText>
-            </Link>
+              Twitter
+            </FooterText>
           </SocialsContainer>
         </SectionContainer>
-        <SectionContainer>
+        <SectionContainer isMobile>
           <FooterSubheading>Subscribe</FooterSubheading>
           <NewsletterForm>
             <NewsletterInput

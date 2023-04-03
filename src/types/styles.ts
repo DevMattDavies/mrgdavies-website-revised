@@ -11,3 +11,7 @@ export type TextProps = {
 export type NewsletterButtonProps = {
   onSubmit: (e: React.FormEvent) => void;
 };
+
+export type FooterProps = {
+  isMobile: boolean;
+};

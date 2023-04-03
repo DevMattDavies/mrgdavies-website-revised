@@ -1,23 +1,27 @@
 import styled from "styled-components";
 import * as Types from "@/types/styles";
 
-export const FooterContainer = styled.footer`
+export const FooterContainer = styled.footer<Types.FooterProps>`
   background-color: #000;
   width: 100%;
   padding: 2rem;
   display: flex;
   justify-content: center;
-  height: 250px;
+  height: ${(props) => (props.isMobile ? "max-content" : "250px")};
   margin-top: auto;
   position: absolute;
   bottom: 0;
 `;
 
-export const InnerContainer = styled.div`
+export const InnerContainer = styled.div<Types.FooterProps>`
   width: 100%;
   max-width: var(--max-page-width);
   display: flex;
+  flex-direction: ${(props) => (props.isMobile ? "column" : "row")};
   justify-content: space-between;
+  gap: ${(props) => props.isMobile && "1.5rem"};
+  border-left: ${(props) => props.isMobile && "2px solid white"};
+  padding-left: ${(props) => props.isMobile && "1rem"};
 `;
 
 export const LeftContainer = styled.div`
@@ -32,12 +36,11 @@ export const TitleContainer = styled.div`
   flex-direction: column;
 `;
 
-export const SectionContainer = styled.div`
+export const SectionContainer = styled.div<Types.FooterProps>`
   display: flex;
   flex-direction: column;
-  border-left: 2px solid var(--white);
-  padding-left: 1rem;
-  //justify-content: space-between;
+  border-left: ${(props) => !props.isMobile && "2px solid var(--white)"};
+  padding-left: ${(props) => !props.isMobile && "1rem"};
   gap: 0.6rem;
 `;
 
@@ -45,7 +48,6 @@ export const SocialsContainer = styled.div`
   display: flex;
   gap: 1rem;
   align-items: center;
-  //justify-content: center;
 `;
 
 export const NewsletterForm = styled.form`
