@@ -7,28 +7,36 @@ import { Text } from "@/styles/Text/Text.styles";
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
-type Props = {
-  outline?: boolean;
-};
-
-export const HomePage: NextPage = (
-  { abbreviatedPosts }: PageProps,
-  { outline }: Props
-) => {
+export const HomePage: NextPage = ({ abbreviatedPosts }: PageProps) => {
   return (
-    <div>
-      {abbreviatedPosts.map((post: Post) => {
-        return (
-          <>
-            <h2>{post.post.title}</h2>
-            <img style={{ width: "200px" }} src={post.post.cover} />
-            <ReactMarkdown key={post.post.id}>{post.markdown}</ReactMarkdown>
-            <br />
-            <Text>This should be Lora</Text>
-          </>
-        );
-      })}
-    </div>
+    <>
+      <div>
+        {abbreviatedPosts.map((post: Post) => {
+          return (
+            <>
+              <h2>{post.post.title}</h2>
+              <img style={{ width: "200px" }} src={post.post.cover} />
+              <ReactMarkdown key={post.post.id}>{post.markdown}</ReactMarkdown>
+              <br />
+              <Text>This should be Lora</Text>
+            </>
+          );
+        })}
+      </div>
+      <div>
+        {abbreviatedPosts.map((post: Post) => {
+          return (
+            <>
+              <h2>{post.post.title}</h2>
+              <img style={{ width: "200px" }} src={post.post.cover} />
+              <ReactMarkdown key={post.post.id}>{post.markdown}</ReactMarkdown>
+              <br />
+              <Text>This should be Lora</Text>
+            </>
+          );
+        })}
+      </div>
+    </>
   );
 };
 export const getStaticProps: GetStaticProps = async () => {

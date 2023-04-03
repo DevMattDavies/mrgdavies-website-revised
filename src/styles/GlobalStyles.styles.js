@@ -18,6 +18,12 @@ export const GlobalStyles = createGlobalStyle`
       font-family: "Lora", serif;
     }
     
+    body {
+      min-height: 100vh;
+      position: relative;
+      padding-bottom: 250px;
+    }
+    
     @font-face {
       font-family: "Lora";
       src: url('/static/fonts/Lora-Regular.woff2') format('woff2'),

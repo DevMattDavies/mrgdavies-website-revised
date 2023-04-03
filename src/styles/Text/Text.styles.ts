@@ -35,6 +35,7 @@ export const FooterText = styled.a`
   font-size: 0.8rem;
   font-family: "Montserrat", sans-serif;
   color: var(--grey);
+  text-decoration: none;
 
   &:hover {
     color: var(--white);
