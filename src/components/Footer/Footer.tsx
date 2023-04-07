@@ -18,7 +18,7 @@ import {
   FooterCopyright,
   FooterSubheading,
   FooterTitle,
-  FooterText,
+  FooterLink,
 } from "@/styles/Text/Text.styles";
 
 import { IsMobileContext } from "@/pages/_app";
@@ -39,11 +39,10 @@ const Footer = (): JSX.Element => {
   };
 
   // TODO: Add email subscription functionality
-  // TODO: Refactor styling to make sure footer sticks to bottom of page
 
   return (
-    <FooterContainer isMobile>
-      <InnerContainer isMobile>
+    <FooterContainer isMobile={isMobile}>
+      <InnerContainer isMobile={isMobile}>
         {!isMobile && (
           <LeftContainer>
             <TitleContainer>
@@ -56,80 +55,50 @@ const Footer = (): JSX.Element => {
             </FooterCopyright>
           </LeftContainer>
         )}
-        <SectionContainer isMobile>
+        <SectionContainer isMobile={isMobile}>
           <FooterSubheading>Navigation</FooterSubheading>
-          <Link
-            style={{ textDecoration: "none" }}
-            href="/"
-            passHref
-            legacyBehavior
-          >
-            <FooterText>Home</FooterText>
+          <Link href="/" passHref legacyBehavior>
+            <FooterLink>Home</FooterLink>
           </Link>
-          <Link
-            style={{ textDecoration: "none" }}
-            href="/writing"
-            passHref
-            legacyBehavior
-          >
-            <FooterText>Writing</FooterText>
+          <Link href="/writing" passHref legacyBehavior>
+            <FooterLink>Writing</FooterLink>
           </Link>
-          <Link
-            style={{ textDecoration: "none" }}
-            href="/performing"
-            passHref
-            legacyBehavior
-          >
-            <FooterText>Performing</FooterText>
+          <Link href="/performing" passHref legacyBehavior>
+            <FooterLink>Performing</FooterLink>
           </Link>
-          <Link
-            style={{ textDecoration: "none" }}
-            href="/gallery"
-            passHref
-            legacyBehavior
-          >
-            <FooterText>Gallery</FooterText>
+          <Link href="/gallery" passHref legacyBehavior>
+            <FooterLink>Gallery</FooterLink>
           </Link>
-          <Link
-            style={{ textDecoration: "none" }}
-            href="/events"
-            passHref
-            legacyBehavior
-          >
-            <FooterText>Events</FooterText>
+          <Link href="/events" passHref legacyBehavior>
+            <FooterLink>Events</FooterLink>
           </Link>
-          <Link
-            style={{ textDecoration: "none" }}
-            href="/contact"
-            passHref
-            legacyBehavior
-          >
-            <FooterText>Contact</FooterText>
+          <Link href="/contact" passHref legacyBehavior>
+            <FooterLink>Contact</FooterLink>
           </Link>
         </SectionContainer>
-        <SectionContainer isMobile>
+        <SectionContainer isMobile={isMobile}>
           <FooterSubheading>Get in touch</FooterSubheading>
           <SocialsContainer>
             <MailOutlineIcon style={{ color: "var(--red)" }} />
-            <FooterText
+            <FooterLink
               style={{ textDecoration: "none" }}
               href="mailto:mrgdavies@aol.com"
             >
               Email
-            </FooterText>
+            </FooterLink>
           </SocialsContainer>
           <SocialsContainer>
             <TwitterIcon style={{ color: "var(--red)" }} />
-            <FooterText
+            <FooterLink
               style={{ textDecoration: "none" }}
               href="https://twitter.com/mrgdavies"
               target="_blank"
             >
               Twitter
-            </FooterText>
+            </FooterLink>
           </SocialsContainer>
         </SectionContainer>
-        <SectionContainer isMobile>
+        <SectionContainer isMobile={isMobile}>
           <FooterSubheading>Subscribe</FooterSubheading>
           <NewsletterForm>
             <NewsletterInput

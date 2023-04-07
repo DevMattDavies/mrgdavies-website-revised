@@ -7,9 +7,8 @@ export const FooterContainer = styled.footer<Types.FooterProps>`
   padding: 2rem;
   display: flex;
   justify-content: center;
-  height: ${(props) => (props.isMobile ? "max-content" : "250px")};
-  margin-top: auto;
-  position: absolute;
+  height: 100%;
+  position: relative;
   bottom: 0;
 `;
 
@@ -20,8 +19,8 @@ export const InnerContainer = styled.div<Types.FooterProps>`
   flex-direction: ${(props) => (props.isMobile ? "column" : "row")};
   justify-content: space-between;
   gap: ${(props) => props.isMobile && "1.5rem"};
-  border-left: ${(props) => props.isMobile && "2px solid white"};
-  padding-left: ${(props) => props.isMobile && "1rem"};
+  //border-left: ${(props) => props.isMobile && "2px solid white"};
+  //padding-left: ${(props) => props.isMobile && "1rem"};
 `;
 
 export const LeftContainer = styled.div`

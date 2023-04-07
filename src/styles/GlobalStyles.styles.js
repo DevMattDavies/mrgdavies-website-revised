@@ -6,9 +6,13 @@ export const GlobalStyles = createGlobalStyle`
     --black: #000;
     --white: #fff;
     --grey: grey;
-    --max-page-width: 1200px;
+    --max-page-width: 80rem;
     --mobile-padding: 1rem;
   }
+  
+    html {
+      font-size: calc(60% + 0.8vmin);
+    }
   
     * {
       font-size: 1rem;
@@ -20,8 +24,10 @@ export const GlobalStyles = createGlobalStyle`
     
     body {
       min-height: 100vh;
-      position: relative;
-      padding-bottom: 250px;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     
     @font-face {
