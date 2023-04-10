@@ -1,13 +1,19 @@
 import styled from "styled-components";
 import * as Types from "@/types/styles";
+import device from "@/constants/breakpoints";
 
 export const NavContainer = styled.nav<Types.PageTitleProps>`
   display: flex;
   justify-content: space-between;
-  //align-items: center;
-  padding: ${(props) => (props.isMobile ? "1rem" : "2rem 4rem")};
+  padding: 1rem;
   width: 100vw;
-  height: 100%;
+  height: 75px;
+  position: relative;
+
+  @media screen and ${device.tablet} {
+    padding: 2rem 4rem;
+    height: 100%;
+  }
 `;
 
 export const TitleContainer = styled.div<Types.PageTitleProps>`
@@ -16,7 +22,11 @@ export const TitleContainer = styled.div<Types.PageTitleProps>`
   justify-content: center;
   gap: 0.5rem;
   min-height: 100%;
-  padding-top: ${(props) => (props.isMobile ? "0.5rem" : "1rem")};
+  padding-top: 0.5rem;
+
+  @media screen and ${device.tablet} {
+    padding-top: 1rem;
+  }
 `;
 
 export const HamburgerContainer = styled.div`
@@ -27,8 +37,24 @@ export const HamburgerContainer = styled.div`
 
 export const LinksContainer = styled.div`
   display: flex;
-  width: 50%;
-  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
   align-items: center;
-  min-height: 100%;
+  gap: 1rem;
+  padding: 2rem;
+  top: 75px;
+  width: 100%;
+  background-color: var(--white);
+  right: 0;
+
+  @media screen and ${device.tablet} {
+    position: relative;
+    top: 0;
+    padding: 0;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100%;
+  }
 `;

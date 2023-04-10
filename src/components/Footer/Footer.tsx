@@ -21,10 +21,10 @@ import {
   FooterLink,
 } from "@/styles/Text/Text.styles";
 
-import { IsMobileContext } from "@/pages/_app";
+import { DeviceContext } from "@/pages/_app";
 
 const Footer = (): JSX.Element => {
-  const isMobile: boolean = useContext(IsMobileContext);
+  const { isMobile }: any = useContext(DeviceContext);
   const [email, setEmail] = useState("");
   const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
 
@@ -41,8 +41,8 @@ const Footer = (): JSX.Element => {
   // TODO: Add email subscription functionality
 
   return (
-    <FooterContainer isMobile={isMobile}>
-      <InnerContainer isMobile={isMobile}>
+    <FooterContainer>
+      <InnerContainer>
         {!isMobile && (
           <LeftContainer>
             <TitleContainer>
@@ -55,7 +55,7 @@ const Footer = (): JSX.Element => {
             </FooterCopyright>
           </LeftContainer>
         )}
-        <SectionContainer isMobile={isMobile}>
+        <SectionContainer>
           <FooterSubheading>Navigation</FooterSubheading>
           <Link href="/" passHref legacyBehavior>
             <FooterLink>Home</FooterLink>
@@ -76,7 +76,7 @@ const Footer = (): JSX.Element => {
             <FooterLink>Contact</FooterLink>
           </Link>
         </SectionContainer>
-        <SectionContainer isMobile={isMobile}>
+        <SectionContainer>
           <FooterSubheading>Get in touch</FooterSubheading>
           <SocialsContainer>
             <MailOutlineIcon style={{ color: "var(--red)" }} />
@@ -98,7 +98,7 @@ const Footer = (): JSX.Element => {
             </FooterLink>
           </SocialsContainer>
         </SectionContainer>
-        <SectionContainer isMobile={isMobile}>
+        <SectionContainer>
           <FooterSubheading>Subscribe</FooterSubheading>
           <NewsletterForm>
             <NewsletterInput

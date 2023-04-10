@@ -12,7 +12,6 @@ export type ColorStopProps = {
 // Nav types
 export type PageTitleProps = {
   outline?: boolean;
-  isMobile?: boolean;
 };
 
 // Footer types
@@ -21,6 +20,5 @@ export type NewsletterButtonProps = {
 };
 
 export type FooterProps = {
-  isMobile?: boolean;
   outline?: boolean;
 };

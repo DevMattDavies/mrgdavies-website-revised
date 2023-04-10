@@ -2,21 +2,21 @@ import type { AppProps } from "next/app";
 import GlobalStyles from "../styles/GlobalStyles.styles";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import useIsMobile from "@/hooks/useIsMobile";
+import useIsDevice from "@/hooks/useIsDevice";
 import { createContext } from "react";
 
-export const IsMobileContext: any = createContext(null);
+export const DeviceContext: any = createContext(null);
 
 export default function App({ Component, pageProps }: AppProps) {
-  const isMobile = useIsMobile();
+  const device = useIsDevice();
   return (
     <>
       <GlobalStyles />
-      <IsMobileContext.Provider value={isMobile}>
+      <DeviceContext.Provider value={device}>
         <Navbar />
         <Component {...pageProps} />
         <Footer />
-      </IsMobileContext.Provider>
+      </DeviceContext.Provider>
     </>
   );
 }

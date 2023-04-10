@@ -1,13 +1,12 @@
-import Link from "next/link";
 import {
   HamburgerContainer,
-  LinksContainer,
   NavContainer,
   TitleContainer,
 } from "@/styles/Navbar/Navbar.styles";
-import { PageTitle, NavLink, ColorStop } from "@/styles/Text/Text.styles";
-import { useContext, useEffect, useState } from "react";
-import { IsMobileContext } from "@/pages/_app";
+import { PageTitle } from "@/styles/Text/Text.styles";
+import { useEffect, useState } from "react";
+
+import NavLinks from "@/components/Navbar/NavLinks";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -25,23 +24,23 @@ const NavMobile = (): JSX.Element => {
       document.body.style.overflow = "";
     }
   }, [isModalOpen]);
-  const isMobile: boolean = useContext(IsMobileContext);
+
+  console.log(isModalOpen);
 
   return (
-    <NavContainer isMobile={isMobile}>
-      <TitleContainer isMobile={isMobile}>
-        <PageTitle isMobile={isMobile} outline>
-          Michael
-        </PageTitle>
-        <PageTitle isMobile={isMobile}>Davies</PageTitle>
+    <NavContainer>
+      <TitleContainer>
+        <PageTitle outline>Michael</PageTitle>
+        <PageTitle>Davies</PageTitle>
       </TitleContainer>
       <HamburgerContainer>
-        {!isModalOpen ? (
+        {isModalOpen ? (
           <CloseIcon style={{ fontSize: "30px" }} onClick={modalHandler} />
         ) : (
           <MenuIcon style={{ fontSize: "30px" }} onClick={modalHandler} />
         )}
       </HamburgerContainer>
+      {isModalOpen && <NavLinks />}
     </NavContainer>
   );
 };

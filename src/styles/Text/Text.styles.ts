@@ -15,7 +15,7 @@ export const ColorStop = styled.span<Types.ColorStopProps>`
 
 // Navbar styles
 export const PageTitle = styled.h1<Types.PageTitleProps>`
-  font-size: ${(props) => (props.isMobile ? "2rem" : "2rem")};
+  font-size: 2rem;
   font-family: ${(props) => (props.outline ? "Asterone Outline" : "Asterone")};
   color: var(--red);
 `;
