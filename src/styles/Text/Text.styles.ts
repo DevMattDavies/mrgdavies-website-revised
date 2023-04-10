@@ -20,16 +20,48 @@ export const PageTitle = styled.h1<Types.PageTitleProps>`
   color: var(--red);
 `;
 
+export const Subtitle = styled.h2<Types.TextProps>`
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: ${(props) => props.color};
+`;
+
+export const MobileWelcomeSubtitle = styled(Subtitle)`
+  position: relative;
+  margin-top: -100px;
+  padding: var(--mobile-padding);
+  z-index: 10;
+`;
+
 export const NavLink = styled.a`
   font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: var(--black);
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--red);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+  }
 
   &:hover {
     color: var(--red);
     cursor: pointer;
     transition: 0.2s ease-in-out;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 `;
 

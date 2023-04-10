@@ -5,6 +5,7 @@ import {
 } from "@/styles/Navbar/Navbar.styles";
 import { PageTitle } from "@/styles/Text/Text.styles";
 import { useEffect, useState } from "react";
+import { ModalBackground } from "@/styles/Navbar/Navbar.styles";
 
 import NavLinks from "@/components/Navbar/NavLinks";
 
@@ -25,8 +26,6 @@ const NavMobile = (): JSX.Element => {
     }
   }, [isModalOpen]);
 
-  console.log(isModalOpen);
-
   return (
     <NavContainer>
       <TitleContainer>
@@ -41,6 +40,7 @@ const NavMobile = (): JSX.Element => {
         )}
       </HamburgerContainer>
       {isModalOpen && <NavLinks />}
+      {isModalOpen && <ModalBackground onClick={modalHandler} />}
     </NavContainer>
   );
 };

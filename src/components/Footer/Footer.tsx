@@ -5,6 +5,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import {
   FooterContainer,
   SectionContainer,
+  NavigationContainer,
   TitleContainer,
   LeftContainer,
   SocialsContainer,
@@ -23,8 +24,10 @@ import {
 
 import { DeviceContext } from "@/pages/_app";
 
+import { Device } from "@/types/device";
+
 const Footer = (): JSX.Element => {
-  const { isMobile }: any = useContext(DeviceContext);
+  const { isDesktop }: Device = useContext(DeviceContext);
   const [email, setEmail] = useState("");
   const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
 
@@ -43,7 +46,7 @@ const Footer = (): JSX.Element => {
   return (
     <FooterContainer>
       <InnerContainer>
-        {!isMobile && (
+        {isDesktop && (
           <LeftContainer>
             <TitleContainer>
               <FooterTitle outline>Michael</FooterTitle>
@@ -55,7 +58,7 @@ const Footer = (): JSX.Element => {
             </FooterCopyright>
           </LeftContainer>
         )}
-        <SectionContainer>
+        <NavigationContainer>
           <FooterSubheading>Navigation</FooterSubheading>
           <Link href="/" passHref legacyBehavior>
             <FooterLink>Home</FooterLink>
@@ -75,7 +78,7 @@ const Footer = (): JSX.Element => {
           <Link href="/contact" passHref legacyBehavior>
             <FooterLink>Contact</FooterLink>
           </Link>
-        </SectionContainer>
+        </NavigationContainer>
         <SectionContainer>
           <FooterSubheading>Get in touch</FooterSubheading>
           <SocialsContainer>

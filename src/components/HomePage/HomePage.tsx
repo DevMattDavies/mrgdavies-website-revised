@@ -5,37 +5,27 @@ import ReactMarkdown from "react-markdown";
 import { Post } from "@/types/posts";
 import { Text } from "@/styles/Text/Text.styles";
 
+import MobileWelcome from "@/components/HomePage/Mobile/MobileWelcome";
+
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const HomePage: NextPage = ({ abbreviatedPosts }: PageProps) => {
   return (
     <>
-      <div>
-        {abbreviatedPosts.map((post: Post) => {
-          return (
-            <>
-              <h2>{post.post.title}</h2>
-              <img style={{ width: "200px" }} src={post.post.cover} />
-              <ReactMarkdown key={post.post.id}>{post.markdown}</ReactMarkdown>
-              <br />
-              <Text>This should be Lora</Text>
-            </>
-          );
-        })}
-      </div>
-      <div>
-        {abbreviatedPosts.map((post: Post) => {
-          return (
-            <>
-              <h2>{post.post.title}</h2>
-              <img style={{ width: "200px" }} src={post.post.cover} />
-              <ReactMarkdown key={post.post.id}>{post.markdown}</ReactMarkdown>
-              <br />
-              <Text>This should be Lora</Text>
-            </>
-          );
-        })}
-      </div>
+      <MobileWelcome />
+      {/*<div>*/}
+      {/*  {abbreviatedPosts.map((post: Post) => {*/}
+      {/*    return (*/}
+      {/*      <>*/}
+      {/*        <h2>{post.post.title}</h2>*/}
+      {/*        <img style={{ width: "200px" }} src={post.post.cover} />*/}
+      {/*        <ReactMarkdown key={post.post.id}>{post.markdown}</ReactMarkdown>*/}
+      {/*        <br />*/}
+      {/*        <Text>This should be Lora</Text>*/}
+      {/*      </>*/}
+      {/*    );*/}
+      {/*  })}*/}
+      {/*</div>*/}
     </>
   );
 };

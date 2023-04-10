@@ -22,3 +22,7 @@ export type NewsletterButtonProps = {
 export type FooterProps = {
   outline?: boolean;
 };
+
+export type MainContainerProps = {
+  padding: string;
+};

@@ -1,22 +1,22 @@
 import styled from "styled-components";
-import * as Types from "@/types/styles";
 import device from "@/constants/breakpoints";
 
-export const NavContainer = styled.nav<Types.PageTitleProps>`
+export const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   width: 100vw;
   height: 75px;
   position: relative;
+  top: 0;
 
-  @media screen and ${device.tablet} {
+  @media screen and ${device.desktop} {
     padding: 2rem 4rem;
     height: 100%;
   }
 `;
 
-export const TitleContainer = styled.div<Types.PageTitleProps>`
+export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,7 +24,7 @@ export const TitleContainer = styled.div<Types.PageTitleProps>`
   min-height: 100%;
   padding-top: 0.5rem;
 
-  @media screen and ${device.tablet} {
+  @media screen and ${device.desktop} {
     padding-top: 1rem;
   }
 `;
@@ -46,8 +46,9 @@ export const LinksContainer = styled.div`
   width: 100%;
   background-color: var(--white);
   right: 0;
+  z-index: 1000;
 
-  @media screen and ${device.tablet} {
+  @media screen and ${device.desktop} {
     position: relative;
     top: 0;
     padding: 0;
@@ -56,5 +57,16 @@ export const LinksContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     min-height: 100%;
+    gap: 0;
   }
+`;
+
+export const ModalBackground = styled.div`
+  position: fixed;
+  top: 75px;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
 `;

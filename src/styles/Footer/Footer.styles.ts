@@ -7,9 +7,17 @@ export const FooterContainer = styled.footer`
   padding: 2rem;
   display: flex;
   justify-content: center;
-  height: 100%;
-  position: relative;
+  height: 375px;
+  position: absolute;
   bottom: 0;
+
+  @media screen and ${device.tablet} {
+    height: 450px;
+  }
+
+  @media screen and ${device.desktop} {
+    height: 300px;
+  }
 `;
 
 export const InnerContainer = styled.div`
@@ -19,10 +27,10 @@ export const InnerContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   gap: 1.5rem;
+  //height: 100%;
 
-  @media screen and ${device.tablet} {
+  @media screen and ${device.desktop} {
     flex-direction: row;
-    gap: 0;
   }
 `;
 
@@ -41,11 +49,22 @@ export const TitleContainer = styled.div`
 export const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
   gap: 0.6rem;
 
-  @media screen and ${device.tablet} {
+  @media screen and ${device.desktop} {
     border-left: 2px solid var(--white);
     padding-left: 1rem;
+    gap: 1.2rem;
+  }
+`;
+
+export const NavigationContainer = styled(SectionContainer)`
+  justify-content: space-between;
+
+  @media screen and ${device.desktop} {
+    justify-content: space-between;
+    gap: 0;
   }
 `;
 

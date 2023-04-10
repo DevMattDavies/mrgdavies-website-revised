@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --grey: grey;
     --max-page-width: 80rem;
-    --mobile-padding: 1rem;
+    --mobile-padding: 2rem;
   }
   
     html {
@@ -27,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
       width: 100vw;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      position: relative;
     }
     
     @font-face {
