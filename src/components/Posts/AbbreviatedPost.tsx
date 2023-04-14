@@ -12,6 +12,8 @@ import { DeviceContext } from "@/pages/_app";
 
 import { format } from "date-fns";
 
+// TODO: Add conditional for image
+
 const AbbreviatedPost = ({ post }: { post: Post }): JSX.Element => {
   const { isMobile }: any = useContext(DeviceContext);
   const date = format(new Date(post.post.date), "MMMM dd, yyyy");

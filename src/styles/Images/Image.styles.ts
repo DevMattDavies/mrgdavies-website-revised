@@ -13,7 +13,7 @@ export const HomeImage = styled.img`
 `;
 
 export const BlogImage = styled.img`
-  width: 250px;
-  height: auto;
+  width: auto;
+  height: 200px;
   display: block;
 `;

@@ -44,8 +44,8 @@ export const PostsContainer = styled.div`
 
   @media screen and ${device.desktop} {
     flex-direction: row;
-    gap: 0;
     justify-content: space-between;
+    gap: 4rem;
   }
 `;
 
