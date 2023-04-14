@@ -6,8 +6,14 @@ export const HomeImage = styled.img`
   display: block;
   position: relative;
   
-  
   @media screen and ${device.tablet} {
-    width: 200px;
-    height: auto;
+    width: auto;
+    height: 300px;
+    border: 2px solid white;
+`;
+
+export const BlogImage = styled.img`
+  width: 250px;
+  height: auto;
+  display: block;
 `;

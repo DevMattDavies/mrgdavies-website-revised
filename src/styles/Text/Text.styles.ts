@@ -3,9 +3,10 @@ import * as Types from "@/types/styles";
 
 // Text styles
 export const Text = styled.p<Types.TextProps>`
-  font-size: 3rem;
+  font-size: 1rem;
   font-family: "Lora", serif;
   font-style: ${(props) => (props.italic ? "italic" : "normal")};
+  color: ${(props) => props.color};
 `;
 
 export const ColorStop = styled.span<Types.ColorStopProps>`
@@ -13,24 +14,28 @@ export const ColorStop = styled.span<Types.ColorStopProps>`
   font-size: 2rem;
 `;
 
+export const BlogTitle = styled.h2`
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+`;
+
+export const BlogDate = styled.p`
+  font-size: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--black);
+`;
+
 // Navbar styles
 export const PageTitle = styled.h1<Types.PageTitleProps>`
-  font-size: 2rem;
+  font-size: ${(props) => (props.outline ? "1.85rem" : "2rem")};
   font-family: ${(props) => (props.outline ? "Asterone Outline" : "Asterone")};
   color: var(--red);
 `;
 
 export const Subtitle = styled.h2<Types.TextProps>`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   color: ${(props) => props.color};
-`;
-
-export const MobileWelcomeSubtitle = styled(Subtitle)`
-  position: relative;
-  margin-top: -100px;
-  padding: var(--mobile-padding);
-  z-index: 10;
 `;
 
 export const NavLink = styled.a`
@@ -94,4 +99,9 @@ export const FooterCopyright = styled.p`
   font-size: 0.6rem;
   font-family: "Montserrat", sans-serif;
   color: var(--grey);
+`;
+
+export const HR = styled.hr`
+  width: 30%;
+  border: 0.7px solid var(--red);
 `;

@@ -6,8 +6,8 @@ export const GlobalStyles = createGlobalStyle`
     --black: #000;
     --white: #fff;
     --grey: grey;
-    --max-page-width: 80rem;
-    --mobile-padding: 2rem;
+    --max-page-width: 100rem;
+    --mobile-padding: 1rem;
   }
   
     html {

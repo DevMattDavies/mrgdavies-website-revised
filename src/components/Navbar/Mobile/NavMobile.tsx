@@ -1,6 +1,8 @@
 import {
   HamburgerContainer,
+  HeroContainer,
   NavContainer,
+  TaglineText,
   TitleContainer,
 } from "@/styles/Navbar/Navbar.styles";
 import { PageTitle } from "@/styles/Text/Text.styles";
@@ -28,10 +30,13 @@ const NavMobile = (): JSX.Element => {
 
   return (
     <NavContainer>
-      <TitleContainer>
-        <PageTitle outline>Michael</PageTitle>
-        <PageTitle>Davies</PageTitle>
-      </TitleContainer>
+      <HeroContainer>
+        <TitleContainer>
+          <PageTitle outline>Michael</PageTitle>
+          <PageTitle>Davies</PageTitle>
+        </TitleContainer>
+        <TaglineText>Author | Actor | Playwright</TaglineText>
+      </HeroContainer>
       <HamburgerContainer>
         {isModalOpen ? (
           <CloseIcon style={{ fontSize: "30px" }} onClick={modalHandler} />

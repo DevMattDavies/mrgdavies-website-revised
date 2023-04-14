@@ -1,31 +1,37 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import getAllPosts from "@/utils/getAllPosts";
 import getAbbreviatedPosts from "@/utils/getAbbreviatedPosts";
-import ReactMarkdown from "react-markdown";
+import { useContext } from "react";
+import { DeviceContext } from "@/pages/_app";
+import {
+  PostsContainer,
+  ContainerBackground,
+  ContentContainer,
+} from "@/styles/Containers/Container.styles";
 import { Post } from "@/types/posts";
-import { Text } from "@/styles/Text/Text.styles";
 
 import MobileWelcome from "@/components/HomePage/Mobile/MobileWelcome";
+import DesktopWelcome from "@/components/HomePage/Desktop/DesktopWelcome";
+import AbbreviatedPost from "@/components/Posts/AbbreviatedPost";
+import { Subtitle } from "@/styles/Text/Text.styles";
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const HomePage: NextPage = ({ abbreviatedPosts }: PageProps) => {
+  const { isMobile }: any = useContext(DeviceContext);
   return (
     <>
-      <MobileWelcome />
-      {/*<div>*/}
-      {/*  {abbreviatedPosts.map((post: Post) => {*/}
-      {/*    return (*/}
-      {/*      <>*/}
-      {/*        <h2>{post.post.title}</h2>*/}
-      {/*        <img style={{ width: "200px" }} src={post.post.cover} />*/}
-      {/*        <ReactMarkdown key={post.post.id}>{post.markdown}</ReactMarkdown>*/}
-      {/*        <br />*/}
-      {/*        <Text>This should be Lora</Text>*/}
-      {/*      </>*/}
-      {/*    );*/}
-      {/*  })}*/}
-      {/*</div>*/}
+      {isMobile ? <MobileWelcome /> : <DesktopWelcome />}
+      <ContainerBackground>
+        <ContentContainer flexDirection={"column"}>
+          <Subtitle color={"var(--red)"}>Breaking News.</Subtitle>
+          <PostsContainer>
+            {abbreviatedPosts.map((post: Post) => {
+              return <AbbreviatedPost key={post.post.id} post={post} />;
+            })}
+          </PostsContainer>
+        </ContentContainer>
+      </ContainerBackground>
     </>
   );
 };

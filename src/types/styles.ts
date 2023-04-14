@@ -26,3 +26,11 @@ export type FooterProps = {
 export type MainContainerProps = {
   padding: string;
 };
+
+export type ContainerBackgroundProps = {
+  red?: boolean;
+};
+
+export type ContentContainerProps = {
+  flexDirection: string;
+};

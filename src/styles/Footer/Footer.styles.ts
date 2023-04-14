@@ -4,7 +4,6 @@ import device from "@/constants/breakpoints";
 export const FooterContainer = styled.footer`
   background-color: #000;
   width: 100%;
-  padding: 2rem;
   display: flex;
   justify-content: center;
   height: 375px;
@@ -26,11 +25,10 @@ export const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.5rem;
-  //height: 100%;
 
   @media screen and ${device.desktop} {
     flex-direction: row;
+    padding: 2rem 4rem;
   }
 `;
 

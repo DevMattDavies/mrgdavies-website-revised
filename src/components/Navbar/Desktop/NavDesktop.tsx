@@ -1,4 +1,9 @@
-import { NavContainer, TitleContainer } from "@/styles/Navbar/Navbar.styles";
+import {
+  HeroContainer,
+  NavContainer,
+  TaglineText,
+  TitleContainer,
+} from "@/styles/Navbar/Navbar.styles";
 import { PageTitle } from "@/styles/Text/Text.styles";
 
 import NavLinks from "@/components/Navbar/NavLinks";
@@ -6,10 +11,13 @@ import NavLinks from "@/components/Navbar/NavLinks";
 const NavDesktop = (): JSX.Element => {
   return (
     <NavContainer>
-      <TitleContainer>
-        <PageTitle outline>Michael</PageTitle>
-        <PageTitle>Davies</PageTitle>
-      </TitleContainer>
+      <HeroContainer>
+        <TitleContainer>
+          <PageTitle outline>Michael</PageTitle>
+          <PageTitle>Davies</PageTitle>
+        </TitleContainer>
+        <TaglineText>Author | Actor | Playwright</TaglineText>
+      </HeroContainer>
       <NavLinks />
     </NavContainer>
   );
