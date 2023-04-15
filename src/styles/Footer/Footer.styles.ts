@@ -11,7 +11,7 @@ export const FooterContainer = styled.footer`
   bottom: 0;
 
   @media screen and ${device.tablet} {
-    height: 450px;
+    height: 300px;
   }
 
   @media screen and ${device.desktop} {
@@ -25,10 +25,14 @@ export const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 2rem 1rem;
+  height: 100%;
+  gap: 1rem;
 
-  @media screen and ${device.desktop} {
+  @media screen and ${device.tablet} {
     flex-direction: row;
     padding: 2rem 4rem;
+    gap: 0;
   }
 `;
 
@@ -50,7 +54,7 @@ export const SectionContainer = styled.div`
   height: 100%;
   gap: 0.6rem;
 
-  @media screen and ${device.desktop} {
+  @media screen and ${device.tablet} {
     border-left: 2px solid var(--white);
     padding-left: 1rem;
     gap: 1.2rem;

@@ -6,7 +6,7 @@ export const MainContainer = styled.div`
   padding-bottom: 375px;
 
   @media screen and ${device.tablet} {
-    padding-bottom: 450px;
+    padding-bottom: 300px;
   }
 
   @media screen and ${device.desktop} {
@@ -27,12 +27,12 @@ export const ContentContainer = styled.div<Types.ContentContainerProps>`
   display: flex;
   flex-direction: ${(props) => props.flexDirection};
   gap: 1rem;
-  padding: var(--mobile-padding);
+  padding: 2rem var(--mobile-padding);
 
   @media screen and ${device.tablet} {
     width: 80%;
     max-width: var(--max-page-width);
-    padding: 4rem 0;
+    padding: 2rem 0;
   }
 `;
 

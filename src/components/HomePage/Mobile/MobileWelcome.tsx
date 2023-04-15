@@ -1,5 +1,6 @@
 import { Subtitle, ColorStop, Text } from "@/styles/Text/Text.styles";
 import { MobileWelcomeContainer } from "@/styles/Containers/Container.styles";
+import { HomeImage } from "@/styles/Images/Image.styles";
 
 const MobileWelcome = (): JSX.Element => {
   return (
@@ -22,7 +23,5 @@ const MobileWelcome = (): JSX.Element => {
     </>
   );
 };
-
-import { HomeImage } from "@/styles/Images/Image.styles";
 
 export default MobileWelcome;

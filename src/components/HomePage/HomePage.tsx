@@ -17,6 +17,8 @@ import { Subtitle } from "@/styles/Text/Text.styles";
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
+// TODO: Mobile page layout leaves large gap between welcome text and posts due to negative top adjustment - to be resolved
+
 export const HomePage: NextPage = ({ abbreviatedPosts }: PageProps) => {
   const { isMobile }: any = useContext(DeviceContext);
   return (
