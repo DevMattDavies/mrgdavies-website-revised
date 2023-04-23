@@ -54,6 +54,15 @@ export const BlogPostContainer = styled.div`
   flex-direction: column;
   width: 100%;
   gap: 1rem;
+  //padding: 1rem;
+  //-webkit-box-shadow: -15px 25px 0px -10px var(--white),
+  //  20px -20px 0px -20px var(--white), 20px -20px -0px -10px var(--white),
+  //  -20px 20px 0px -10px var(--white), 0px 0px 0px 5px var(--red),
+  //  25px 25px 15px 5px rgba(0, 0, 0, 0);
+  //box-shadow: -15px 25px 0px -10px var(--white),
+  //  20px -20px 0px -20px var(--white), 20px -20px -0px -10px var(--white),
+  //  -20px 20px 0px -10px var(--white), 0px 0px 0px 5px var(--red),
+  //  25px 25px 15px 5px rgba(0, 0, 0, 0);
 `;
 
 export const BlogContentContainer = styled.div`
@@ -61,6 +70,37 @@ export const BlogContentContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
+
+  a {
+    text-decoration: none;
+    color: var(--black);
+    font-style: italic;
+    position: relative;
+    font-size: 1rem;
+    font-weight: bold;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--red);
+      transform-origin: bottom right;
+      transition: transform 0.5s ease-out;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+
+    &:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
 `;
 
 export const SeeAllPostsContainer = styled.div`
@@ -68,6 +108,7 @@ export const SeeAllPostsContainer = styled.div`
   justify-content: flex-end;
   gap: 0.8rem;
   align-items: center;
+  margin-top: 4rem;
 `;
 
 export const TextContentContainer = styled.div`

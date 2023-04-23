@@ -30,37 +30,6 @@ export const GlobalStyles = createGlobalStyle`
       position: relative;
     }
     
-   #markdown a {
-     text-decoration: none;
-     color: var(--black);
-     font-style: italic;
-     position: relative;
-     font-size: 1rem;
-
-     &:after {
-       content: "";
-       position: absolute;
-       width: 100%;
-       transform: scaleX(0);
-       height: 1px;
-       bottom: 0;
-       left: 0;
-       background-color: var(--red);
-       transform-origin: bottom right;
-       transition: transform 0.5s ease-out;
-     }
-
-     &:hover {
-       cursor: pointer;
-       transition: 0.2s ease-in-out;
-     }
-
-     &:hover:after {
-       transform: scaleX(1);
-       transform-origin: bottom left;
-     }
-    }
-    
     @font-face {
       font-family: "Lora";
       src: url('/static/fonts/Lora-Regular.woff2') format('woff2'),
