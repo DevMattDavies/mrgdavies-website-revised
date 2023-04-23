@@ -33,7 +33,7 @@ export const ContentContainer = styled.div<Types.ContentContainerProps>`
     width: 80%;
     max-width: var(--max-page-width);
     padding: 4rem 0;
-    align-items: ${(props) => props.flexDirection === "row" && "center"};
+    // align-items: ${(props) => props.flexDirection === "row" && "center"};
   }
 `;
 
@@ -41,12 +41,11 @@ export const PostsContainer = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
 
   @media screen and ${device.desktop} {
     flex-direction: row;
     justify-content: space-between;
-    gap: 4rem;
   }
 `;
 
@@ -83,21 +82,5 @@ export const HomeTextContentContainer = styled(TextContentContainer)`
   height: 100%;
   max-width: 400px;
   margin-left: 1rem;
-`;
-
-export const MobileWelcomeContainer = styled(ContentContainer)`
-  padding-top: 4rem;
-  position: relative;
-  top: -75px;
-  background: -webkit-linear-gradient(
-    rgba(255, 255, 255, 0.1) 1%,
-    rgba(255, 255, 255, 0.3) 3%,
-    rgba(255, 255, 255, 0.4) 5%,
-    rgba(255, 255, 255, 0.6) 10%,
-    rgba(255, 255, 255, 0.7) 15%,
-    rgba(255, 255, 255, 0.8) 20%,
-    rgba(255, 255, 255, 0.9) 25%,
-    rgba(255, 255, 255, 1) 30%
-  );
-  z-index: 10;
+  display: flex;
 `;

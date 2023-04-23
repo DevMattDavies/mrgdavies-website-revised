@@ -1,12 +1,14 @@
 import { Subtitle, ColorStop, Text } from "@/styles/Text/Text.styles";
-import { MobileWelcomeContainer } from "@/styles/Containers/Container.styles";
-import { HomeImage } from "@/styles/Images/Image.styles";
+import { ContentContainer } from "@/styles/Containers/Container.styles";
+import { HomeImage, ImageGradient } from "@/styles/Images/Image.styles";
 
 const MobileWelcome = (): JSX.Element => {
   return (
     <>
-      <HomeImage src="assets/MD_1.jpg" />
-      <MobileWelcomeContainer flexDirection={"column"}>
+      <ImageGradient>
+        <HomeImage src="assets/MD_1.jpg" />
+      </ImageGradient>
+      <ContentContainer flexDirection={"column"}>
         <Subtitle color={"var(--red)"}>
           Welcome<ColorStop color={"var(--black)"}>.</ColorStop>
         </Subtitle>
@@ -19,7 +21,7 @@ const MobileWelcome = (): JSX.Element => {
               don't wish to be seen to be condoning poor behaviour.`}</Text>
         <Text>{`Instead, this is t'Interweb home of Michael Davies.
               You can pretty much see what I do.`}</Text>
-      </MobileWelcomeContainer>
+      </ContentContainer>
     </>
   );
 };
