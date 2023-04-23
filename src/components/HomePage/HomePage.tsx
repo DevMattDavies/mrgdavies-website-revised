@@ -16,11 +16,9 @@ import { Post } from "@/types/posts";
 import MobileWelcome from "@/components/HomePage/Mobile/MobileWelcome";
 import DesktopWelcome from "@/components/HomePage/Desktop/DesktopWelcome";
 import AbbreviatedPost from "@/components/Posts/AbbreviatedPost";
-import { SeeAllPosts, Subtitle } from "@/styles/Text/Text.styles";
+import { ColorStop, SeeAllPosts, Subtitle } from "@/styles/Text/Text.styles";
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
-
-// TODO: Mobile page layout leaves large gap between welcome text and posts due to negative top adjustment - to be resolved
 
 export const HomePage: NextPage = ({ abbreviatedPosts }: PageProps) => {
   const { isMobile }: any = useContext(DeviceContext);
@@ -29,7 +27,9 @@ export const HomePage: NextPage = ({ abbreviatedPosts }: PageProps) => {
       {isMobile ? <MobileWelcome /> : <DesktopWelcome />}
       <ContainerBackground>
         <ContentContainer flexDirection={"column"}>
-          <Subtitle color={"var(--red)"}>Breaking News.</Subtitle>
+          <Subtitle color={"var(--red)"}>
+            Breaking News<ColorStop color={"var(--black)"}>.</ColorStop>
+          </Subtitle>
           <PostsContainer>
             {abbreviatedPosts.map((post: Post) => {
               return <AbbreviatedPost key={post.post.id} post={post} />;

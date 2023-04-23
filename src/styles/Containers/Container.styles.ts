@@ -28,24 +28,24 @@ export const ContentContainer = styled.div<Types.ContentContainerProps>`
   flex-direction: ${(props) => props.flexDirection};
   gap: 1rem;
   padding: 2rem var(--mobile-padding);
+  align-items: ${(props) => props.flexDirection === "row" && "center"};
+  width: 100%;
 
   @media screen and ${device.tablet} {
     width: 80%;
     max-width: var(--max-page-width);
     padding: 4rem 0;
-    // align-items: ${(props) => props.flexDirection === "row" && "center"};
+    align-items: ${(props) => props.flexDirection === "row" && "center"};
   }
 `;
 
 export const PostsContainer = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: column;
   gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 
   @media screen and ${device.desktop} {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 

@@ -35,6 +35,11 @@ const getAbbreviatedPosts = (slugs: string[]) => {
           " ",
           "-"
         )})`;
+      } else {
+        markdown = `${markdown.slice(
+          0,
+          markdown.length - 2
+        )}...[read more](${title.replaceAll(" ", "-")})`;
       }
 
       posts.push({
