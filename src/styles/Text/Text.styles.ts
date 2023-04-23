@@ -70,6 +70,13 @@ export const NavLink = styled.a`
   }
 `;
 
+export const SeeAllPosts = styled(NavLink)`
+  font-size: 1rem;
+  font-family: "Lora", serif;
+  text-align: right;
+  font-style: italic;
+`;
+
 // Footer styles
 export const FooterTitle = styled.h2<Types.FooterProps>`
   font-size: 1.5rem;

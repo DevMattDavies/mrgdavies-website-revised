@@ -5,14 +5,11 @@ import { BlogImage } from "@/styles/Images/Image.styles";
 import {
   BlogContentContainer,
   BlogPostContainer,
-  BlogTextContainer,
 } from "@/styles/Containers/Container.styles";
 import { useContext } from "react";
 import { DeviceContext } from "@/pages/_app";
 
 import { format } from "date-fns";
-
-// TODO: Add conditional for image
 
 const AbbreviatedPost = ({ post }: { post: Post }): JSX.Element => {
   const { isMobile }: any = useContext(DeviceContext);
@@ -23,10 +20,10 @@ const AbbreviatedPost = ({ post }: { post: Post }): JSX.Element => {
       <BlogDate>{date}</BlogDate>
       <HR />
       <BlogContentContainer>
-        <BlogTextContainer>
+        <BlogImage src={post.post.cover} />
+        <div id={"markdown"}>
           <ReactMarkdown>{post.markdown}</ReactMarkdown>
-        </BlogTextContainer>
-        {!isMobile && <BlogImage src={post.post.cover} />}
+        </div>
       </BlogContentContainer>
     </BlogPostContainer>
   );

@@ -1,4 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
+import Link from "next/link";
+import EastIcon from "@mui/icons-material/East";
 import getAllPosts from "@/utils/getAllPosts";
 import getAbbreviatedPosts from "@/utils/getAbbreviatedPosts";
 import { useContext } from "react";
@@ -7,13 +9,14 @@ import {
   PostsContainer,
   ContainerBackground,
   ContentContainer,
+  SeeAllPostsContainer,
 } from "@/styles/Containers/Container.styles";
 import { Post } from "@/types/posts";
 
 import MobileWelcome from "@/components/HomePage/Mobile/MobileWelcome";
 import DesktopWelcome from "@/components/HomePage/Desktop/DesktopWelcome";
 import AbbreviatedPost from "@/components/Posts/AbbreviatedPost";
-import { Subtitle } from "@/styles/Text/Text.styles";
+import { SeeAllPosts, Subtitle } from "@/styles/Text/Text.styles";
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -32,6 +35,12 @@ export const HomePage: NextPage = ({ abbreviatedPosts }: PageProps) => {
               return <AbbreviatedPost key={post.post.id} post={post} />;
             })}
           </PostsContainer>
+          <SeeAllPostsContainer>
+            <Link href="/posts" passHref legacyBehavior>
+              <SeeAllPosts>All posts</SeeAllPosts>
+            </Link>
+            <EastIcon style={{ color: "var(--red)" }} />
+          </SeeAllPostsContainer>
         </ContentContainer>
       </ContainerBackground>
     </>

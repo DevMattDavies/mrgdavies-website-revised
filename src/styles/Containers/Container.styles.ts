@@ -3,14 +3,14 @@ import device from "@/constants/breakpoints";
 import * as Types from "@/types/styles";
 
 export const MainContainer = styled.div`
-  padding-bottom: 375px;
+  padding-bottom: 30rem;
 
   @media screen and ${device.tablet} {
-    padding-bottom: 300px;
+    padding-bottom: 20rem;
   }
 
   @media screen and ${device.desktop} {
-    padding-bottom: 300px;
+    padding-bottom: 15rem;
   }
 `;
 
@@ -32,7 +32,8 @@ export const ContentContainer = styled.div<Types.ContentContainerProps>`
   @media screen and ${device.tablet} {
     width: 80%;
     max-width: var(--max-page-width);
-    padding: 2rem 0;
+    padding: 4rem 0;
+    align-items: ${(props) => props.flexDirection === "row" && "center"};
   }
 `;
 
@@ -53,19 +54,21 @@ export const BlogPostContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 0.8rem;
-`;
-
-export const BlogTextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
 `;
 
 export const BlogContentContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+`;
+
+export const SeeAllPostsContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  align-items: center;
 `;
 
 export const TextContentContainer = styled.div`

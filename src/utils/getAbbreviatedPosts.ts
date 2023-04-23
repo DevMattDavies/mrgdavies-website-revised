@@ -25,8 +25,17 @@ const getAbbreviatedPosts = (slugs: string[]) => {
       });
       const page = response.results[0];
       const mdBlocks = await n2m.pageToMarkdown(page.id);
-      markdown = n2m.toMarkdownString(mdBlocks).slice(0, 500);
+      markdown = n2m.toMarkdownString(mdBlocks);
+
       post = pageToPostTransform(page);
+      const { title } = pageToPostTransform(page);
+
+      if (markdown.length > 300) {
+        markdown = `${markdown.slice(0, 300)}...[read more](${title.replaceAll(
+          " ",
+          "-"
+        )})`;
+      }
 
       posts.push({
         post,

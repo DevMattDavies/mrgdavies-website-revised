@@ -4,12 +4,13 @@ import {
   ContentContainer,
   HomeTextContentContainer,
 } from "@/styles/Containers/Container.styles";
+import { HomeImage } from "@/styles/Images/Image.styles";
 
 const DesktopWelcome = (): JSX.Element => {
   return (
     <ContainerBackground red>
       <ContentContainer flexDirection={"row"}>
-        <HomeImage src="assets/MD_1.jpg" />
+        <HomeImage src="/assets/MD_1.jpg" alt="mike headshot" />
         <HomeTextContentContainer>
           <Subtitle color={"var(--white)"}>
             Welcome<ColorStop color={"var(--black)"}>.</ColorStop>
@@ -32,8 +33,5 @@ const DesktopWelcome = (): JSX.Element => {
     </ContainerBackground>
   );
 };
-
-import { HomeImage } from "@/styles/Images/Image.styles";
-import React from "react";
 
 export default DesktopWelcome;

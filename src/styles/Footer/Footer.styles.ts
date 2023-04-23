@@ -6,16 +6,16 @@ export const FooterContainer = styled.footer`
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 375px;
+  height: 30rem;
   position: absolute;
   bottom: 0;
 
   @media screen and ${device.tablet} {
-    height: 300px;
+    height: 20rem;
   }
 
   @media screen and ${device.desktop} {
-    height: 300px;
+    height: 15rem;
   }
 `;
 

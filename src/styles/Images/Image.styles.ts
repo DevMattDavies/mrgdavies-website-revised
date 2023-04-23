@@ -7,13 +7,24 @@ export const HomeImage = styled.img`
   position: relative;
   
   @media screen and ${device.tablet} {
-    width: auto;
-    height: 300px;
     border: 2px solid white;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    @media screen and ${device.desktop} {
+      //width: 18rem;
+      //height: auto;
+      //border: 2px solid white;
+      border: 2px solid white;
+      object-fit: cover;
+      width: 15rem;
+      height: 100%;
 `;
 
 export const BlogImage = styled.img`
   width: auto;
-  height: 200px;
+  height: 10rem;
+  object-fit: contain;
   display: block;
 `;
