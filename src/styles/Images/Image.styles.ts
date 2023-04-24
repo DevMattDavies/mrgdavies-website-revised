@@ -5,18 +5,20 @@ export const HomeImage = styled.img`
   height: auto;
   display: block;
   position: relative;
-  
+
   @media screen and ${device.tablet} {
     border: 2px solid white;
     object-fit: cover;
     width: 100%;
     height: 100%;
+  }
 
-    @media screen and ${device.desktop} {
-      border: 2px solid white;
-      object-fit: cover;
-      width: 15rem;
-      height: 100%;
+  @media screen and ${device.desktop} {
+    border: 2px solid white;
+    object-fit: cover;
+    width: 15rem;
+    height: 100%;
+  }
 `;
 
 export const ImageGradient = styled.div`
