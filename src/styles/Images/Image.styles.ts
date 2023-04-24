@@ -9,7 +9,7 @@ export const HomeImage = styled.img`
   @media screen and ${device.tablet} {
     border: 2px solid white;
     object-fit: cover;
-    width: 100%;
+    width: 10rem;
     height: 100%;
   }
 
