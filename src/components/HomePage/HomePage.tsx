@@ -21,6 +21,7 @@ import { ColorStop, SeeAllPosts, Subtitle } from "@/styles/Text/Text.styles";
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const HomePage: NextPage = ({ abbreviatedPosts }: PageProps) => {
+  // console.log(abbreviatedPosts);
   const { isMobile }: any = useContext(DeviceContext);
   return (
     <>

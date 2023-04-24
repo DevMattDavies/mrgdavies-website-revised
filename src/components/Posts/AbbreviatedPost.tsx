@@ -6,13 +6,10 @@ import {
   BlogContentContainer,
   BlogPostContainer,
 } from "@/styles/Containers/Container.styles";
-import { useContext } from "react";
-import { DeviceContext } from "@/pages/_app";
 
 import { format } from "date-fns";
 
 const AbbreviatedPost = ({ post }: { post: Post }): JSX.Element => {
-  const { isMobile }: any = useContext(DeviceContext);
   const date = format(new Date(post.post.date), "MMMM dd, yyyy");
   return (
     <BlogPostContainer>

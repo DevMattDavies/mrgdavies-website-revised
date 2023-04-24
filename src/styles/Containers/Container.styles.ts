@@ -54,15 +54,6 @@ export const BlogPostContainer = styled.div`
   flex-direction: column;
   width: 100%;
   gap: 1rem;
-  //padding: 1rem;
-  //-webkit-box-shadow: -15px 25px 0px -10px var(--white),
-  //  20px -20px 0px -20px var(--white), 20px -20px -0px -10px var(--white),
-  //  -20px 20px 0px -10px var(--white), 0px 0px 0px 5px var(--red),
-  //  25px 25px 15px 5px rgba(0, 0, 0, 0);
-  //box-shadow: -15px 25px 0px -10px var(--white),
-  //  20px -20px 0px -20px var(--white), 20px -20px -0px -10px var(--white),
-  //  -20px 20px 0px -10px var(--white), 0px 0px 0px 5px var(--red),
-  //  25px 25px 15px 5px rgba(0, 0, 0, 0);
 `;
 
 export const BlogContentContainer = styled.div`
