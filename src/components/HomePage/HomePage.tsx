@@ -10,23 +10,23 @@ import {
   ContainerBackground,
   ContentContainer,
   SeeAllPostsContainer,
+    HomeLowerContainer
 } from "@/styles/Containers/Container.styles";
 import { Post } from "@/types/posts";
 
-import MobileWelcome from "@/components/HomePage/Mobile/MobileWelcome";
-import DesktopWelcome from "@/components/HomePage/Desktop/DesktopWelcome";
+import Welcome from "@/components/HomePage/Welcome";
 import AbbreviatedPost from "@/components/Posts/AbbreviatedPost";
 import { ColorStop, SeeAllPosts, Subtitle } from "@/styles/Text/Text.styles";
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const HomePage: NextPage = ({ abbreviatedPosts }: PageProps) => {
-  const { isMobile }: any = useContext(DeviceContext);
   return (
     <>
-      {isMobile ? <MobileWelcome /> : <DesktopWelcome />}
+     <Welcome />
       <ContainerBackground>
-        <ContentContainer flexDirection={"column"}>
+        <ContentContainer>
+        <HomeLowerContainer>
           <Subtitle color={"var(--red)"}>
             Breaking News<ColorStop color={"var(--black)"}>.</ColorStop>
           </Subtitle>
@@ -41,6 +41,7 @@ export const HomePage: NextPage = ({ abbreviatedPosts }: PageProps) => {
             </Link>
             <EastIcon style={{ color: "var(--red)" }} />
           </SeeAllPostsContainer>
+        </HomeLowerContainer>
         </ContentContainer>
       </ContainerBackground>
     </>

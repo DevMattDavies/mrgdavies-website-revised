@@ -30,7 +30,3 @@ export type MainContainerProps = {
 export type ContainerBackgroundProps = {
   red?: boolean;
 };
-
-export type ContentContainerProps = {
-  flexDirection: string;
-};

@@ -68,11 +68,12 @@ export const LinksContainer = styled.div`
     top: 0;
     padding: 0;
     flex-direction: row;
-    width: 50%;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: flex-end;
     align-items: center;
     min-height: 100%;
-    gap: 0;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 `;
 

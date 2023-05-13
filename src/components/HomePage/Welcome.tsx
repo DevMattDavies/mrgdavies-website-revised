@@ -6,10 +6,10 @@ import {
 } from "@/styles/Containers/Container.styles";
 import { HomeImage } from "@/styles/Images/Image.styles";
 
-const DesktopWelcome = (): JSX.Element => {
+const Welcome = (): JSX.Element => {
   return (
     <ContainerBackground red>
-      <ContentContainer flexDirection={"row"}>
+      <ContentContainer>
         <HomeImage src="/assets/MD_1.jpg" alt="mike headshot" />
         <HomeTextContentContainer>
           <Subtitle color={"var(--white)"}>
@@ -34,4 +34,4 @@ const DesktopWelcome = (): JSX.Element => {
   );
 };
 
-export default DesktopWelcome;
+export default Welcome;

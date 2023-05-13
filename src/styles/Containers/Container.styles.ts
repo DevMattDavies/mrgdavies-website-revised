@@ -23,21 +23,27 @@ export const ContainerBackground = styled.div<Types.ContainerBackgroundProps>`
   align-items: center;
 `;
 
-export const ContentContainer = styled.div<Types.ContentContainerProps>`
+export const ContentContainer = styled.div`
   display: flex;
-  flex-direction: ${(props) => props.flexDirection};
+  flex-direction: column;
   gap: 1rem;
   padding: 2rem var(--mobile-padding);
-  align-items: ${(props) => props.flexDirection === "row" && "center"};
   width: 100%;
 
   @media screen and ${device.tablet} {
+    flex-direction: row;
     width: 80%;
     max-width: var(--max-page-width);
     padding: 4rem 0;
-    align-items: ${(props) => props.flexDirection === "row" && "center"};
+    align-items: center;
   }
 `;
+
+export const HomeLowerContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+  gap: 1rem;
+  `
 
 export const PostsContainer = styled.div`
   gap: 4rem;
@@ -113,6 +119,9 @@ export const HomeTextContentContainer = styled(TextContentContainer)`
   width: auto;
   height: 100%;
   max-width: 400px;
-  margin-left: 1rem;
   display: flex;
+  
+  @media screen and ${device.tablet} {
+    margin-left: 1rem;
+  }
 `;
