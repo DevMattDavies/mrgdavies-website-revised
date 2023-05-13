@@ -15,14 +15,14 @@ export const BlogPostsPage: NextPage = ({ abbreviatedPosts }: PageProps) => {
   return (
     <>
       <ContainerBackground red>
-        <ContentContainer flexDirection={"column"}>
+        <ContentContainer>
           <Subtitle color={"var(--white)"}>
             Posts<ColorStop color={"var(--black)"}>.</ColorStop>
           </Subtitle>
         </ContentContainer>
       </ContainerBackground>
       <ContainerBackground>
-        <ContentContainer flexDirection={"column"}>
+        <ContentContainer>
           <PostsContainer>
             {abbreviatedPosts.map((post: Post) => {
               return <AbbreviatedPost key={post.post.id} post={post} />;

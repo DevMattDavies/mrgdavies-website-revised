@@ -20,7 +20,7 @@ type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 export const SingleBlogPostPage: NextPage = ({ post }: PageProps) => {
   return (
     <ContainerBackground>
-      <ContentContainer flexDirection={"column"}>
+      <ContentContainer>
         <FullPost post={post.post} markdownText={post.markdownText} />
       </ContentContainer>
     </ContainerBackground>
