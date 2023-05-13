@@ -9,7 +9,7 @@ const getSinglePost = (slug: string) => {
   });
   const n2m = new NotionToMarkdown({ notionClient: notion });
   const getSingleBlogPost = async (): Promise<Post> => {
-    let post, markdown;
+    let post, markdown, markdownText;
     const response = await notion.databases.query({
       database_id: process.env.NOTION_DATABASE!,
       filter: {
@@ -24,11 +24,12 @@ const getSinglePost = (slug: string) => {
     const page = response.results[0];
     const mdBlocks = await n2m.pageToMarkdown(page.id);
     markdown = n2m.toMarkdownString(mdBlocks);
+    markdownText = markdown.parent;
     post = pageToPostTransform(page);
 
     return {
       post,
-      markdown,
+      markdownText,
     };
   };
   return getSingleBlogPost();

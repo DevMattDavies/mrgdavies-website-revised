@@ -21,7 +21,7 @@ export const SingleBlogPostPage: NextPage = ({ post }: PageProps) => {
   return (
     <ContainerBackground>
       <ContentContainer flexDirection={"column"}>
-        <FullPost post={post.post} markdown={post.markdown} />
+        <FullPost post={post.post} markdownText={post.markdownText} />
       </ContentContainer>
     </ContainerBackground>
   );

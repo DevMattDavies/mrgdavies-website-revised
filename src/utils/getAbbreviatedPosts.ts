@@ -11,7 +11,7 @@ const getAbbreviatedPosts = (slugs: string[]) => {
   const getAbbreviatedBlogPost = async (): Promise<Post[]> => {
     let posts: Post[] = [];
     for (const slug of slugs) {
-      let post, markdown;
+      let post, markdown, markdownText;
       const response = await notion.databases.query({
         database_id: process.env.NOTION_DATABASE!,
         filter: {
@@ -26,21 +26,21 @@ const getAbbreviatedPosts = (slugs: string[]) => {
       const page = response.results[0];
       const mdBlocks = await n2m.pageToMarkdown(page.id);
       markdown = n2m.toMarkdownString(mdBlocks);
-
+      markdownText = markdown.parent;
       post = pageToPostTransform(page);
 
-      if (markdown.length > 300) {
-        markdown = `${markdown.slice(0, 300)}...[read more](/posts/${slug})`;
+      if (markdownText.length > 300) {
+        markdownText = `${markdownText.slice(0, 300)}...[read more](/posts/${slug})`;
       } else {
-        markdown = `${markdown.slice(
+        markdownText = `${markdownText.slice(
           0,
-          markdown.length - 2
+          markdownText.length - 2
         )}...[read more](posts/${slug})`;
       }
 
       posts.push({
         post,
-        markdown,
+        markdownText,
       });
     }
     return posts;

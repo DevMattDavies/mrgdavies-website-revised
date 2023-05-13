@@ -8,7 +8,7 @@ import {
 } from "@/styles/Containers/Container.styles";
 import { format } from "date-fns";
 
-const FullPost = ({ post, markdown }: Post): JSX.Element => {
+const FullPost = ({ post, markdownText }: Post): JSX.Element => {
   const date = format(new Date(post.date), "MMMM dd, yyyy");
   return (
     <BlogPostContainer>
@@ -17,7 +17,7 @@ const FullPost = ({ post, markdown }: Post): JSX.Element => {
       <HR />
       <BlogContentContainer>
         <BlogImage src={post.cover} />
-        <ReactMarkdown>{markdown}</ReactMarkdown>
+        <ReactMarkdown>{markdownText}</ReactMarkdown>
       </BlogContentContainer>
     </BlogPostContainer>
   );

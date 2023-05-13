@@ -19,7 +19,7 @@ const AbbreviatedPost = ({ post }: { post: Post }): JSX.Element => {
       <BlogContentContainer>
         <BlogImage src={post.post.cover} />
         <div id={"markdown"}>
-          <ReactMarkdown>{post.markdown}</ReactMarkdown>
+          <ReactMarkdown>{post.markdownText}</ReactMarkdown>
         </div>
       </BlogContentContainer>
     </BlogPostContainer>

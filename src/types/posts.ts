@@ -8,5 +8,5 @@ export type Posts = {
 
 export type Post = {
   post: Posts;
-  markdown: string;
+  markdownText: string;
 };
