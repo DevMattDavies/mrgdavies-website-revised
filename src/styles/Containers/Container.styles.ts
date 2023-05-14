@@ -2,6 +2,7 @@ import styled from "styled-components";
 import device from "@/constants/breakpoints";
 import * as Types from "@/types/styles";
 
+// General containers
 export const MainContainer = styled.div`
   padding-bottom: 30rem;
 
@@ -31,19 +32,54 @@ export const ContentContainer = styled.div`
   width: 100%;
 
   @media screen and ${device.tablet} {
-    flex-direction: row;
     width: 80%;
     max-width: var(--max-page-width);
     padding: 4rem 0;
-    align-items: center;
   }
 `;
 
+export const RowContentContainer = styled(ContentContainer)`
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and ${device.tablet} {
+    flex-direction: row;
+  }
+`;
+
+// Homepage containers
 export const HomeLowerContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  `
+`;
+
+export const HomeUpperContainer = styled(ContentContainer)`
+  display: flex;
+  flex-direction: column;
+
+  @media screen and ${device.tablet} {
+    flex-direction: row;
+  }
+`;
+
+export const TextContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  gap: 1rem;
+`;
+
+export const HomeTextContentContainer = styled(TextContentContainer)`
+  width: auto;
+  height: 100%;
+  max-width: 400px;
+  display: flex;
+
+  @media screen and ${device.tablet} {
+    margin-left: 1rem;
+  }
+`;
 
 export const PostsContainer = styled.div`
   gap: 4rem;
@@ -55,6 +91,7 @@ export const PostsContainer = styled.div`
   }
 `;
 
+// Blog posts containers
 export const BlogPostContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -108,20 +145,17 @@ export const SeeAllPostsContainer = styled.div`
   margin-top: 4rem;
 `;
 
-export const TextContentContainer = styled.div`
+// Writing / Performing containers
+
+export const WritingAndPerformingContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   gap: 1rem;
+  width: 70%;
 `;
 
-export const HomeTextContentContainer = styled(TextContentContainer)`
-  width: auto;
-  height: 100%;
-  max-width: 400px;
-  display: flex;
-  
-  @media screen and ${device.tablet} {
-    margin-left: 1rem;
-  }
+export const WritingAndPerformingSubtitlesContainer = styled(
+  WritingAndPerformingContainer
+)`
+  width: 30%;
 `;

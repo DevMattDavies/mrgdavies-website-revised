@@ -9,11 +9,9 @@ import getAllPosts from "@/utils/getAllPosts";
 
 import FullPost from "@/components/Posts/FullPost";
 import {
-  BlogPostContainer,
   ContainerBackground,
   ContentContainer,
 } from "@/styles/Containers/Container.styles";
-import { format } from "date-fns";
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 

@@ -20,6 +20,10 @@ const NavMobile = (): JSX.Element => {
     setIsModalOpen((prevIsModalOpen) => !prevIsModalOpen);
   };
 
+  const closeModalOnClick = (): void => {
+    isModalOpen && setIsModalOpen(false);
+  }
+
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = "hidden";
@@ -44,7 +48,7 @@ const NavMobile = (): JSX.Element => {
           <MenuIcon style={{ fontSize: "30px" }} onClick={modalHandler} />
         )}
       </HamburgerContainer>
-      {isModalOpen && <NavLinks />}
+      {isModalOpen && <NavLinks closeModalOnClick={closeModalOnClick} />}
       {isModalOpen && <ModalBackground onClick={modalHandler} />}
     </NavContainer>
   );

@@ -5,6 +5,7 @@ export const HomeImage = styled.img`
   height: auto;
   margin: 0 auto;
   display: block;
+  border: 1px solid white;
 
   @media screen and ${device.tablet} {
     margin: 0;
@@ -15,10 +16,7 @@ export const HomeImage = styled.img`
   }
 
   @media screen and ${device.desktop} {
-    border: 2px solid white;
-    object-fit: cover;
     width: 15rem;
-    height: 100%;
   }
 `;
 

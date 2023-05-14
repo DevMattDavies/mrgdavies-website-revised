@@ -38,6 +38,13 @@ export const Subtitle = styled.h2<Types.TextProps>`
   color: ${(props) => props.color};
 `;
 
+export const WritingAndPerformingSubtitle = styled(Subtitle)`
+  &:hover {
+    cursor: pointer;
+    color: var(--red);
+  }
+`;
+
 export const NavLink = styled.a`
   font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;

@@ -1,7 +1,7 @@
 import { Subtitle, ColorStop, Text } from "@/styles/Text/Text.styles";
 import {
   ContainerBackground,
-  ContentContainer,
+  HomeUpperContainer,
   HomeTextContentContainer,
 } from "@/styles/Containers/Container.styles";
 import { HomeImage } from "@/styles/Images/Image.styles";
@@ -9,7 +9,7 @@ import { HomeImage } from "@/styles/Images/Image.styles";
 const Welcome = (): JSX.Element => {
   return (
     <ContainerBackground red>
-      <ContentContainer>
+      <HomeUpperContainer>
         <HomeImage src="/assets/MD_1.jpg" alt="mike headshot" />
         <HomeTextContentContainer>
           <Subtitle color={"var(--white)"}>
@@ -29,7 +29,7 @@ const Welcome = (): JSX.Element => {
           >{`Instead, this is t'Interweb home of Michael Davies.
               You can pretty much see what I do.`}</Text>
         </HomeTextContentContainer>
-      </ContentContainer>
+      </HomeUpperContainer>
     </ContainerBackground>
   );
 };
