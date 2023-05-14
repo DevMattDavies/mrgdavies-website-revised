@@ -44,9 +44,9 @@ const PerformingContent = ({
         <Text color={"var(--black)"}>
           Michael has considerable radio and studio experience and a lovely
           voice, rich and deep and rather chocolatey. You want to hear it now,
-          don't you? It's RP but not upper-crust and he does some great accents
-          and vocalisations, making him ideal for audio books and voiceover
-          work.
+          don&apos;t you? It&apos;s RP but not upper-crust and he does some
+          great accents and vocalisations, making him ideal for audio books and
+          voiceover work.
         </Text>
         <Text>
           Besides a regular slot on a BBC local radio station, Michael has
