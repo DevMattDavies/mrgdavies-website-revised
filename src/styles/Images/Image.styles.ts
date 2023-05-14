@@ -12,7 +12,6 @@ export const HomeImage = styled.img`
     border: 2px solid white;
     object-fit: cover;
     width: 12rem;
-    height: 100%;
   }
 
   @media screen and ${device.desktop} {

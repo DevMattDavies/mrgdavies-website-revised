@@ -14,10 +14,11 @@ const AbbreviatedPost = ({ post }: { post: Post }): JSX.Element => {
   return (
     <BlogPostContainer>
       <BlogTitle>{post.post.title}</BlogTitle>
-      <BlogDate>{date}</BlogDate>
+
       <HR />
       <BlogContentContainer>
         <BlogImage src={post.post.cover} />
+        <BlogDate>{date}</BlogDate>
         <div id={"markdown"}>
           <ReactMarkdown>{post.markdownText}</ReactMarkdown>
         </div>

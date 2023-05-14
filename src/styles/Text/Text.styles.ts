@@ -20,8 +20,10 @@ export const BlogTitle = styled.h2`
 `;
 
 export const BlogDate = styled.p`
-  font-size: 1.2rem;
-  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-family: "Lora", serif;
+  font-style: italic;
+  font-weight: bold;
   color: var(--black);
 `;
 

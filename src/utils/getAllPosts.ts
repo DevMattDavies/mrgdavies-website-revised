@@ -18,7 +18,7 @@ const getAllPosts = () => {
       },
       sorts: [
         {
-          property: "created_time",
+          property: "Date",
           direction: "descending",
         },
       ],

@@ -27,11 +27,12 @@ export const ContainerBackground = styled.div<Types.ContainerBackgroundProps>`
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   padding: 2rem var(--mobile-padding);
   width: 100%;
 
   @media screen and ${device.tablet} {
+    flex-direction: row;
     width: 80%;
     max-width: var(--max-page-width);
     padding: 4rem 0;
@@ -54,20 +55,16 @@ export const HomeLowerContainer = styled.div`
   gap: 1rem;
 `;
 
-export const HomeUpperContainer = styled(ContentContainer)`
-  display: flex;
-  flex-direction: column;
-
-  @media screen and ${device.tablet} {
-    flex-direction: row;
-  }
-`;
-
 export const TextContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100%;
   gap: 1rem;
+  width: 100%;
+
+  @media screen and ${device.desktop} {
+    width: 50%;
+  }
 `;
 
 export const HomeTextContentContainer = styled(TextContentContainer)`
@@ -75,10 +72,6 @@ export const HomeTextContentContainer = styled(TextContentContainer)`
   height: 100%;
   max-width: 400px;
   display: flex;
-
-  @media screen and ${device.tablet} {
-    margin-left: 1rem;
-  }
 `;
 
 export const PostsContainer = styled.div`
