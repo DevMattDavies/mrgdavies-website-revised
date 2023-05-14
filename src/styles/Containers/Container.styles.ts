@@ -41,11 +41,16 @@ export const ContentContainer = styled.div`
 
 export const RowContentContainer = styled(ContentContainer)`
   flex-direction: column;
-  justify-content: space-between;
 
   @media screen and ${device.tablet} {
     flex-direction: row;
   }
+`;
+
+export const RowImageContainer = styled.div`
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
 `;
 
 // Homepage containers
@@ -144,11 +149,20 @@ export const WritingAndPerformingContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 70%;
+  width: 100%;
+
+  @media screen and ${device.desktop} {
+    width: 60%;
+  }
 `;
 
 export const WritingAndPerformingSubtitlesContainer = styled(
   WritingAndPerformingContainer
 )`
-  width: 30%;
+  width: 100%;
+
+  @media screen and ${device.tablet} {
+    width: 30%;
+    margin-right: 2rem;
+  }
 `;

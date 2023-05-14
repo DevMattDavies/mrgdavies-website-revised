@@ -10,12 +10,13 @@ export const HomeImage = styled.img`
   @media screen and ${device.tablet} {
     margin: 0;
     border: 2px solid white;
-    object-fit: cover;
-    width: 12rem;
+    width: 18rem;
+    height: 25rem;
   }
 
   @media screen and ${device.desktop} {
     width: 15rem;
+    height: auto;
   }
 `;
 

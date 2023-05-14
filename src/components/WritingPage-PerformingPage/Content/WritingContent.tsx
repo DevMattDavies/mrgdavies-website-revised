@@ -1,4 +1,6 @@
 import { ColorStop, HR, Subtitle, Text } from "@/styles/Text/Text.styles";
+import { BlogImage } from "@/styles/Images/Image.styles";
+import { RowImageContainer } from "@/styles/Containers/Container.styles";
 
 type TWritingContent = {
   writingSubtitle: string;
@@ -14,6 +16,20 @@ export const WritingContent = ({
           Fiction<ColorStop color={"var(--black)"}>.</ColorStop>
         </Subtitle>
         <HR />
+        <RowImageContainer>
+          <BlogImage
+            src="/assets/domino_island_cover.jpg"
+            alt="domino island book cover"
+          />
+          <BlogImage
+            src="/assets/lancashire_stories_cover.jpeg"
+            alt="lancashire stories book cover"
+          />
+          <BlogImage
+            src="/assets/vicious_circle_cover.jpg"
+            alt="vicious circle book cover"
+          />
+        </RowImageContainer>
         <Text color={"var(--black)"}>
           <i>Outback</i>, Michael’s debut novel published in May 2023 by
           HarperCollins, is the culmination of years of fiction-writing. It
@@ -41,6 +57,12 @@ export const WritingContent = ({
           Scriptwriting<ColorStop color={"var(--black)"}>.</ColorStop>
         </Subtitle>
         <HR />
+        <RowImageContainer>
+          <BlogImage
+            src="/assets/meet_marry_murder.png"
+            alt="meet marry murder image"
+          />
+        </RowImageContainer>
         <Text color={"var(--black)"}>
           Michael has written more than 20 hours of narrative non-fiction for
           television shows that have been sold worldwide. One of these –{" "}
@@ -63,6 +85,15 @@ export const WritingContent = ({
           Stage<ColorStop color={"var(--black)"}>.</ColorStop>
         </Subtitle>
         <HR />
+        <RowImageContainer>
+          <BlogImage
+            src="/assets/rasputins_mother.jpg"
+            alt="Rasputin's mother"
+          />
+          <BlogImage src="/assets/reality.jpg" alt="Reality" />
+          <BlogImage src="/assets/tess.png" alt="Tess" />
+          <BlogImage src="/assets/machamlear.png" alt="MacHamLear" />
+        </RowImageContainer>
         <Text color={"var(--black)"}>
           Michael’s first full-length stage play <i>Rasputin&apos;s Mother</i>{" "}
           was named the overall winner of what is now the Bristol Old Vic
@@ -93,11 +124,14 @@ export const WritingContent = ({
           Non-Fiction<ColorStop color={"var(--black)"}>.</ColorStop>
         </Subtitle>
         <HR />
+        <RowImageContainer>
+          <BlogImage src="/assets/whatsonstage.png" alt="Whatsonstage logo" />
+        </RowImageContainer>
         <Text color={"var(--black)"}>
           Michael has been a professional theatre critic for 30 years. His work
           has appeared in national newspapers and he has been a regular reviewer
           for <i>The Stage</i>, as well as serving as resident critic for a host
-          of regional newspaper titles. His reviews can be read at
+          of regional newspaper titles. His reviews can be read at{" "}
           <a href="www.stagereviews.co.uk">www.stagereviews.co.uk</a> and
           <a href="www.whatsonstage.com">whatsonstage.com</a>.
         </Text>

@@ -1,4 +1,6 @@
 import { ColorStop, HR, Subtitle, Text } from "@/styles/Text/Text.styles";
+import { BlogImage } from "@/styles/Images/Image.styles";
+import { RowImageContainer } from "@/styles/Containers/Container.styles";
 
 type TPerformingContent = {
   performingSubtitle: string;
@@ -14,6 +16,20 @@ const PerformingContent = ({
           Acting<ColorStop color={"var(--black)"}>.</ColorStop>
         </Subtitle>
         <HR />
+        <RowImageContainer>
+          <BlogImage
+            src="/assets/professor_curvature.jpg"
+            alt="Curvature acting"
+          />
+          <BlogImage
+            src="/assets/man_of_the_moment_wide.jpg"
+            alt="Man of the moment acting"
+          />
+          <BlogImage
+            src="/assets/man_of_the_moment_diving.jpg"
+            alt="Man of the moment diving"
+          />
+        </RowImageContainer>
         <Text color={"var(--black)"}>
           Under his stage name Michael Crask-Davies, Michael’s professional
           debut came in Sir Alan Ayckbourn’s <i>Man of the Moment</i> (Roal &
@@ -41,6 +57,12 @@ const PerformingContent = ({
           Voiceover<ColorStop color={"var(--black)"}>.</ColorStop>
         </Subtitle>
         <HR />
+        <RowImageContainer>
+          <BlogImage
+            src="/assets/voiceover.png"
+            alt="Mike in recording studio"
+          />
+        </RowImageContainer>
         <Text color={"var(--black)"}>
           Michael has considerable radio and studio experience and a lovely
           voice, rich and deep and rather chocolatey. You want to hear it now,
@@ -61,6 +83,16 @@ const PerformingContent = ({
           Presenting<ColorStop color={"var(--black)"}>.</ColorStop>
         </Subtitle>
         <HR />
+        <RowImageContainer>
+          <BlogImage
+            src="/assets/collabro.png"
+            alt="Mike on guest panel at Collabro event"
+          />
+          <BlogImage
+            src="/assets/lee_mead.png"
+            alt="Mike speaking with Lee Mead"
+          />
+        </RowImageContainer>
         <Text color={"var(--black)"}>
           Michael is a highly experienced presenter and panellist and can host
           both live and on-camera events.
@@ -98,14 +130,20 @@ const PerformingContent = ({
         </Text>
       </>
     );
-  } else if (performingSubtitle === "Public Speaking/Lecturing.") {
+  } else if (performingSubtitle === "Public Speaking & Lecturing.") {
     return (
       <>
         <Subtitle>
-          Public Speaking/Lecturing
+          Public Speaking & Lecturing
           <ColorStop color={"var(--black)"}>.</ColorStop>
         </Subtitle>
         <HR />
+        <RowImageContainer>
+          <BlogImage
+            src="/assets/public_speaking.png"
+            alt="Mike speaking to the public"
+          />
+        </RowImageContainer>
         <Text color={"var(--black)"}>
           A national award-winning public speaker, Michael is highly experienced
           in formal and informal situations, from after-dinner engagements to
@@ -139,6 +177,9 @@ const PerformingContent = ({
           Music<ColorStop color={"var(--black)"}>.</ColorStop>
         </Subtitle>
         <HR />
+        <RowImageContainer>
+          <BlogImage src="/assets/inside_job.png" alt="Inside job band photo" />
+        </RowImageContainer>
         <Text color={"var(--black)"}>
           A multi-instrumentalist and vocalist with extensive live and studio
           experience, Michael plays saxophone, guitar and keyboards to

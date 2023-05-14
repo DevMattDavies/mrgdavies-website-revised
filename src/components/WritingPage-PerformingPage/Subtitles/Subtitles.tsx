@@ -80,7 +80,8 @@ export const Subtitles = ({
           color={"var(--black)"}
           onClick={updatePerformingData}
         >
-          Public Speaking/Lecturing<ColorStop color={"var(--red)"}>.</ColorStop>
+          Public Speaking & Lecturing
+          <ColorStop color={"var(--red)"}>.</ColorStop>
         </WritingAndPerformingSubtitle>
         <WritingAndPerformingSubtitle
           color={"var(--black)"}

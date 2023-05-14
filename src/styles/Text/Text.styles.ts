@@ -11,7 +11,7 @@ export const Text = styled.p<Types.TextProps>`
 
 export const ColorStop = styled.span<Types.ColorStopProps>`
   color: ${(props) => props.color};
-  font-size: 2rem;
+  font-size: 1.5rem;
 `;
 
 export const BlogTitle = styled.h2`
@@ -118,6 +118,6 @@ export const FooterCopyright = styled.p`
 `;
 
 export const HR = styled.hr`
-  width: 30%;
+  width: 10rem;
   border: 0.7px solid var(--red);
 `;
