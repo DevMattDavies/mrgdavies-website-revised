@@ -1,16 +1,15 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import EastIcon from "@mui/icons-material/East";
 import getAllPosts from "@/utils/getAllPosts";
 import getAbbreviatedPosts from "@/utils/getAbbreviatedPosts";
-import { useContext } from "react";
-import { DeviceContext } from "@/pages/_app";
 import {
   PostsContainer,
   ContainerBackground,
   ContentContainer,
   SeeAllPostsContainer,
-    HomeLowerContainer
+  HomeLowerContainer,
 } from "@/styles/Containers/Container.styles";
 import { Post } from "@/types/posts";
 
@@ -23,25 +22,25 @@ type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 export const HomePage: NextPage = ({ abbreviatedPosts }: PageProps) => {
   return (
     <>
-     <Welcome />
+      <Welcome />
       <ContainerBackground>
         <ContentContainer>
-        <HomeLowerContainer>
-          <Subtitle color={"var(--red)"}>
-            Breaking News<ColorStop color={"var(--black)"}>.</ColorStop>
-          </Subtitle>
-          <PostsContainer>
-            {abbreviatedPosts.map((post: Post) => {
-              return <AbbreviatedPost key={post.post.id} post={post} />;
-            })}
-          </PostsContainer>
-          <SeeAllPostsContainer>
-            <Link href="/posts" passHref legacyBehavior>
-              <SeeAllPosts>All posts</SeeAllPosts>
-            </Link>
-            <EastIcon style={{ color: "var(--red)" }} />
-          </SeeAllPostsContainer>
-        </HomeLowerContainer>
+          <HomeLowerContainer>
+            <Subtitle color={"var(--red)"}>
+              Breaking News<ColorStop color={"var(--black)"}>.</ColorStop>
+            </Subtitle>
+            <PostsContainer>
+              {abbreviatedPosts.map((post: Post) => {
+                return <AbbreviatedPost key={post.post.id} post={post} />;
+              })}
+            </PostsContainer>
+            <SeeAllPostsContainer>
+              <Link href="/posts" passHref legacyBehavior>
+                <SeeAllPosts>All posts</SeeAllPosts>
+              </Link>
+              <EastIcon style={{ color: "var(--red)" }} />
+            </SeeAllPostsContainer>
+          </HomeLowerContainer>
         </ContentContainer>
       </ContainerBackground>
     </>

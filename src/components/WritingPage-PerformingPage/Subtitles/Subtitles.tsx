@@ -3,6 +3,8 @@ import {
   WritingAndPerformingSubtitle,
 } from "@/styles/Text/Text.styles";
 
+import { motion } from "framer-motion";
+
 type TSubtitles = {
   page?: string;
   updateWritingData?: (e: any) => void;
@@ -17,78 +19,133 @@ export const Subtitles = ({
   if (page === "writing") {
     return (
       <>
-        <WritingAndPerformingSubtitle
-          color={"var(--black)"}
-          onClick={updateWritingData}
+        <motion.div
+          whileHover={{ marginLeft: "2rem" }}
+          transition={{ duration: 0.3, ease: "linear" }}
         >
-          Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
-        </WritingAndPerformingSubtitle>
-        <WritingAndPerformingSubtitle
-          color={"var(--black)"}
-          onClick={updateWritingData}
+          <WritingAndPerformingSubtitle
+            color={"var(--black)"}
+            onClick={updateWritingData}
+          >
+            Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
+          </WritingAndPerformingSubtitle>
+        </motion.div>
+        <motion.div
+          whileHover={{ marginLeft: "2rem" }}
+          transition={{ duration: 0.3, ease: "linear" }}
         >
-          Scriptwriting<ColorStop color={"var(--red)"}>.</ColorStop>
-        </WritingAndPerformingSubtitle>
-        <WritingAndPerformingSubtitle
-          color={"var(--black)"}
-          onClick={updateWritingData}
+          <WritingAndPerformingSubtitle
+            color={"var(--black)"}
+            onClick={updateWritingData}
+          >
+            Scriptwriting<ColorStop color={"var(--red)"}>.</ColorStop>
+          </WritingAndPerformingSubtitle>
+        </motion.div>
+        <motion.div
+          whileHover={{ marginLeft: "2rem" }}
+          transition={{ duration: 0.3, ease: "linear" }}
         >
-          Stage<ColorStop color={"var(--red)"}>.</ColorStop>
-        </WritingAndPerformingSubtitle>
-        <WritingAndPerformingSubtitle
-          color={"var(--black)"}
-          onClick={updateWritingData}
+          <WritingAndPerformingSubtitle
+            color={"var(--black)"}
+            onClick={updateWritingData}
+          >
+            Stage<ColorStop color={"var(--red)"}>.</ColorStop>
+          </WritingAndPerformingSubtitle>
+        </motion.div>
+        <motion.div
+          whileHover={{ marginLeft: "2rem" }}
+          transition={{ duration: 0.3, ease: "linear" }}
         >
-          Non-Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
-        </WritingAndPerformingSubtitle>
-        <WritingAndPerformingSubtitle
-          color={"var(--black)"}
-          onClick={updateWritingData}
+          <WritingAndPerformingSubtitle
+            color={"var(--black)"}
+            onClick={updateWritingData}
+          >
+            Non-Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
+          </WritingAndPerformingSubtitle>
+        </motion.div>
+        <motion.div
+          whileHover={{ marginLeft: "2rem" }}
+          transition={{ duration: 0.3, ease: "linear" }}
         >
-          Journalism<ColorStop color={"var(--red)"}>.</ColorStop>
-        </WritingAndPerformingSubtitle>
+          <WritingAndPerformingSubtitle
+            color={"var(--black)"}
+            onClick={updateWritingData}
+          >
+            Journalism<ColorStop color={"var(--red)"}>.</ColorStop>
+          </WritingAndPerformingSubtitle>
+        </motion.div>
       </>
     );
   } else {
     return (
       <>
-        <WritingAndPerformingSubtitle
-          color={"var(--black)"}
-          onClick={updatePerformingData}
+        <motion.div
+          whileHover={{ marginLeft: "2rem" }}
+          transition={{ duration: 0.3, ease: "linear" }}
         >
-          Acting<ColorStop color={"var(--red)"}>.</ColorStop>
-        </WritingAndPerformingSubtitle>
-        <WritingAndPerformingSubtitle
-          color={"var(--black)"}
-          onClick={updatePerformingData}
+          <WritingAndPerformingSubtitle
+            color={"var(--black)"}
+            onClick={updatePerformingData}
+          >
+            Acting<ColorStop color={"var(--red)"}>.</ColorStop>
+          </WritingAndPerformingSubtitle>
+        </motion.div>
+        <motion.div
+          whileHover={{ marginLeft: "2rem" }}
+          transition={{ duration: 0.3, ease: "linear" }}
         >
-          Voiceover<ColorStop color={"var(--red)"}>.</ColorStop>
-        </WritingAndPerformingSubtitle>
-        <WritingAndPerformingSubtitle
-          color={"var(--black)"}
-          onClick={updatePerformingData}
+          <WritingAndPerformingSubtitle
+            color={"var(--black)"}
+            onClick={updatePerformingData}
+          >
+            Voiceover<ColorStop color={"var(--red)"}>.</ColorStop>
+          </WritingAndPerformingSubtitle>
+        </motion.div>
+        <motion.div
+          whileHover={{ marginLeft: "2rem" }}
+          transition={{ duration: 0.3, ease: "linear" }}
         >
-          Presenting<ColorStop color={"var(--red)"}>.</ColorStop>
-        </WritingAndPerformingSubtitle>
-        <WritingAndPerformingSubtitle
-          color={"var(--black)"}
-          onClick={updatePerformingData}
+          <WritingAndPerformingSubtitle
+            color={"var(--black)"}
+            onClick={updatePerformingData}
+          >
+            Presenting<ColorStop color={"var(--red)"}>.</ColorStop>
+          </WritingAndPerformingSubtitle>
+        </motion.div>
+        <motion.div
+          whileHover={{ marginLeft: "2rem" }}
+          transition={{ duration: 0.3, ease: "linear" }}
         >
-          Roleplaying<ColorStop color={"var(--red)"}>.</ColorStop>
-        </WritingAndPerformingSubtitle>
-        <WritingAndPerformingSubtitle
-          color={"var(--black)"}
-          onClick={updatePerformingData}
+          <WritingAndPerformingSubtitle
+            color={"var(--black)"}
+            onClick={updatePerformingData}
+          >
+            Roleplaying<ColorStop color={"var(--red)"}>.</ColorStop>
+          </WritingAndPerformingSubtitle>
+        </motion.div>
+        <motion.div
+          whileHover={{ marginLeft: "2rem" }}
+          transition={{ duration: 0.3, ease: "linear" }}
         >
-          Public Speaking & Lecturing
-          <ColorStop color={"var(--red)"}>.</ColorStop>
-        </WritingAndPerformingSubtitle>
-        <WritingAndPerformingSubtitle
-          color={"var(--black)"}
-          onClick={updatePerformingData}
+          <WritingAndPerformingSubtitle
+            color={"var(--black)"}
+            onClick={updatePerformingData}
+          >
+            Public Speaking & Lecturing
+            <ColorStop color={"var(--red)"}>.</ColorStop>
+          </WritingAndPerformingSubtitle>
+        </motion.div>
+        <motion.div
+          whileHover={{ marginLeft: "2rem" }}
+          transition={{ duration: 0.3, ease: "linear" }}
         >
-          Music<ColorStop color={"var(--red)"}>.</ColorStop>
-        </WritingAndPerformingSubtitle>
+          <WritingAndPerformingSubtitle
+            color={"var(--black)"}
+            onClick={updatePerformingData}
+          >
+            Music<ColorStop color={"var(--red)"}>.</ColorStop>
+          </WritingAndPerformingSubtitle>
+        </motion.div>
       </>
     );
   }
