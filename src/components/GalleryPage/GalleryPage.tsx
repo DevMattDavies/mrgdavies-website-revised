@@ -44,7 +44,7 @@ export const GalleryPage = (): JSX.Element => {
         // enable optional lightbox plugins
         plugins={[Fullscreen, Slideshow, Thumbnails, Zoom, Captions]}
         captions={{ descriptionTextAlign: "center" }}
-        thumbnails={{ height: 200, width: 300 }}
+        thumbnails={{ height: 100, width: 150 }}
       />
     </>
   );
