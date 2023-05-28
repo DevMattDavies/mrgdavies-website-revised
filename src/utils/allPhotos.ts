@@ -34,27 +34,44 @@ export const photos = [
     description: "Desmond Bagley book covers",
     width: 960,
     height: 361,
-    zoom: 3,
   },
-  { src: collabro.src, description: "Collabro", width: 451, height: 445 },
+  {
+    src: collabro.src,
+    description:
+      "The fifth element? No, Collabro haven't acquired a new member - it's just me interviewing them!",
+    width: 451,
+    height: 445,
+  },
   {
     src: desmond_bagley.src,
     description: "Desmond Bagley",
     width: 338,
     height: 380,
-    zoom: 3,
   },
-  domino_island_cover,
+  {
+    src: domino_island_cover.src,
+    description:
+      "Michael completed the Desmond Bagley novel Domino Island for posthumous publication.",
+    width: 630,
+    height: 904,
+  },
   inside_job,
   krysia_cairns,
   john_owen_jones,
   lancashire_stories_cover,
-  lee_mead,
+  {
+    src: lee_mead.src,
+    description:
+      "Mr Entertainer: hosting an on-stage interview and Q&A with the delightful Lee Mead.",
+    width: 400,
+    height: 483,
+  },
   machamlear,
   man_of_the_moment_diving,
   {
     src: man_of_the_moment_upright.src,
-    description: "Man of the moment play",
+    description:
+      "As Ruy the gardener in Alan Ayckbourn’s Man of the Moment (Royal & Derngate).",
     width: 630,
     height: 904,
     zoom: 1,
@@ -64,15 +81,42 @@ export const photos = [
   meet_marry_murder,
   on_set_with_award,
   outback_cover,
-  professor_curvature,
+  {
+    src: professor_curvature.src,
+    description: "As the Professor in Curvature at Leicester’s Curve.",
+    width: 1411,
+    height: 1881,
+    zoom: 1,
+  },
   public_speaking,
-  rasputins_mother,
+  {
+    src: rasputins_mother.src,
+    description:
+      "The play Rasputin’s Mother won the Bristol Old Vic playwriting competition.",
+    width: 860,
+    height: 1217,
+    zoom: 1,
+  },
   reality,
   roleplay,
   roleplay_2,
-  tess,
+  {
+    src: tess.src,
+    description:
+      "The musical adaptation Tess was workshopped at The Other Place in Stratford-upon-Avon.",
+    width: 418,
+    height: 374,
+    zoom: 1,
+  },
   the_professor,
-  vicious_circle_cover,
+  {
+    src: vicious_circle_cover.src,
+    description:
+      "Michael was one of 12 authors who contributed to Vicious Circle, a 4-hour book.",
+    width: 847,
+    height: 1382,
+    zoom: 1,
+  },
   voiceover,
   west_end_producer,
 ];
