@@ -15,8 +15,6 @@ import man_of_the_moment_wide from "../../public/images/man_of_the_moment_wide.j
 import MD_1 from "../../public/images/MD_1.jpg";
 import meet_marry_murder from "../../public/images/meet_marry_murder.png";
 import on_set_with_award from "../../public/images/on_set_with_award.jpg";
-import outback_3d from "../../public/images/outback_3d.png";
-import outback_3d_2d from "../../public/images/outback_3d_2d.jpg";
 import outback_cover from "../../public/images/outback_cover.png";
 import professor_curvature from "../../public/images/professor_curvature.jpg";
 import public_speaking from "../../public/images/public_speaking.png";
@@ -29,7 +27,6 @@ import the_professor from "../../public/images/the_professor.jpg";
 import vicious_circle_cover from "../../public/images/vicious_circle_cover.jpg";
 import voiceover from "../../public/images/voiceover.png";
 import west_end_producer from "../../public/images/west_end_producer.jpg";
-import whatsonstage from "../../public/images/whatsonstage.png";
 
 export const photos = [
   {
