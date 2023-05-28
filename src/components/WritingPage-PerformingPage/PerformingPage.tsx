@@ -26,7 +26,7 @@ export const PerformingPage = (): JSX.Element => {
       <ContainerBackground red>
         <ContentContainer>
           <HomeImage
-            src="/assets/man_of_the_moment_upright.jpg"
+            src="/images/man_of_the_moment_upright.jpg"
             alt="man of the moment stage picture"
           />
           <TextContentContainer>

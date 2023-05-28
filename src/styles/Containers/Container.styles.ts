@@ -166,3 +166,15 @@ export const WritingAndPerformingSubtitlesContainer = styled(
     margin-right: 2rem;
   }
 `;
+
+// Gallery containers
+export const GalleryContainer = styled.div`
+  padding: 2rem var(--mobile-padding);
+  width: 100%;
+
+  @media screen and ${device.tablet} {
+    width: 80%;
+    max-width: var(--max-page-width);
+    padding: 4rem 0;
+  }
+`;

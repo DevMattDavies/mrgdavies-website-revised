@@ -18,15 +18,15 @@ const PerformingContent = ({
         <HR />
         <RowImageContainer>
           <BlogImage
-            src="/assets/professor_curvature.jpg"
+            src="/images/professor_curvature.jpg"
             alt="Curvature acting"
           />
           <BlogImage
-            src="/assets/man_of_the_moment_wide.jpg"
+            src="/images/man_of_the_moment_wide.jpg"
             alt="Man of the moment acting"
           />
           <BlogImage
-            src="/assets/man_of_the_moment_diving.jpg"
+            src="/images/man_of_the_moment_diving.jpg"
             alt="Man of the moment diving"
           />
         </RowImageContainer>
@@ -59,7 +59,7 @@ const PerformingContent = ({
         <HR />
         <RowImageContainer>
           <BlogImage
-            src="/assets/voiceover.png"
+            src="/images/voiceover.png"
             alt="Mike in recording studio"
           />
         </RowImageContainer>
@@ -85,11 +85,11 @@ const PerformingContent = ({
         <HR />
         <RowImageContainer>
           <BlogImage
-            src="/assets/collabro.png"
+            src="/images/collabro.png"
             alt="Mike on guest panel at Collabro event"
           />
           <BlogImage
-            src="/assets/lee_mead.png"
+            src="/images/lee_mead.png"
             alt="Mike speaking with Lee Mead"
           />
         </RowImageContainer>
@@ -140,7 +140,7 @@ const PerformingContent = ({
         <HR />
         <RowImageContainer>
           <BlogImage
-            src="/assets/public_speaking.png"
+            src="/images/public_speaking.png"
             alt="Mike speaking to the public"
           />
         </RowImageContainer>
@@ -178,7 +178,7 @@ const PerformingContent = ({
         </Subtitle>
         <HR />
         <RowImageContainer>
-          <BlogImage src="/assets/inside_job.png" alt="Inside job band photo" />
+          <BlogImage src="/images/inside_job.png" alt="Inside job band photo" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
           A multi-instrumentalist and vocalist with extensive live and studio

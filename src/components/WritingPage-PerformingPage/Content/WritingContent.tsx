@@ -18,15 +18,15 @@ export const WritingContent = ({
         <HR />
         <RowImageContainer>
           <BlogImage
-            src="/assets/domino_island_cover.jpg"
+            src="/images/domino_island_cover.jpg"
             alt="domino island book cover"
           />
           <BlogImage
-            src="/assets/lancashire_stories_cover.jpeg"
+            src="/images/lancashire_stories_cover.jpeg"
             alt="lancashire stories book cover"
           />
           <BlogImage
-            src="/assets/vicious_circle_cover.jpg"
+            src="/images/vicious_circle_cover.jpg"
             alt="vicious circle book cover"
           />
         </RowImageContainer>
@@ -59,7 +59,7 @@ export const WritingContent = ({
         <HR />
         <RowImageContainer>
           <BlogImage
-            src="/assets/meet_marry_murder.png"
+            src="/images/meet_marry_murder.png"
             alt="meet marry murder image"
           />
         </RowImageContainer>
@@ -87,12 +87,12 @@ export const WritingContent = ({
         <HR />
         <RowImageContainer>
           <BlogImage
-            src="/assets/rasputins_mother.jpg"
+            src="/images/rasputins_mother.jpg"
             alt="Rasputin's mother"
           />
-          <BlogImage src="/assets/reality.jpg" alt="Reality" />
-          <BlogImage src="/assets/tess.png" alt="Tess" />
-          <BlogImage src="/assets/machamlear.png" alt="MacHamLear" />
+          <BlogImage src="/images/reality.jpg" alt="Reality" />
+          <BlogImage src="/images/tess.png" alt="Tess" />
+          <BlogImage src="/images/machamlear.png" alt="MacHamLear" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
           Michael’s first full-length stage play <i>Rasputin&apos;s Mother</i>{" "}
@@ -125,7 +125,7 @@ export const WritingContent = ({
         </Subtitle>
         <HR />
         <RowImageContainer>
-          <BlogImage src="/assets/whatsonstage.png" alt="Whatsonstage logo" />
+          <BlogImage src="/images/whatsonstage.png" alt="Whatsonstage logo" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
           Michael has been a professional theatre critic for 30 years. His work

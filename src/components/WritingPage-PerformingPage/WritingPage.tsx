@@ -25,7 +25,7 @@ export const WritingPage = (): JSX.Element => {
     <>
       <ContainerBackground red>
         <ContentContainer>
-          <HomeImage src="/assets/outback_cover.png" alt="bagley novel" />
+          <HomeImage src="/images/outback_cover.png" alt="bagley novel" />
           <TextContentContainer>
             <Subtitle color={"var(--white)"}>
               Writing<ColorStop color={"var(--black)"}>.</ColorStop>

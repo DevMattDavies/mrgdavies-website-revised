@@ -10,7 +10,7 @@ const Welcome = (): JSX.Element => {
   return (
     <ContainerBackground red>
       <ContentContainer>
-        <HomeImage src="/assets/MD_1.jpg" alt="mike headshot" />
+        <HomeImage src="/images/MD_1.jpg" alt="mike headshot" />
         <HomeTextContentContainer>
           <Subtitle color={"var(--white)"}>
             Welcome<ColorStop color={"var(--black)"}>.</ColorStop>
