@@ -178,3 +178,18 @@ export const GalleryContainer = styled.div`
     padding: 4rem 0;
   }
 `;
+
+// Contact page containers
+
+export const ContactContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+`;
+
+export const LowerContactContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;

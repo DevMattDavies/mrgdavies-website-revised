@@ -79,6 +79,24 @@ export const NavLink = styled.a`
   }
 `;
 
+export const ContactLink = styled.a`
+  font-size: 1.2rem;
+  font-family: "Lora", serif;
+  color: ${(props) => props.color};
+  text-decoration: none;
+
+  &:hover {
+    color: ${(props) =>
+      props.color === "var(--white)" ? "var(--black)" : "var(--red)"};
+  }
+`;
+
+export const ContactNonLink = styled.p`
+  font-size: 1.2rem;
+  font-family: "Lora", serif;
+  color: ${(props) => props.color};
+`;
+
 export const SeeAllPosts = styled(NavLink)`
   font-size: 1rem;
   font-family: "Lora", serif;
