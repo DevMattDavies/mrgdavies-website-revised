@@ -29,7 +29,7 @@ export const ContactPage = (): JSX.Element => {
           </Subtitle>
           <TextContentContainer style={{ gap: "3rem" }}>
             <ContactContainer>
-              <MailOutlineIcon style={{ fontSize: "3rem", color: "white" }} />
+              <MailOutlineIcon style={{ fontSize: "2rem", color: "white" }} />
               <ContactLink
                 href="mailto: mrgdavies@aol.com"
                 color={"var(--white)"}
@@ -38,7 +38,7 @@ export const ContactPage = (): JSX.Element => {
               </ContactLink>
             </ContactContainer>
             <ContactContainer>
-              <TwitterIcon style={{ fontSize: "3rem", color: "white" }} />
+              <TwitterIcon style={{ fontSize: "2rem", color: "white" }} />
               <ContactLink
                 href="https://twitter.com/mrgdavies"
                 target="_blank"
@@ -51,7 +51,7 @@ export const ContactPage = (): JSX.Element => {
         </ContentContainer>
       </ContainerBackground>
       <ContainerBackground>
-        <ContentContainer style={{ gap: "15rem" }}>
+        <ContentContainer style={{ gap: "3rem" }}>
           <LowerContactContainer>
             <Subtitle color={"var(--red)"}>
               Acting representation
@@ -62,7 +62,7 @@ export const ContactPage = (): JSX.Element => {
             </Subtitle>
             <ContactContainer>
               <MailOutlineIcon
-                style={{ fontSize: "3rem", color: "var(--black)" }}
+                style={{ fontSize: "2rem", color: "var(--black)" }}
               />
               <ContactLink
                 href="mailto: info@redtalentmanagement.com"
@@ -73,7 +73,7 @@ export const ContactPage = (): JSX.Element => {
             </ContactContainer>
             <ContactContainer>
               <LanguageIcon
-                style={{ fontSize: "3rem", color: "var(--black)" }}
+                style={{ fontSize: "2rem", color: "var(--black)" }}
               />
               <ContactLink
                 href="https://www.redtalentmanagement.com/"
@@ -84,7 +84,7 @@ export const ContactPage = (): JSX.Element => {
             </ContactContainer>
             <ContactContainer>
               <PhoneEnabledIcon
-                style={{ fontSize: "3rem", color: "var(--black)" }}
+                style={{ fontSize: "2rem", color: "var(--black)" }}
               />
               <ContactNonLink color={"var(--black)"}>
                 02476 691 900
@@ -92,7 +92,7 @@ export const ContactPage = (): JSX.Element => {
             </ContactContainer>
             <ContactContainer>
               <PhoneAndroidIcon
-                style={{ fontSize: "3rem", color: "var(--black)" }}
+                style={{ fontSize: "2rem", color: "var(--black)" }}
               />
               <ContactNonLink color={"var(--black)"}>
                 07941 133 812
@@ -107,7 +107,7 @@ export const ContactPage = (): JSX.Element => {
             <Subtitle color={"var(--black)"}>Matt Davies</Subtitle>
             <ContactContainer>
               <MailOutlineIcon
-                style={{ fontSize: "3rem", color: "var(--black)" }}
+                style={{ fontSize: "2rem", color: "var(--black)" }}
               />
               <ContactLink
                 href="mailto: matt@matt.davies.dev"
@@ -118,7 +118,7 @@ export const ContactPage = (): JSX.Element => {
             </ContactContainer>
             <ContactContainer>
               <LanguageIcon
-                style={{ fontSize: "3rem", color: "var(--black)" }}
+                style={{ fontSize: "2rem", color: "var(--black)" }}
               />
               <ContactLink
                 href="https://mattdavies.dev/"

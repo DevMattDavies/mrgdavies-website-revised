@@ -24,7 +24,7 @@ export const InnerContainer = styled.div`
   max-width: var(--max-page-width);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 2rem 1rem;
   height: 100%;
   gap: 1rem;
