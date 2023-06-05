@@ -13,6 +13,7 @@ import NavLinks from "@/components/Navbar/NavLinks";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import Link from "next/link";
 
 const NavMobile = (): JSX.Element => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,7 +23,7 @@ const NavMobile = (): JSX.Element => {
 
   const closeModalOnClick = (): void => {
     isModalOpen && setIsModalOpen(false);
-  }
+  };
 
   useEffect(() => {
     if (isModalOpen) {
@@ -35,10 +36,12 @@ const NavMobile = (): JSX.Element => {
   return (
     <NavContainer>
       <HeroContainer>
-        <TitleContainer>
-          <PageTitle outline>Michael</PageTitle>
-          <PageTitle>Davies</PageTitle>
-        </TitleContainer>
+        <Link href="/" style={{ textDecoration: "none" }}>
+          <TitleContainer>
+            <PageTitle outline>Michael</PageTitle>
+            <PageTitle>Davies</PageTitle>
+          </TitleContainer>
+        </Link>
         <TaglineText>Author | Actor | Playwright</TaglineText>
       </HeroContainer>
       <HamburgerContainer>

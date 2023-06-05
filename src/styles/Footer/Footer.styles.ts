@@ -76,10 +76,16 @@ export const SocialsContainer = styled.div`
   align-items: center;
 `;
 
-export const NewsletterForm = styled.form`
+export const NewsletterForm = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+`;
+
+export const NewsletterFormLabel = styled.label`
+  font-size: 0.8rem;
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
 `;
 
 export const NewsletterInput = styled.input`

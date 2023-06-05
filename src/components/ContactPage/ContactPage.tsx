@@ -4,6 +4,7 @@ import {
   TextContentContainer,
   ContactContainer,
   LowerContactContainer,
+  ContactContentContainer,
 } from "@/styles/Containers/Container.styles";
 import {
   ColorStop,
@@ -51,7 +52,7 @@ export const ContactPage = (): JSX.Element => {
         </ContentContainer>
       </ContainerBackground>
       <ContainerBackground>
-        <ContentContainer style={{ gap: "3rem" }}>
+        <ContactContentContainer>
           <LowerContactContainer>
             <Subtitle color={"var(--red)"}>
               Acting representation
@@ -129,7 +130,7 @@ export const ContactPage = (): JSX.Element => {
               </ContactLink>
             </ContactContainer>
           </LowerContactContainer>
-        </ContentContainer>
+        </ContactContentContainer>
       </ContainerBackground>
     </>
   );

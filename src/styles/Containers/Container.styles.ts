@@ -39,6 +39,14 @@ export const ContentContainer = styled.div`
   }
 `;
 
+export const ContactContentContainer = styled(ContentContainer)`
+  gap: 3rem;
+
+  @media screen and ${device.tablet} {
+    gap: 5rem;
+  }
+`;
+
 export const RowContentContainer = styled(ContentContainer)`
   flex-direction: column;
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   HeroContainer,
   NavContainer,
@@ -12,10 +13,12 @@ const NavDesktop = (): JSX.Element => {
   return (
     <NavContainer>
       <HeroContainer>
-        <TitleContainer>
-          <PageTitle outline>Michael</PageTitle>
-          <PageTitle>Davies</PageTitle>
-        </TitleContainer>
+        <Link href="/" style={{ textDecoration: "none" }}>
+          <TitleContainer>
+            <PageTitle outline>Michael</PageTitle>
+            <PageTitle>Davies</PageTitle>
+          </TitleContainer>
+        </Link>
         <TaglineText>Author | Actor | Playwright</TaglineText>
       </HeroContainer>
       <NavLinks />
