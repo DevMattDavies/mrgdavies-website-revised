@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Device } from "@/types/device";
-const useIsDevice = (): Device => {
+export const useIsDevice = (): Device => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -25,5 +25,3 @@ const useIsDevice = (): Device => {
 
   return { isMobile, isTablet, isDesktop };
 };
-
-export default useIsDevice;

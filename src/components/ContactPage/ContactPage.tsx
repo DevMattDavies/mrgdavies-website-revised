@@ -35,7 +35,7 @@ export const ContactPage = (): JSX.Element => {
                 href="mailto: mrgdavies@aol.com"
                 color={"var(--white)"}
               >
-                mrgdavies@aol.com
+                Email me
               </ContactLink>
             </ContactContainer>
             <ContactContainer>

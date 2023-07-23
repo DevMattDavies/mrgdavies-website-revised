@@ -23,7 +23,7 @@ import {
   FooterLink,
 } from "@/styles/Text/Text.styles";
 
-import { DeviceContext } from "@/pages/_app";
+import { DeviceContext } from "@/context";
 
 import { Device } from "@/types/device";
 

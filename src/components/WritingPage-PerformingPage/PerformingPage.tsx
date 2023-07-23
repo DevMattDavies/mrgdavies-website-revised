@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   ContainerBackground,
   ContentContainer,
@@ -12,14 +11,13 @@ import { ColorStop, Subtitle, Text } from "@/styles/Text/Text.styles";
 import Subtitles from "@/components/WritingPage-PerformingPage/Subtitles/Subtitles";
 import PerformingContent from "@/components/WritingPage-PerformingPage/Content/PerformingContent";
 import { HomeImage } from "@/styles/Images/Image.styles";
+import { PerformingData } from "@/types/writingAndPerformingData";
+import { useContext } from "react";
+import { PerformingContext } from "@/context";
 
 export const PerformingPage = (): JSX.Element => {
-  const [performingSubtitle, setPerformingSubtitle] = useState("");
-
-  const updatePerformingData = (e: any) => {
-    const clickedSubtitle = e.target.textContent;
-    setPerformingSubtitle(clickedSubtitle);
-  };
+  const { performingSubtitle, updatePerformingSubtitle }: PerformingData =
+    useContext(PerformingContext);
 
   return (
     <>
@@ -51,7 +49,7 @@ export const PerformingPage = (): JSX.Element => {
       <ContainerBackground>
         <RowContentContainer>
           <WritingAndPerformingSubtitlesContainer>
-            <Subtitles updatePerformingData={updatePerformingData} />
+            <Subtitles updatePerformingData={updatePerformingSubtitle} />
           </WritingAndPerformingSubtitlesContainer>
           <WritingAndPerformingContainer>
             <PerformingContent performingSubtitle={performingSubtitle} />

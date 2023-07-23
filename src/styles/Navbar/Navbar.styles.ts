@@ -77,6 +77,19 @@ export const LinksContainer = styled.div`
   }
 `;
 
+export const NavDropdown = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 130%;
+  width: 200px;
+  background-color: var(--white);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
 export const ModalBackground = styled.div`
   position: fixed;
   top: 75px;

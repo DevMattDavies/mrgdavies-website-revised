@@ -79,6 +79,15 @@ export const NavLink = styled.a`
   }
 `;
 
+export const DropdownLink = styled(NavLink)`
+  font-size: 1rem;
+  width: max-content;
+
+  &:after {
+    height: 1px;
+  }
+`;
+
 export const ContactLink = styled.a`
   font-size: 1.2rem;
   font-family: "Lora", serif;

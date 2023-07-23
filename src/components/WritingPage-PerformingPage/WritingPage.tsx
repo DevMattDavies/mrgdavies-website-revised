@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   ContainerBackground,
   ContentContainer,
@@ -9,17 +8,17 @@ import {
 } from "@/styles/Containers/Container.styles";
 import { ColorStop, Subtitle, Text } from "@/styles/Text/Text.styles";
 
+import { WritingContext } from "@/context";
+import { WritingData } from "@/types/writingAndPerformingData";
+
 import Subtitles from "@/components/WritingPage-PerformingPage/Subtitles/Subtitles";
 import WritingContent from "@/components/WritingPage-PerformingPage/Content/WritingContent";
 import { HomeImage } from "@/styles/Images/Image.styles";
+import { useContext } from "react";
 
 export const WritingPage = (): JSX.Element => {
-  const [writingSubtitle, setWritingSubtitle] = useState("Fiction");
-
-  const updateWritingData = (e: any) => {
-    const clickedSubtitle = e.target.textContent;
-    setWritingSubtitle(clickedSubtitle);
-  };
+  const { writingSubtitle, updateWritingSubtitle }: WritingData =
+    useContext(WritingContext);
 
   return (
     <>
@@ -56,7 +55,10 @@ export const WritingPage = (): JSX.Element => {
       <ContainerBackground>
         <RowContentContainer>
           <WritingAndPerformingSubtitlesContainer>
-            <Subtitles page={"writing"} updateWritingData={updateWritingData} />
+            <Subtitles
+              page={"writing"}
+              updateWritingData={updateWritingSubtitle}
+            />
           </WritingAndPerformingSubtitlesContainer>
           <WritingAndPerformingContainer>
             <WritingContent writingSubtitle={writingSubtitle} />

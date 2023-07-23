@@ -132,7 +132,7 @@ export const WritingContent = ({
           has appeared in national newspapers and he has been a regular reviewer
           for <i>The Stage</i>, as well as serving as resident critic for a host
           of regional newspaper titles. His reviews can be read at{" "}
-          <a href="www.stagereviews.co.uk">www.stagereviews.co.uk</a> and
+          <a href="www.stagereviews.co.uk">www.stagereviews.co.uk</a> and{" "}
           <a href="www.whatsonstage.com">whatsonstage.com</a>.
         </Text>
         <Text>

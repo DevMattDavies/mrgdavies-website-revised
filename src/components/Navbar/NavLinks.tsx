@@ -1,8 +1,30 @@
+import { useContext, useState } from "react";
 import Link from "next/link";
-import { ColorStop, NavLink } from "@/styles/Text/Text.styles";
-import { LinksContainer } from "@/styles/Navbar/Navbar.styles";
+import { DeviceContext, WritingContext, PerformingContext } from "@/context";
+import { ColorStop, NavLink, DropdownLink } from "@/styles/Text/Text.styles";
+import { LinksContainer, NavDropdown } from "@/styles/Navbar/Navbar.styles";
+import { PerformingData, WritingData } from "@/types/writingAndPerformingData";
+import { Device } from "@/types/device";
 
-const NavLinks = ({closeModalOnClick}: any): JSX.Element => {
+const NavLinks = ({ closeModalOnClick }: any): JSX.Element => {
+  const [isWritingHovered, setIsWritingHovered] = useState(false);
+  const [isPerformingHovered, setIsPerformingHovered] = useState(false);
+
+  const { isDesktop }: Device = useContext(DeviceContext);
+
+  const { updateWritingSubtitle }: WritingData = useContext(WritingContext);
+
+  const { updatePerformingSubtitle }: PerformingData =
+    useContext(PerformingContext);
+
+  const handleWritingHover = () => {
+    setIsWritingHovered((isWritingHovered) => !isWritingHovered);
+  };
+
+  const handlePerformingHover = () => {
+    setIsPerformingHovered((isPerformingHovered) => !isPerformingHovered);
+  };
+
   return (
     <LinksContainer>
       <Link href="/" passHref legacyBehavior>
@@ -12,13 +34,80 @@ const NavLinks = ({closeModalOnClick}: any): JSX.Element => {
         </NavLink>
       </Link>
       <Link href="/writing" passHref legacyBehavior>
-        <NavLink onClick={closeModalOnClick}>
+        <NavLink
+          onClick={closeModalOnClick}
+          onMouseEnter={handleWritingHover}
+          onMouseLeave={handleWritingHover}
+        >
           Writing<ColorStop color={"var(--red)"}>.</ColorStop>
+          {isDesktop && isWritingHovered && (
+            <NavDropdown>
+              <DropdownLink href="/writing" onClick={updateWritingSubtitle}>
+                Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
+              </DropdownLink>
+              <DropdownLink href="/writing" onClick={updateWritingSubtitle}>
+                Scriptwriting<ColorStop color={"var(--red)"}>.</ColorStop>
+              </DropdownLink>
+              <DropdownLink href="/writing" onClick={updateWritingSubtitle}>
+                Stage<ColorStop color={"var(--red)"}>.</ColorStop>
+              </DropdownLink>
+              <DropdownLink href="/writing" onClick={updateWritingSubtitle}>
+                Non-Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
+              </DropdownLink>
+              <DropdownLink href="/writing" onClick={updateWritingSubtitle}>
+                Journalism<ColorStop color={"var(--red)"}>.</ColorStop>
+              </DropdownLink>
+            </NavDropdown>
+          )}
         </NavLink>
       </Link>
       <Link href="/performing" passHref legacyBehavior>
-        <NavLink onClick={closeModalOnClick}>
+        <NavLink
+          onClick={closeModalOnClick}
+          onMouseEnter={handlePerformingHover}
+          onMouseLeave={handlePerformingHover}
+        >
           Performing<ColorStop color={"var(--red)"}>.</ColorStop>
+          {isDesktop && isPerformingHovered && (
+            <NavDropdown>
+              <DropdownLink
+                href="/performing"
+                onClick={updatePerformingSubtitle}
+              >
+                Acting<ColorStop color={"var(--red)"}>.</ColorStop>
+              </DropdownLink>
+              <DropdownLink
+                href="/performing"
+                onClick={updatePerformingSubtitle}
+              >
+                Voiceover<ColorStop color={"var(--red)"}>.</ColorStop>
+              </DropdownLink>
+              <DropdownLink
+                href="/performing"
+                onClick={updatePerformingSubtitle}
+              >
+                Presenting<ColorStop color={"var(--red)"}>.</ColorStop>
+              </DropdownLink>
+              <DropdownLink
+                href="/performing"
+                onClick={updatePerformingSubtitle}
+              >
+                Roleplaying<ColorStop color={"var(--red)"}>.</ColorStop>
+              </DropdownLink>
+              <DropdownLink
+                href="/performing"
+                onClick={updatePerformingSubtitle}
+              >
+                Public Speaking<ColorStop color={"var(--red)"}>.</ColorStop>
+              </DropdownLink>
+              <DropdownLink
+                href="/performing"
+                onClick={updatePerformingSubtitle}
+              >
+                Music<ColorStop color={"var(--red)"}>.</ColorStop>
+              </DropdownLink>
+            </NavDropdown>
+          )}
         </NavLink>
       </Link>
       <Link href="/gallery" passHref legacyBehavior>

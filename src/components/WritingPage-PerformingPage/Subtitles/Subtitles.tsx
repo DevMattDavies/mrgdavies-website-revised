@@ -131,7 +131,7 @@ export const Subtitles = ({
             color={"var(--black)"}
             onClick={updatePerformingData}
           >
-            Public Speaking & Lecturing
+            Public Speaking <br />& Lecturing
             <ColorStop color={"var(--red)"}>.</ColorStop>
           </WritingAndPerformingSubtitle>
         </motion.div>
