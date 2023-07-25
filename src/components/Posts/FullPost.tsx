@@ -16,7 +16,7 @@ const FullPost = ({ post, markdownText }: Post): JSX.Element => {
       <BlogDate>{date}</BlogDate>
       <HR />
       <BlogContentContainer>
-        <BlogImage src={post.cover} />
+        {post.cover && <BlogImage src={post.cover} />}
         <ReactMarkdown>{markdownText}</ReactMarkdown>
       </BlogContentContainer>
     </BlogPostContainer>

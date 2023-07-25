@@ -5,7 +5,12 @@ export const useSetWritingData = () => {
 
   const updateWritingSubtitle = (e: any) => {
     const clickedSubtitle = e.target.textContent;
-    setWritingSubtitle(clickedSubtitle);
+    // console.log(clickedSubtitle);
+    if (clickedSubtitle === "Writing.") {
+      setWritingSubtitle("");
+    } else {
+      setWritingSubtitle(clickedSubtitle);
+    }
   };
 
   return { writingSubtitle, updateWritingSubtitle };

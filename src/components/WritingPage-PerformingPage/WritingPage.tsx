@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
   ContainerBackground,
   ContentContainer,
@@ -14,7 +15,6 @@ import { WritingData } from "@/types/writingAndPerformingData";
 import Subtitles from "@/components/WritingPage-PerformingPage/Subtitles/Subtitles";
 import WritingContent from "@/components/WritingPage-PerformingPage/Content/WritingContent";
 import { HomeImage } from "@/styles/Images/Image.styles";
-import { useContext } from "react";
 
 export const WritingPage = (): JSX.Element => {
   const { writingSubtitle, updateWritingSubtitle }: WritingData =
@@ -57,6 +57,7 @@ export const WritingPage = (): JSX.Element => {
           <WritingAndPerformingSubtitlesContainer>
             <Subtitles
               page={"writing"}
+              writingSubtitle={writingSubtitle}
               updateWritingData={updateWritingSubtitle}
             />
           </WritingAndPerformingSubtitlesContainer>

@@ -17,6 +17,7 @@ export const WritingContent = ({
         </Subtitle>
         <HR />
         <RowImageContainer>
+          <BlogImage src="/images/outback_cover.png" alt="outback book cover" />
           <BlogImage
             src="/images/domino_island_cover.jpg"
             alt="domino island book cover"

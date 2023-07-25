@@ -1,18 +1,21 @@
+import { motion } from "framer-motion";
 import {
   ColorStop,
   WritingAndPerformingSubtitle,
 } from "@/styles/Text/Text.styles";
 
-import { motion } from "framer-motion";
-
 type TSubtitles = {
   page?: string;
+  writingSubtitle?: string;
+  performingSubtitle?: string;
   updateWritingData?: (e: any) => void;
   updatePerformingData?: (e: any) => void;
 };
 
 export const Subtitles = ({
   page,
+  writingSubtitle,
+  performingSubtitle,
   updateWritingData,
   updatePerformingData,
 }: TSubtitles): JSX.Element => {
@@ -20,10 +23,11 @@ export const Subtitles = ({
     return (
       <>
         <motion.div
-          whileHover={{ marginLeft: "2rem" }}
+          animate={{ marginLeft: writingSubtitle === "Fiction." ? "2rem" : 0 }}
           transition={{ duration: 0.3, ease: "linear" }}
         >
           <WritingAndPerformingSubtitle
+            id="fiction"
             color={"var(--black)"}
             onClick={updateWritingData}
           >
@@ -31,10 +35,13 @@ export const Subtitles = ({
           </WritingAndPerformingSubtitle>
         </motion.div>
         <motion.div
-          whileHover={{ marginLeft: "2rem" }}
+          animate={{
+            marginLeft: writingSubtitle === "Scriptwriting." ? "2rem" : 0,
+          }}
           transition={{ duration: 0.3, ease: "linear" }}
         >
           <WritingAndPerformingSubtitle
+            id="scriptwriting"
             color={"var(--black)"}
             onClick={updateWritingData}
           >
@@ -42,10 +49,11 @@ export const Subtitles = ({
           </WritingAndPerformingSubtitle>
         </motion.div>
         <motion.div
-          whileHover={{ marginLeft: "2rem" }}
+          animate={{ marginLeft: writingSubtitle === "Stage." ? "2rem" : 0 }}
           transition={{ duration: 0.3, ease: "linear" }}
         >
           <WritingAndPerformingSubtitle
+            id="stage"
             color={"var(--black)"}
             onClick={updateWritingData}
           >
@@ -53,10 +61,13 @@ export const Subtitles = ({
           </WritingAndPerformingSubtitle>
         </motion.div>
         <motion.div
-          whileHover={{ marginLeft: "2rem" }}
+          animate={{
+            marginLeft: writingSubtitle === "Non-Fiction." ? "2rem" : 0,
+          }}
           transition={{ duration: 0.3, ease: "linear" }}
         >
           <WritingAndPerformingSubtitle
+            id="non-fiction"
             color={"var(--black)"}
             onClick={updateWritingData}
           >
@@ -64,10 +75,13 @@ export const Subtitles = ({
           </WritingAndPerformingSubtitle>
         </motion.div>
         <motion.div
-          whileHover={{ marginLeft: "2rem" }}
+          animate={{
+            marginLeft: writingSubtitle === "Journalism." ? "2rem" : 0,
+          }}
           transition={{ duration: 0.3, ease: "linear" }}
         >
           <WritingAndPerformingSubtitle
+            id="journalism"
             color={"var(--black)"}
             onClick={updateWritingData}
           >
@@ -80,7 +94,9 @@ export const Subtitles = ({
     return (
       <>
         <motion.div
-          whileHover={{ marginLeft: "2rem" }}
+          animate={{
+            marginLeft: performingSubtitle === "Acting." ? "2rem" : 0,
+          }}
           transition={{ duration: 0.3, ease: "linear" }}
         >
           <WritingAndPerformingSubtitle
@@ -91,7 +107,9 @@ export const Subtitles = ({
           </WritingAndPerformingSubtitle>
         </motion.div>
         <motion.div
-          whileHover={{ marginLeft: "2rem" }}
+          animate={{
+            marginLeft: performingSubtitle === "Voiceover." ? "2rem" : 0,
+          }}
           transition={{ duration: 0.3, ease: "linear" }}
         >
           <WritingAndPerformingSubtitle
@@ -102,7 +120,9 @@ export const Subtitles = ({
           </WritingAndPerformingSubtitle>
         </motion.div>
         <motion.div
-          whileHover={{ marginLeft: "2rem" }}
+          animate={{
+            marginLeft: performingSubtitle === "Presenting." ? "2rem" : 0,
+          }}
           transition={{ duration: 0.3, ease: "linear" }}
         >
           <WritingAndPerformingSubtitle
@@ -113,7 +133,9 @@ export const Subtitles = ({
           </WritingAndPerformingSubtitle>
         </motion.div>
         <motion.div
-          whileHover={{ marginLeft: "2rem" }}
+          animate={{
+            marginLeft: performingSubtitle === "Roleplaying." ? "2rem" : 0,
+          }}
           transition={{ duration: 0.3, ease: "linear" }}
         >
           <WritingAndPerformingSubtitle
@@ -124,7 +146,12 @@ export const Subtitles = ({
           </WritingAndPerformingSubtitle>
         </motion.div>
         <motion.div
-          whileHover={{ marginLeft: "2rem" }}
+          animate={{
+            marginLeft:
+              performingSubtitle === "Public Speaking & Lecturing."
+                ? "2rem"
+                : 0,
+          }}
           transition={{ duration: 0.3, ease: "linear" }}
         >
           <WritingAndPerformingSubtitle
@@ -136,7 +163,9 @@ export const Subtitles = ({
           </WritingAndPerformingSubtitle>
         </motion.div>
         <motion.div
-          whileHover={{ marginLeft: "2rem" }}
+          animate={{
+            marginLeft: performingSubtitle === "Music." ? "2rem" : 0,
+          }}
           transition={{ duration: 0.3, ease: "linear" }}
         >
           <WritingAndPerformingSubtitle

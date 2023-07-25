@@ -35,26 +35,26 @@ const NavLinks = ({ closeModalOnClick }: any): JSX.Element => {
       </Link>
       <Link href="/writing" passHref legacyBehavior>
         <NavLink
-          onClick={closeModalOnClick}
+          onClick={isDesktop ? updateWritingSubtitle : closeModalOnClick}
           onMouseEnter={handleWritingHover}
           onMouseLeave={handleWritingHover}
         >
           Writing<ColorStop color={"var(--red)"}>.</ColorStop>
           {isDesktop && isWritingHovered && (
             <NavDropdown>
-              <DropdownLink href="/writing" onClick={updateWritingSubtitle}>
+              <DropdownLink onClick={updateWritingSubtitle}>
                 Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink href="/writing" onClick={updateWritingSubtitle}>
+              <DropdownLink onClick={updateWritingSubtitle}>
                 Scriptwriting<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink href="/writing" onClick={updateWritingSubtitle}>
+              <DropdownLink onClick={updateWritingSubtitle}>
                 Stage<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink href="/writing" onClick={updateWritingSubtitle}>
+              <DropdownLink onClick={updateWritingSubtitle}>
                 Non-Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink href="/writing" onClick={updateWritingSubtitle}>
+              <DropdownLink onClick={updateWritingSubtitle}>
                 Journalism<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
             </NavDropdown>
@@ -63,47 +63,29 @@ const NavLinks = ({ closeModalOnClick }: any): JSX.Element => {
       </Link>
       <Link href="/performing" passHref legacyBehavior>
         <NavLink
-          onClick={closeModalOnClick}
+          onClick={isDesktop ? updatePerformingSubtitle : closeModalOnClick}
           onMouseEnter={handlePerformingHover}
           onMouseLeave={handlePerformingHover}
         >
           Performing<ColorStop color={"var(--red)"}>.</ColorStop>
           {isDesktop && isPerformingHovered && (
             <NavDropdown>
-              <DropdownLink
-                href="/performing"
-                onClick={updatePerformingSubtitle}
-              >
+              <DropdownLink onClick={updatePerformingSubtitle}>
                 Acting<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink
-                href="/performing"
-                onClick={updatePerformingSubtitle}
-              >
+              <DropdownLink onClick={updatePerformingSubtitle}>
                 Voiceover<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink
-                href="/performing"
-                onClick={updatePerformingSubtitle}
-              >
+              <DropdownLink onClick={updatePerformingSubtitle}>
                 Presenting<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink
-                href="/performing"
-                onClick={updatePerformingSubtitle}
-              >
+              <DropdownLink onClick={updatePerformingSubtitle}>
                 Roleplaying<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink
-                href="/performing"
-                onClick={updatePerformingSubtitle}
-              >
+              <DropdownLink onClick={updatePerformingSubtitle}>
                 Public Speaking<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink
-                href="/performing"
-                onClick={updatePerformingSubtitle}
-              >
+              <DropdownLink onClick={updatePerformingSubtitle}>
                 Music<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
             </NavDropdown>

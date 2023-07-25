@@ -49,7 +49,10 @@ export const PerformingPage = (): JSX.Element => {
       <ContainerBackground>
         <RowContentContainer>
           <WritingAndPerformingSubtitlesContainer>
-            <Subtitles updatePerformingData={updatePerformingSubtitle} />
+            <Subtitles
+              updatePerformingData={updatePerformingSubtitle}
+              performingSubtitle={performingSubtitle}
+            />
           </WritingAndPerformingSubtitlesContainer>
           <WritingAndPerformingContainer>
             <PerformingContent performingSubtitle={performingSubtitle} />

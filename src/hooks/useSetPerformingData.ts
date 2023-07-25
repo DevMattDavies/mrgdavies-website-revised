@@ -5,7 +5,12 @@ export const useSetPerformingData = () => {
 
   const updatePerformingSubtitle = (e: any) => {
     const clickedSubtitle = e.target.textContent;
-    setPerformingSubtitle(clickedSubtitle);
+    // console.log(clickedSubtitle);
+    if (clickedSubtitle === "Performing.") {
+      setPerformingSubtitle("");
+    } else {
+      setPerformingSubtitle(clickedSubtitle);
+    }
   };
 
   return { performingSubtitle, updatePerformingSubtitle };
