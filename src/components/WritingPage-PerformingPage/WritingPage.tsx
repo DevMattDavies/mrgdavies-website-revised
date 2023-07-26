@@ -9,16 +9,17 @@ import {
 } from "@/styles/Containers/Container.styles";
 import { ColorStop, Subtitle, Text } from "@/styles/Text/Text.styles";
 
-import { WritingContext } from "@/context";
-import { WritingData } from "@/types/writingAndPerformingData";
+import { WritingAndPerformingDataContext } from "@/context";
+import { WritingAndPerformingData } from "@/types/writingAndPerformingData";
 
 import Subtitles from "@/components/WritingPage-PerformingPage/Subtitles/Subtitles";
 import WritingContent from "@/components/WritingPage-PerformingPage/Content/WritingContent";
 import { HomeImage } from "@/styles/Images/Image.styles";
 
 export const WritingPage = (): JSX.Element => {
-  const { writingSubtitle, updateWritingSubtitle }: WritingData =
-    useContext(WritingContext);
+  const { subtitle, updateSubtitle }: WritingAndPerformingData = useContext(
+    WritingAndPerformingDataContext
+  );
 
   return (
     <>
@@ -57,12 +58,12 @@ export const WritingPage = (): JSX.Element => {
           <WritingAndPerformingSubtitlesContainer>
             <Subtitles
               page={"writing"}
-              writingSubtitle={writingSubtitle}
-              updateWritingData={updateWritingSubtitle}
+              subtitle={subtitle}
+              updateSubtitle={updateSubtitle}
             />
           </WritingAndPerformingSubtitlesContainer>
           <WritingAndPerformingContainer>
-            <WritingContent writingSubtitle={writingSubtitle} />
+            <WritingContent writingSubtitle={subtitle} />
           </WritingAndPerformingContainer>
         </RowContentContainer>
       </ContainerBackground>

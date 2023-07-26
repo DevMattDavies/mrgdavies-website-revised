@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import Link from "next/link";
-import { DeviceContext, WritingContext, PerformingContext } from "@/context";
+import { DeviceContext, WritingAndPerformingDataContext } from "@/context";
 import { ColorStop, NavLink, DropdownLink } from "@/styles/Text/Text.styles";
 import { LinksContainer, NavDropdown } from "@/styles/Navbar/Navbar.styles";
-import { PerformingData, WritingData } from "@/types/writingAndPerformingData";
+import { WritingAndPerformingData } from "@/types/writingAndPerformingData";
 import { Device } from "@/types/device";
 
 const NavLinks = ({ closeModalOnClick }: any): JSX.Element => {
@@ -12,10 +12,9 @@ const NavLinks = ({ closeModalOnClick }: any): JSX.Element => {
 
   const { isDesktop }: Device = useContext(DeviceContext);
 
-  const { updateWritingSubtitle }: WritingData = useContext(WritingContext);
-
-  const { updatePerformingSubtitle }: PerformingData =
-    useContext(PerformingContext);
+  const { updateSubtitle }: WritingAndPerformingData = useContext(
+    WritingAndPerformingDataContext
+  );
 
   const handleWritingHover = () => {
     setIsWritingHovered((isWritingHovered) => !isWritingHovered);
@@ -35,26 +34,26 @@ const NavLinks = ({ closeModalOnClick }: any): JSX.Element => {
       </Link>
       <Link href="/writing" passHref legacyBehavior>
         <NavLink
-          onClick={isDesktop ? updateWritingSubtitle : closeModalOnClick}
+          onClick={isDesktop ? updateSubtitle : closeModalOnClick}
           onMouseEnter={handleWritingHover}
           onMouseLeave={handleWritingHover}
         >
           Writing<ColorStop color={"var(--red)"}>.</ColorStop>
           {isDesktop && isWritingHovered && (
             <NavDropdown>
-              <DropdownLink onClick={updateWritingSubtitle}>
+              <DropdownLink onClick={updateSubtitle}>
                 Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink onClick={updateWritingSubtitle}>
+              <DropdownLink onClick={updateSubtitle}>
                 Scriptwriting<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink onClick={updateWritingSubtitle}>
+              <DropdownLink onClick={updateSubtitle}>
                 Stage<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink onClick={updateWritingSubtitle}>
+              <DropdownLink onClick={updateSubtitle}>
                 Non-Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink onClick={updateWritingSubtitle}>
+              <DropdownLink onClick={updateSubtitle}>
                 Journalism<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
             </NavDropdown>
@@ -63,29 +62,29 @@ const NavLinks = ({ closeModalOnClick }: any): JSX.Element => {
       </Link>
       <Link href="/performing" passHref legacyBehavior>
         <NavLink
-          onClick={isDesktop ? updatePerformingSubtitle : closeModalOnClick}
+          onClick={isDesktop ? updateSubtitle : closeModalOnClick}
           onMouseEnter={handlePerformingHover}
           onMouseLeave={handlePerformingHover}
         >
           Performing<ColorStop color={"var(--red)"}>.</ColorStop>
           {isDesktop && isPerformingHovered && (
             <NavDropdown>
-              <DropdownLink onClick={updatePerformingSubtitle}>
+              <DropdownLink onClick={updateSubtitle}>
                 Acting<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink onClick={updatePerformingSubtitle}>
+              <DropdownLink onClick={updateSubtitle}>
                 Voiceover<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink onClick={updatePerformingSubtitle}>
+              <DropdownLink onClick={updateSubtitle}>
                 Presenting<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink onClick={updatePerformingSubtitle}>
+              <DropdownLink onClick={updateSubtitle}>
                 Roleplaying<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink onClick={updatePerformingSubtitle}>
+              <DropdownLink onClick={updateSubtitle}>
                 Public Speaking<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
-              <DropdownLink onClick={updatePerformingSubtitle}>
+              <DropdownLink onClick={updateSubtitle}>
                 Music<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
             </NavDropdown>

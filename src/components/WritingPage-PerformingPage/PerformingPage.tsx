@@ -11,13 +11,16 @@ import { ColorStop, Subtitle, Text } from "@/styles/Text/Text.styles";
 import Subtitles from "@/components/WritingPage-PerformingPage/Subtitles/Subtitles";
 import PerformingContent from "@/components/WritingPage-PerformingPage/Content/PerformingContent";
 import { HomeImage } from "@/styles/Images/Image.styles";
-import { PerformingData } from "@/types/writingAndPerformingData";
+import { WritingAndPerformingData } from "@/types/writingAndPerformingData";
 import { useContext } from "react";
-import { PerformingContext } from "@/context";
+import { WritingAndPerformingDataContext } from "@/context";
 
 export const PerformingPage = (): JSX.Element => {
-  const { performingSubtitle, updatePerformingSubtitle }: PerformingData =
-    useContext(PerformingContext);
+  const { subtitle, updateSubtitle }: WritingAndPerformingData = useContext(
+    WritingAndPerformingDataContext
+  );
+
+  console.log(subtitle);
 
   return (
     <>
@@ -49,13 +52,10 @@ export const PerformingPage = (): JSX.Element => {
       <ContainerBackground>
         <RowContentContainer>
           <WritingAndPerformingSubtitlesContainer>
-            <Subtitles
-              updatePerformingData={updatePerformingSubtitle}
-              performingSubtitle={performingSubtitle}
-            />
+            <Subtitles updateSubtitle={updateSubtitle} subtitle={subtitle} />
           </WritingAndPerformingSubtitlesContainer>
           <WritingAndPerformingContainer>
-            <PerformingContent performingSubtitle={performingSubtitle} />
+            <PerformingContent performingSubtitle={subtitle} />
           </WritingAndPerformingContainer>
         </RowContentContainer>
       </ContainerBackground>

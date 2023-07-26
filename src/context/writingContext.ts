@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const WritingContext: any = createContext(null);
+export const WritingAndPerformingDataContext: any = createContext(null);
