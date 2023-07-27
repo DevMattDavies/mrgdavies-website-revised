@@ -1,4 +1,5 @@
 import { ChangeEvent, useState } from "react";
+import Script from "next/script";
 import {
   NewsletterButton,
   NewsletterForm,
@@ -53,7 +54,7 @@ const SubscriptionSection = () => {
         </NewsletterForm>
         <input type="hidden" name="anticsrf" value="true" />
       </form>
-      <script
+      <Script
         src="https://groot.mailerlite.com/js/w/webforms.min.js?v1f25ee4b05f240a833e02c19975434a4"
         type="text/javascript"
       />
