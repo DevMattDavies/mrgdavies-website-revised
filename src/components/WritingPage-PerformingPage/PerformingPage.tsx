@@ -20,8 +20,6 @@ export const PerformingPage = (): JSX.Element => {
     WritingAndPerformingDataContext
   );
 
-  console.log(subtitle);
-
   return (
     <>
       <ContainerBackground red>

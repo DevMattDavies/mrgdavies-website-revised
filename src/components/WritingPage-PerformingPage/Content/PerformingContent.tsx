@@ -13,7 +13,7 @@ const PerformingContent = ({
     return (
       <>
         <Subtitle>
-          Acting<ColorStop color={"var(--black)"}>.</ColorStop>
+          Acting<ColorStop color={"var(--red)"}>.</ColorStop>
         </Subtitle>
         <HR />
         <RowImageContainer>
@@ -54,7 +54,7 @@ const PerformingContent = ({
     return (
       <>
         <Subtitle>
-          Voiceover<ColorStop color={"var(--black)"}>.</ColorStop>
+          Voiceover<ColorStop color={"var(--red)"}>.</ColorStop>
         </Subtitle>
         <HR />
         <RowImageContainer>
@@ -80,7 +80,7 @@ const PerformingContent = ({
     return (
       <>
         <Subtitle>
-          Presenting<ColorStop color={"var(--black)"}>.</ColorStop>
+          Presenting<ColorStop color={"var(--red)"}>.</ColorStop>
         </Subtitle>
         <HR />
         <RowImageContainer>
@@ -111,7 +111,7 @@ const PerformingContent = ({
     return (
       <>
         <Subtitle>
-          Roleplaying<ColorStop color={"var(--black)"}>.</ColorStop>
+          Roleplaying<ColorStop color={"var(--red)"}>.</ColorStop>
         </Subtitle>
         <HR />
         <Text color={"var(--black)"}>
@@ -135,7 +135,7 @@ const PerformingContent = ({
       <>
         <Subtitle>
           Public Speaking & Lecturing
-          <ColorStop color={"var(--black)"}>.</ColorStop>
+          <ColorStop color={"var(--red)"}>.</ColorStop>
         </Subtitle>
         <HR />
         <RowImageContainer>
@@ -174,7 +174,7 @@ const PerformingContent = ({
     return (
       <>
         <Subtitle>
-          Music<ColorStop color={"var(--black)"}>.</ColorStop>
+          Music<ColorStop color={"var(--red)"}>.</ColorStop>
         </Subtitle>
         <HR />
         <RowImageContainer>

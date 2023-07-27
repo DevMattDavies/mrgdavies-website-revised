@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useContext, useState } from "react";
+import { useContext } from "react";
 import Link from "next/link";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -9,10 +9,6 @@ import {
   TitleContainer,
   LeftContainer,
   SocialsContainer,
-  NewsletterForm,
-  NewsletterInput,
-  NewsletterButton,
-  NewsletterFormLabel,
   InnerContainer,
 } from "@/styles/Footer/Footer.styles";
 
@@ -23,27 +19,14 @@ import {
   FooterLink,
 } from "@/styles/Text/Text.styles";
 
+import SubscriptionSection from "@/components/Footer/SubscriptionSection";
+
 import { DeviceContext } from "@/context";
 
 import { Device } from "@/types/device";
 
 const Footer = (): JSX.Element => {
   const { isDesktop }: Device = useContext(DeviceContext);
-  const [email, setEmail] = useState("");
-  const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
-
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    setEmail(e.target.value);
-  };
-
-  const handleEmailSubmit = (e: FormEvent<HTMLFormElement>): void => {
-    e.preventDefault();
-    if (email) {
-      setIsEmailSubmitted(true);
-    }
-  };
-
-  // TODO: Add email subscription functionality
 
   return (
     <FooterContainer>
@@ -103,42 +86,8 @@ const Footer = (): JSX.Element => {
             </FooterLink>
           </SocialsContainer>
         </SectionContainer>
-
         <SectionContainer>
-          <FooterSubheading>Subscribe</FooterSubheading>
-          <form
-            action="https://aol.us21.list-manage.com/subscribe/post?u=dac0c5b6a54c3b69565d9b2b5&amp;id=60f6604fd8&amp;f_id=004bbae1f0"
-            method="post"
-            id="mc-embedded-subscribe-form"
-            name="mc-embedded-subscribe-form"
-            className="validate"
-            target="_self"
-            onSubmit={handleEmailSubmit}
-          >
-            <NewsletterForm>
-              <NewsletterFormLabel htmlFor="mce-EMAIL">
-                Email Address
-              </NewsletterFormLabel>
-              <NewsletterInput
-                type="email"
-                name="EMAIL"
-                className="required email"
-                id="mce-EMAIL"
-                onChange={handleEmailChange}
-                value={isEmailSubmitted ? "" : email}
-                required
-              ></NewsletterInput>
-              <NewsletterButton
-                type="submit"
-                value={isEmailSubmitted ? "Submitted" : "Sign up"}
-                name="subscribe"
-                id="mc-embedded-subscribe"
-                className="button"
-              >
-                {isEmailSubmitted ? "Thanks!" : "Sign up"}
-              </NewsletterButton>
-            </NewsletterForm>
-          </form>
+          <SubscriptionSection />
         </SectionContainer>
       </InnerContainer>
     </FooterContainer>

@@ -13,7 +13,7 @@ export const WritingContent = ({
     return (
       <>
         <Subtitle>
-          Fiction<ColorStop color={"var(--black)"}>.</ColorStop>
+          Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
         </Subtitle>
         <HR />
         <RowImageContainer>
@@ -55,7 +55,7 @@ export const WritingContent = ({
     return (
       <>
         <Subtitle>
-          Scriptwriting<ColorStop color={"var(--black)"}>.</ColorStop>
+          Scriptwriting<ColorStop color={"var(--red)"}>.</ColorStop>
         </Subtitle>
         <HR />
         <RowImageContainer>
@@ -83,7 +83,7 @@ export const WritingContent = ({
     return (
       <>
         <Subtitle>
-          Stage<ColorStop color={"var(--black)"}>.</ColorStop>
+          Stage<ColorStop color={"var(--red)"}>.</ColorStop>
         </Subtitle>
         <HR />
         <RowImageContainer>
@@ -122,7 +122,7 @@ export const WritingContent = ({
     return (
       <>
         <Subtitle>
-          Non-Fiction<ColorStop color={"var(--black)"}>.</ColorStop>
+          Non-Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
         </Subtitle>
         <HR />
         <RowImageContainer>
@@ -148,7 +148,7 @@ export const WritingContent = ({
     return (
       <>
         <Subtitle>
-          Journalism<ColorStop color={"var(--black)"}>.</ColorStop>
+          Journalism<ColorStop color={"var(--red)"}>.</ColorStop>
         </Subtitle>
         <HR />
         <Text color={"var(--black)"}>
