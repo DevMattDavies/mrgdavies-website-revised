@@ -11,15 +11,18 @@ export const SectionImage = ({ src, alt }: ImageProps): JSX.Element => {
   let imageWidth = "12rem";
   let imageHeight = "auto";
   let imageBorder = "1px solid white";
+  let imageMargin = "0 auto";
 
   if (isTablet) {
     imageWidth = "18rem";
     imageHeight = "25rem";
     imageBorder = "2px solid white";
+    imageMargin = "0";
   } else if (isDesktop) {
     imageWidth = "15rem";
     imageHeight = "auto";
     imageBorder = "2px solid white";
+    imageMargin = "0";
   }
 
   return (
@@ -33,6 +36,7 @@ export const SectionImage = ({ src, alt }: ImageProps): JSX.Element => {
         height: imageHeight,
         display: "block",
         border: imageBorder,
+        margin: imageMargin,
       }}
       priority
     />
