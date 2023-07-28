@@ -5,6 +5,10 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    domains: ["live.staticflickr.com"],
+    loader: "default",
+  },
 };
 
 module.exports = nextConfig;

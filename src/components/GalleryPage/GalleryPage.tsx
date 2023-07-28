@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { photos } from "@/utils/allPhotos";
+import NextJsImage from "./NextJSImage";
+
 import {
   ContainerBackground,
   ContentContainer,
@@ -32,7 +34,9 @@ export const GalleryPage = (): JSX.Element => {
         <PhotoAlbum
           photos={photos}
           layout="columns"
+          renderPhoto={NextJsImage}
           onClick={({ index }) => setIndex(index)}
+          sizes={{ size: "100%" }}
         />
       </div>
       <Lightbox

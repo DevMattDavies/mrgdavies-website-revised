@@ -82,7 +82,8 @@ const NavLinks = ({ closeModalOnClick }: any): JSX.Element => {
                 Roleplaying<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
               <DropdownLink onClick={updateSubtitle}>
-                Public Speaking<ColorStop color={"var(--red)"}>.</ColorStop>
+                Public Speaking <br />& Lecturing
+                <ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>
               <DropdownLink onClick={updateSubtitle}>
                 Music<ColorStop color={"var(--red)"}>.</ColorStop>

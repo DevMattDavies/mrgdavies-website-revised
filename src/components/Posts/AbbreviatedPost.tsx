@@ -1,7 +1,7 @@
 import { Post } from "@/types/posts";
 import ReactMarkdown from "react-markdown";
 import { BlogDate, BlogTitle, HR } from "@/styles/Text/Text.styles";
-import { BlogImage } from "@/styles/Images/Image.styles";
+import { BlogImage } from "@/components/Images/Images";
 import {
   BlogContentContainer,
   BlogPostContainer,
@@ -17,7 +17,9 @@ const AbbreviatedPost = ({ post }: { post: Post }): JSX.Element => {
 
       <HR />
       <BlogContentContainer>
-        {post.post.cover && <BlogImage src={post.post.cover} />}
+        {post.post.cover && (
+          <BlogImage src={post.post.cover} alt={`${post.post.title} cover`} />
+        )}
         <BlogDate>{date}</BlogDate>
         <div id={"markdown"}>
           <ReactMarkdown>{post.markdownText}</ReactMarkdown>

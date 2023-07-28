@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
   ContainerBackground,
   ContentContainer,
@@ -10,10 +11,12 @@ import { ColorStop, Subtitle, Text } from "@/styles/Text/Text.styles";
 
 import Subtitles from "@/components/WritingPage-PerformingPage/Subtitles/Subtitles";
 import PerformingContent from "@/components/WritingPage-PerformingPage/Content/PerformingContent";
-import { HomeImage } from "@/styles/Images/Image.styles";
+import { SectionImage } from "@/components/Images/Images";
+
 import { WritingAndPerformingData } from "@/types/writingAndPerformingData";
-import { useContext } from "react";
 import { WritingAndPerformingDataContext } from "@/context";
+
+import moment_upright from "/public/images/moment_upright.jpg";
 
 export const PerformingPage = (): JSX.Element => {
   const { subtitle, updateSubtitle }: WritingAndPerformingData = useContext(
@@ -24,8 +27,8 @@ export const PerformingPage = (): JSX.Element => {
     <>
       <ContainerBackground red>
         <ContentContainer>
-          <HomeImage
-            src="/images/man_of_the_moment_upright.jpg"
+          <SectionImage
+            src={moment_upright}
             alt="man of the moment stage picture"
           />
           <TextContentContainer>

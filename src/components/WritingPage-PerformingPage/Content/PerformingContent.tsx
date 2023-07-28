@@ -1,6 +1,15 @@
 import { ColorStop, HR, Subtitle, Text } from "@/styles/Text/Text.styles";
-import { BlogImage } from "@/styles/Images/Image.styles";
 import { RowImageContainer } from "@/styles/Containers/Container.styles";
+import { BlogImage } from "@/components/Images/Images";
+
+import inside_job from "/public/images/inside_job.png";
+import professor_curvature from "/public/images/professor_curvature.jpg";
+import man_wide from "/public/images/man_of_the_moment_wide.jpg";
+import man_diving from "/public/images/man_of_the_moment_diving.jpg";
+import voiceover from "/public/images/voiceover.png";
+import collabro from "/public/images/collabro.png";
+import lee_mead from "/public/images/lee_mead.png";
+import public_speaking from "/public/images/public_speaking.png";
 
 type TPerformingContent = {
   performingSubtitle: string;
@@ -17,18 +26,9 @@ const PerformingContent = ({
         </Subtitle>
         <HR />
         <RowImageContainer>
-          <BlogImage
-            src="/images/professor_curvature.jpg"
-            alt="Curvature acting"
-          />
-          <BlogImage
-            src="/images/man_of_the_moment_wide.jpg"
-            alt="Man of the moment acting"
-          />
-          <BlogImage
-            src="/images/man_of_the_moment_diving.jpg"
-            alt="Man of the moment diving"
-          />
+          <BlogImage src={professor_curvature} alt="Curvature acting" />
+          <BlogImage src={man_wide} alt="Man of the moment acting" />
+          <BlogImage src={man_diving} alt="Man of the moment diving" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
           Under his stage name Michael Crask-Davies, Michael’s professional
@@ -58,10 +58,7 @@ const PerformingContent = ({
         </Subtitle>
         <HR />
         <RowImageContainer>
-          <BlogImage
-            src="/images/voiceover.png"
-            alt="Mike in recording studio"
-          />
+          <BlogImage src={voiceover} alt="Mike in recording studio" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
           Michael has considerable radio and studio experience and a lovely
@@ -85,13 +82,10 @@ const PerformingContent = ({
         <HR />
         <RowImageContainer>
           <BlogImage
-            src="/images/collabro.png"
+            src={collabro}
             alt="Mike on guest panel at Collabro event"
           />
-          <BlogImage
-            src="/images/lee_mead.png"
-            alt="Mike speaking with Lee Mead"
-          />
+          <BlogImage src={lee_mead} alt="Mike speaking with Lee Mead" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
           Michael is a highly experienced presenter and panellist and can host
@@ -139,10 +133,7 @@ const PerformingContent = ({
         </Subtitle>
         <HR />
         <RowImageContainer>
-          <BlogImage
-            src="/images/public_speaking.png"
-            alt="Mike speaking to the public"
-          />
+          <BlogImage src={public_speaking} alt="Mike speaking to the public" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
           A national award-winning public speaker, Michael is highly experienced
@@ -178,7 +169,8 @@ const PerformingContent = ({
         </Subtitle>
         <HR />
         <RowImageContainer>
-          <BlogImage src="/images/inside_job.png" alt="Inside job band photo" />
+          {/*<BlogImage src="/images/inside_job.png" alt="Inside job band photo" />*/}
+          <BlogImage src={inside_job} alt="mike headshot" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
           A multi-instrumentalist and vocalist with extensive live and studio

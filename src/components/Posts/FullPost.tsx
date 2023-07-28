@@ -1,7 +1,7 @@
 import { Post } from "@/types/posts";
 import { Subtitle, BlogDate, HR } from "@/styles/Text/Text.styles";
 import ReactMarkdown from "react-markdown";
-import { BlogImage } from "@/styles/Images/Image.styles";
+import { BlogImage } from "@/components/Images/Images";
 import {
   BlogPostContainer,
   BlogContentContainer,
@@ -16,7 +16,9 @@ const FullPost = ({ post, markdownText }: Post): JSX.Element => {
       <BlogDate>{date}</BlogDate>
       <HR />
       <BlogContentContainer>
-        {post.cover && <BlogImage src={post.cover} />}
+        {post.cover && (
+          <BlogImage src={post.cover} alt={`${post.title} cover`} />
+        )}
         <ReactMarkdown>{markdownText}</ReactMarkdown>
       </BlogContentContainer>
     </BlogPostContainer>

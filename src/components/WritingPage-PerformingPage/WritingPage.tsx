@@ -14,7 +14,9 @@ import { WritingAndPerformingData } from "@/types/writingAndPerformingData";
 
 import Subtitles from "@/components/WritingPage-PerformingPage/Subtitles/Subtitles";
 import WritingContent from "@/components/WritingPage-PerformingPage/Content/WritingContent";
-import { HomeImage } from "@/styles/Images/Image.styles";
+import { SectionImage } from "@/components/Images/Images";
+
+import outback_cover from "/public/images/outback_cover.png";
 
 export const WritingPage = (): JSX.Element => {
   const { subtitle, updateSubtitle }: WritingAndPerformingData = useContext(
@@ -25,7 +27,7 @@ export const WritingPage = (): JSX.Element => {
     <>
       <ContainerBackground red>
         <ContentContainer>
-          <HomeImage src="/images/outback_cover.png" alt="bagley novel" />
+          <SectionImage src={outback_cover} alt="bagley novel" />
           <TextContentContainer>
             <Subtitle color={"var(--white)"}>
               Writing<ColorStop color={"var(--black)"}>.</ColorStop>

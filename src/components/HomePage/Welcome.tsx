@@ -1,16 +1,18 @@
+import { SectionImage } from "@/components/Images/Images";
 import { Subtitle, ColorStop, Text } from "@/styles/Text/Text.styles";
 import {
   ContainerBackground,
   ContentContainer,
   HomeTextContentContainer,
 } from "@/styles/Containers/Container.styles";
-import { HomeImage } from "@/styles/Images/Image.styles";
+
+import MD_1 from "/public/images/MD_1.jpg";
 
 const Welcome = (): JSX.Element => {
   return (
     <ContainerBackground red>
       <ContentContainer>
-        <HomeImage src="/images/MD_1.jpg" alt="mike headshot" />
+        <SectionImage src={MD_1} alt="mike headshot" />
         <HomeTextContentContainer>
           <Subtitle color={"var(--white)"}>
             Welcome<ColorStop color={"var(--black)"}>.</ColorStop>

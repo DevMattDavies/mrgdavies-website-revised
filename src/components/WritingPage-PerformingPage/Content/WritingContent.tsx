@@ -1,6 +1,17 @@
 import { ColorStop, HR, Subtitle, Text } from "@/styles/Text/Text.styles";
-import { BlogImage } from "@/styles/Images/Image.styles";
+import { BlogImage } from "@/components/Images/Images";
 import { RowImageContainer } from "@/styles/Containers/Container.styles";
+
+import outback_cover from "/public/images/outback_cover.png";
+import domino_island from "/public/images/domino_island_cover.jpg";
+import lancashire_stories from "/public/images/lancashire_stories_cover.jpeg";
+import vicious_circle from "/public/images/vicious_circle_cover.jpg";
+import meet_marry_murder from "/public/images/meet_marry_murder.png";
+import rasputins_mother from "/public/images/rasputins_mother.jpg";
+import reality from "/public/images/reality.jpg";
+import tess from "/public/images/tess.png";
+import machamlear from "/public/images/machamlear.png";
+import whatsonstage from "/public/images/whatsonstage.png";
 
 type TWritingContent = {
   writingSubtitle: string;
@@ -17,19 +28,13 @@ export const WritingContent = ({
         </Subtitle>
         <HR />
         <RowImageContainer>
-          <BlogImage src="/images/outback_cover.png" alt="outback book cover" />
+          <BlogImage src={outback_cover} alt="outback book cover" />
+          <BlogImage src={domino_island} alt="domino island book cover" />
           <BlogImage
-            src="/images/domino_island_cover.jpg"
-            alt="domino island book cover"
-          />
-          <BlogImage
-            src="/images/lancashire_stories_cover.jpeg"
+            src={lancashire_stories}
             alt="lancashire stories book cover"
           />
-          <BlogImage
-            src="/images/vicious_circle_cover.jpg"
-            alt="vicious circle book cover"
-          />
+          <BlogImage src={vicious_circle} alt="vicious circle book cover" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
           <i>Outback</i>, Michael’s debut novel published in May 2023 by
@@ -59,10 +64,7 @@ export const WritingContent = ({
         </Subtitle>
         <HR />
         <RowImageContainer>
-          <BlogImage
-            src="/images/meet_marry_murder.png"
-            alt="meet marry murder image"
-          />
+          <BlogImage src={meet_marry_murder} alt="meet marry murder image" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
           Michael has written more than 20 hours of narrative non-fiction for
@@ -87,13 +89,10 @@ export const WritingContent = ({
         </Subtitle>
         <HR />
         <RowImageContainer>
-          <BlogImage
-            src="/images/rasputins_mother.jpg"
-            alt="Rasputin's mother"
-          />
-          <BlogImage src="/images/reality.jpg" alt="Reality" />
-          <BlogImage src="/images/tess.png" alt="Tess" />
-          <BlogImage src="/images/machamlear.png" alt="MacHamLear" />
+          <BlogImage src={rasputins_mother} alt="Rasputin's mother" />
+          <BlogImage src={reality} alt="Reality" />
+          <BlogImage src={tess} alt="Tess" />
+          <BlogImage src={machamlear} alt="MacHamLear" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
           Michael’s first full-length stage play <i>Rasputin&apos;s Mother</i>{" "}
@@ -126,7 +125,7 @@ export const WritingContent = ({
         </Subtitle>
         <HR />
         <RowImageContainer>
-          <BlogImage src="/images/whatsonstage.png" alt="Whatsonstage logo" />
+          <BlogImage src={whatsonstage} alt="Whatsonstage logo" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
           Michael has been a professional theatre critic for 30 years. His work

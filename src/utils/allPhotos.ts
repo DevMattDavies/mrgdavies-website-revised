@@ -1,4 +1,3 @@
-import Image from "next/image";
 import bagley_covers from "../../public/images/bagley_covers.jpg";
 import collabro from "../../public/images/collabro.png";
 import desmond_bagley from "../../public/images/desmond_bagley.jpeg";
@@ -10,7 +9,7 @@ import lancashire_stories_cover from "../../public/images/lancashire_stories_cov
 import lee_mead from "../../public/images/lee_mead.png";
 import machamlear from "../../public/images/machamlear.png";
 import man_of_the_moment_diving from "../../public/images/man_of_the_moment_diving.jpg";
-import man_of_the_moment_upright from "../../public/images/man_of_the_moment_upright.jpg";
+import man_of_the_moment_upright from "../../public/images/moment_upright.jpg";
 import man_of_the_moment_wide from "../../public/images/man_of_the_moment_wide.jpg";
 import MD_1 from "../../public/images/MD_1.jpg";
 import meet_marry_murder from "../../public/images/meet_marry_murder.png";
