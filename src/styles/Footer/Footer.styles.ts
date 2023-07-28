@@ -115,3 +115,9 @@ export const NewsletterButton = styled.button`
     background: var(--red);
   }
 `;
+
+export const NewsletterConfirmation = styled.p`
+  font-size: 0.8rem;
+  color: var(--red);
+  font-family: "Montserrat", sans-serif;
+`;
