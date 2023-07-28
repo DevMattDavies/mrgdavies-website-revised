@@ -111,6 +111,9 @@ export const SeeAllPosts = styled(NavLink)`
   font-family: "Lora", serif;
   text-align: right;
   font-style: italic;
+  &:after {
+    height: 1px;
+  }
 `;
 
 // Footer styles

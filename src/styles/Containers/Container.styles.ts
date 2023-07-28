@@ -148,7 +148,13 @@ export const SeeAllPostsContainer = styled.div`
   justify-content: flex-end;
   gap: 0.8rem;
   align-items: center;
-  margin-top: 4rem;
+  padding: 2rem var(--mobile-padding);
+  width: 100%;
+
+  @media screen and ${device.tablet} {
+    max-width: var(--max-page-width);
+    margin-top: 0;
+  }
 `;
 
 // Writing / Performing containers

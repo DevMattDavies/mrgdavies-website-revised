@@ -11,7 +11,11 @@ import FullPost from "@/components/Posts/FullPost";
 import {
   ContainerBackground,
   ContentContainer,
+  SeeAllPostsContainer,
 } from "@/styles/Containers/Container.styles";
+import Link from "next/link";
+import { SeeAllPosts } from "@/styles/Text/Text.styles";
+import EastIcon from "@mui/icons-material/East";
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -21,6 +25,14 @@ export const SingleBlogPostPage: NextPage = ({ post }: PageProps) => {
       <ContentContainer>
         <FullPost post={post.post} markdownText={post.markdownText} />
       </ContentContainer>
+      <div style={{ width: "80%" }}>
+        <SeeAllPostsContainer>
+          <Link href="/posts" passHref legacyBehavior>
+            <SeeAllPosts>All posts</SeeAllPosts>
+          </Link>
+          <EastIcon style={{ color: "var(--red)" }} />
+        </SeeAllPostsContainer>
+      </div>
     </ContainerBackground>
   );
 };
