@@ -4,12 +4,12 @@ import pageToPostTransform from "@/utils/pageToPostTransform";
 
 const getAllPosts = () => {
   const notion = new Client({
-    auth: process.env.NOTION_KEY,
+    auth: process.env.NOTION_BLOG_KEY,
   });
 
   const getPublishedBlogPosts = async (): Promise<Posts[]> => {
     const response = await notion.databases.query({
-      database_id: process.env.NOTION_DATABASE!,
+      database_id: process.env.NOTION_BLOG_DATABASE!,
       filter: {
         property: "Publish",
         checkbox: {

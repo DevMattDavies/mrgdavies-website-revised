@@ -55,7 +55,6 @@ export const BlogImage = ({ src, alt }: ImageProps): JSX.Element => {
         height: "10rem",
         display: "block",
       }}
-      priority
     />
   );
 };

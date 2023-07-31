@@ -5,7 +5,7 @@ import pageToPostTransform from "@/utils/pageToPostTransform";
 
 const getAbbreviatedPosts = (slugs: string[]) => {
   const notion = new Client({
-    auth: process.env.NOTION_KEY,
+    auth: process.env.NOTION_BLOG_KEY,
   });
   const n2m = new NotionToMarkdown({ notionClient: notion });
   const getAbbreviatedBlogPost = async (): Promise<Post[]> => {
@@ -13,7 +13,7 @@ const getAbbreviatedPosts = (slugs: string[]) => {
     for (const slug of slugs) {
       let post, markdown, markdownText;
       const response = await notion.databases.query({
-        database_id: process.env.NOTION_DATABASE!,
+        database_id: process.env.NOTION_BLOG_DATABASE!,
         filter: {
           property: "slug",
           formula: {
@@ -30,7 +30,10 @@ const getAbbreviatedPosts = (slugs: string[]) => {
       post = pageToPostTransform(page);
 
       if (markdownText.length > 300) {
-        markdownText = `${markdownText.slice(0, 300)}...[read more](/posts/${slug})`;
+        markdownText = `${markdownText.slice(
+          0,
+          300
+        )}...[read more](/posts/${slug})`;
       } else {
         markdownText = `${markdownText.slice(
           0,

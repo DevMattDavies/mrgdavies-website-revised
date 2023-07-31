@@ -41,11 +41,14 @@ export const WritingContent = ({
           HarperCollins, is the culmination of years of fiction-writing. It
           features the protagonist Bill Kemp – described by Jeffrey Deaver as
           ‘part James Bond, part Philip Marlowe, and all hero’ – who first
-          appeared in the Desmond Bagley thriller <i>Domino Island</i> , which
+          appeared in the Desmond Bagley thriller <i>Domino Island</i>, which
           Michael was commissioned to complete for posthumous publication in
-          2019.
-          <i>Outback</i> is a kind of sequel and honours the legacy of the
+          2019. <i>Outback</i> is a kind of sequel and honours the legacy of the
           ‘master of the genre’ Bagley in the centenary year of his birth.
+        </Text>
+        <Text>
+          The next novel in the Bill Kemp thriller series, <i>Thin Ice</i>, is
+          due to be published in 2024.
         </Text>
         <Text>
           Elsewhere, Michael contributed to <i>Vicious Circle</i>, a

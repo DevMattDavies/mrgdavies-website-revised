@@ -5,13 +5,13 @@ import pageToPostTransform from "@/utils/pageToPostTransform";
 
 const getSinglePost = (slug: string) => {
   const notion = new Client({
-    auth: process.env.NOTION_KEY,
+    auth: process.env.NOTION_BLOG_KEY,
   });
   const n2m = new NotionToMarkdown({ notionClient: notion });
   const getSingleBlogPost = async (): Promise<Post> => {
     let post, markdown, markdownText;
     const response = await notion.databases.query({
-      database_id: process.env.NOTION_DATABASE!,
+      database_id: process.env.NOTION_BLOG_DATABASE!,
       filter: {
         property: "slug",
         formula: {
