@@ -29,30 +29,6 @@ export const GlobalStyles = createGlobalStyle`
     flex-direction: column;
     position: relative;
   }
-
-  @font-face {
-    font-family: "Lora";
-    src: url('/fonts/Lora-Regular.woff2') format('woff2'),
-    url('/fonts/Lora-Italic.woff2') format('woff2');
-  }
-
-  @font-face {
-    font-family: "Asterone";
-    src: url('/fonts/Asterone-Regular.woff2') format('woff2');
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Asterone Outline";
-    src: url('/fonts/AsteroneOutline-Regular.woff2') format('woff2');
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Montserrat";
-    src: url('/fonts/Montserrat-Bold.woff2') format('woff2');
-    font-style: normal;
-  }
 `;
 
 export default GlobalStyles;

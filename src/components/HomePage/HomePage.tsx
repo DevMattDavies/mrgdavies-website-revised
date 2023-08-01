@@ -1,5 +1,4 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import EastIcon from "@mui/icons-material/East";
 import getAllPosts from "@/utils/getAllPosts";
