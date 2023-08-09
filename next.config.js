@@ -9,6 +9,21 @@ const nextConfig = {
     domains: ["live.staticflickr.com"],
     loader: "default",
   },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(mp4)$/,
+      use: {
+        loader: "file-loader",
+        options: {
+          publicPath: "/_next/static/",
+          outputPath: "static",
+          name: "[name].[hash].[ext]",
+        },
+      },
+    });
+
+    return config;
+  },
 };
 
 module.exports = nextConfig;

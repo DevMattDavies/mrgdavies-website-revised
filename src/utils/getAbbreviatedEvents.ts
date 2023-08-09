@@ -29,18 +29,6 @@ const getAbbreviatedEvents = (slugs: string[]) => {
       markdownText = markdown.parent;
       post = pageToPostTransform(page);
 
-      // if (markdownText.length > 300) {
-      //   markdownText = `${markdownText.slice(
-      //     0,
-      //     300
-      //   )}...[read more](/events/${slug})`;
-      // } else {
-      //   markdownText = `${markdownText.slice(
-      //     0,
-      //     markdownText.length - 2
-      //   )}...[read more](events/${slug})`;
-      // }
-
       events.push({
         post,
         markdownText,

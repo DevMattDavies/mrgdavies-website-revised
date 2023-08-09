@@ -6,20 +6,18 @@ import {
   BlogPostContainer,
   BlogContentContainer,
 } from "@/styles/Containers/Container.styles";
-import { format } from "date-fns";
 
 const FullPost = ({ post, markdownText }: Post): JSX.Element => {
-  const date = format(new Date(post.date), "MMMM dd, yyyy");
   return (
     <BlogPostContainer>
       <Subtitle>{post.title}</Subtitle>
-      <BlogDate>{date}</BlogDate>
+      <BlogDate>{post.formattedDate}</BlogDate>
       <HR />
       <BlogContentContainer>
         {post.cover && (
           <BlogImage src={post.cover} alt={`${post.title} cover`} />
         )}
-        <ReactMarkdown>{markdownText}</ReactMarkdown>
+        <ReactMarkdown className="linebreak">{markdownText}</ReactMarkdown>
       </BlogContentContainer>
     </BlogPostContainer>
   );

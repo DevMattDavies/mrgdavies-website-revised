@@ -148,6 +148,6 @@ export const FooterCopyright = styled.p`
 `;
 
 export const HR = styled.hr`
-  width: 10rem;
+  width: 50%;
   border: 0.7px solid var(--red);
 `;

@@ -29,6 +29,10 @@ export const GlobalStyles = createGlobalStyle`
     flex-direction: column;
     position: relative;
   }
+  
+  .linebreak {
+    white-space: pre-wrap;
+  }
 `;
 
 export default GlobalStyles;

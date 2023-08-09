@@ -1,3 +1,4 @@
+import ReactPlayer from "react-player";
 import { ColorStop, HR, Subtitle, Text } from "@/styles/Text/Text.styles";
 import { RowImageContainer } from "@/styles/Containers/Container.styles";
 import { BlogImage } from "@/components/Images/Images";
@@ -10,6 +11,8 @@ import voiceover from "/public/images/voiceover.png";
 import collabro from "/public/images/collabro.png";
 import lee_mead from "/public/images/lee_mead.png";
 import public_speaking from "/public/images/public_speaking.png";
+
+import outback_audio from "public/audio/outback_audio.mp4";
 
 type TPerformingContent = {
   performingSubtitle: string;
@@ -72,6 +75,13 @@ const PerformingContent = ({
           broadcast on national networks including Radio 4, Radio Five Live and
           Times Radio.
         </Text>
+        <ReactPlayer
+          url={outback_audio}
+          controls
+          height={200}
+          width={"80%"}
+          style={{ marginTop: "2rem" }}
+        />
       </>
     );
   } else if (performingSubtitle === "Presenting.") {
@@ -170,7 +180,6 @@ const PerformingContent = ({
         </Subtitle>
         <HR />
         <RowImageContainer>
-          {/*<BlogImage src="/images/inside_job.png" alt="Inside job band photo" />*/}
           <BlogImage src={inside_job} alt="mike headshot" />
         </RowImageContainer>
         <Text color={"var(--black)"}>

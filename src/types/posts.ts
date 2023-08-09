@@ -3,7 +3,7 @@ export type Posts = {
   title: string;
   slug: string;
   cover?: string;
-  date: string;
+  formattedDate: string | undefined;
 };
 
 export type Post = {
