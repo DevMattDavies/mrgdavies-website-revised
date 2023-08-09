@@ -4,7 +4,7 @@ import {
   Stage,
   NonFiction,
   Journalism,
-} from "@/components/WritingPage-PerformingPage/WritingContent";
+} from "./WritingContent";
 
 type TWritingContent = {
   writingSubtitle: string;

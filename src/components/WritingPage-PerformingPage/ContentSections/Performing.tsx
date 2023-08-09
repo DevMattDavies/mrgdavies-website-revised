@@ -5,7 +5,7 @@ import {
   Roleplaying,
   PublicSpeaking,
   Music,
-} from "@/components/WritingPage-PerformingPage/PerformingContent";
+} from "./PerformingContent";
 
 type TPerformingContent = {
   performingSubtitle: string;
