@@ -2,6 +2,8 @@ import { ColorStop, HR, Subtitle, Text } from "@/styles/Text/Text.styles";
 import { BlogImage } from "@/components/Images/Images";
 import { RowImageContainer } from "@/styles/Containers/Container.styles";
 
+import YouTubeEmbed from "@/components/WritingPage-PerformingPage/Content/YouTubeEmbed";
+
 import outback_cover from "/public/images/outback_cover.png";
 import domino_island from "/public/images/domino_island_cover.jpg";
 import lancashire_stories from "/public/images/lancashire_stories_cover.jpeg";
@@ -98,26 +100,56 @@ export const WritingContent = ({
           <BlogImage src={machamlear} alt="MacHamLear" />
         </RowImageContainer>
         <Text color={"var(--black)"}>
-          Michael’s first full-length stage play <i>Rasputin&apos;s Mother</i>{" "}
-          was named the overall winner of what is now the Bristol Old Vic
-          Playwriting Competition and was professionally produced in Yorkshire
-          and Birmingham.
+          <i>MacHamLear</i>, Michael&apos;s farcical exploitation of three of
+          Shakespeare&apos;s finest tragedies, tours the UK and Ireland in the
+          summer of 2023.
         </Text>
         <Text>
-          The follow-up, <i>Reality</i>, received a staged reading at the Royal
-          & Derngate, Northampton, directed by Gary Sefton and starring Robert
-          Daws and Michael Fenton Stevens. Subsequent stage work includes{" "}
-          <i>This American Carnage</i> and a new comedy, <i>MacHamLear</i>,
-          which tours the UK and Ireland in 2023. His monologue{" "}
-          <i>South Sea Bubble</i> was shortlisted in the Lyric
-          Hammersmith/Warwick Arts Centre Playwriting Competition and he has
-          also adapted Dickens’s <i>The Pickwick Papers</i> for the stage.
+          Heartbreak Productions, specialists in outdoor theatre, take the show
+          on a 50-date jaunt around these isles from June to September. For more
+          details and to book tickets, visit their website{" "}
+          <a
+            target="_blank"
+            href="https://www.heartbreakproductions.co.uk/show/machamlear/"
+          >
+            here
+          </a>
+          , and you can see a trailer for the show below.
+        </Text>
+        <Text>
+          Besides commissioned work, such as an adaptation of Dickens&apos;s{" "}
+          <i>The Pickwick Papers</i> for Catch Theatre Company, Michael&apos;s
+          original stage work includes full-length and one-act plays.
+        </Text>
+        <Text>
+          His two-act &apos;fantasy history&apos; <i>Rasputin&apos;s Mother</i>{" "}
+          won the national Ronald Duncan Playwriting Competition, he was
+          shortlisted in the 2014 Lyric Hammersmith/Warwick Arts Centre
+          Playwriting Competition for his monologue <i>South Sea Bubble</i>, and
+          his follow-up play, Reality, received a staged reading at the Royal &
+          Derngate in Northampton, directed by{" "}
+          <a target="_blank" href="https://www.garysefton.co.uk/">
+            Gary Sefton
+          </a>
+          .
+        </Text>
+        <Text>
+          Michael has also written a host of comic material from pantomime
+          scripts to revues.
         </Text>
         <Text>
           Michael served as bookwriter and lyricist on <i>Tess</i>, a
           sung-through musical adaptation of <i>Tess of the D’Urbervilles</i>,
-          workshopped at the RSC’s The Other Place in Stratford-upon-Avon.
+          workshopped at the RSC’s The Other Place in Stratford-upon-Avon. For
+          more information about the show please visit{" "}
+          <i>
+            <a target="_blank" href="http://www.tessthemusical.com/">
+              Tess The Musical
+            </a>
+          </i>
+          .
         </Text>
+        <YouTubeEmbed />
       </>
     );
   } else if (writingSubtitle === "Non-Fiction.") {

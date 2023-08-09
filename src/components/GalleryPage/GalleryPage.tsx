@@ -40,12 +40,10 @@ export const GalleryPage = (): JSX.Element => {
         />
       </div>
       <Lightbox
-        // TODO: Try and set zoom levels on specific images
         slides={photos}
         open={index >= 0}
         index={index}
         close={() => setIndex(-1)}
-        // enable optional lightbox plugins
         plugins={[Fullscreen, Slideshow, Thumbnails, Zoom, Captions]}
         captions={{ descriptionTextAlign: "center" }}
         thumbnails={{ height: 100, width: 150 }}

@@ -33,24 +33,52 @@ export const WritingPage = (): JSX.Element => {
               Writing<ColorStop color={"var(--black)"}>.</ColorStop>
             </Subtitle>
             <Text color={"var(--white)"}>
-              Since he abandoned a promising career as a newspaper editor,
-              Michael’s writing has appeared on stage, screen, radio, the
-              printed page and online. His debut play <i>Rasputin’s Mother</i>{" "}
-              won what is now the Bristol Old Vic playwriting competition and
-              subsequent work for the stage includes the comedies <i>Reality</i>{" "}
-              (Royal & Derngate, Northampton) and <i>This American Carnage</i>.
-              He has also written narrative non-fiction for worldwide television
-              (Netflix no.1), had short stories and poetry commissioned and
-              published, and contributes regular essays for theatre programmes.
+              Michael&apos;s writing has appeared on stage, screen, radio,
+              t&apos;Interweb and the printed page.
             </Text>
             <Text color={"var(--white)"}>
-              Michael wrote the book and lyrics for <i>Tess – The Musical</i>,
-              an adaptation of Thomas Hardy’s classic{" "}
-              <i>Tess of the d’Urbervilles</i> (The Other Place,
-              Stratford-upon-Avon), and completed Desmond Bagley’s thriller{" "}
-              <i>Domino Island</i> for posthumous publication. <i>Outback</i>,
-              the first novel he can call all his own, is published by
-              HarperCollins.
+              He&apos;s currently writing a new Bill Kemp novel, Thin Ice, as a
+              sequel to 2023&apos;s <i>Outback</i>.
+            </Text>
+            <Text color={"var(--white)"}>
+              He wrote the book and lyrics for the musical <i>Tess</i>,
+              co-written with composer Michael Blore. An adaptation of Thomas
+              Hardy&apos;s much-loved epic <i>Tess of the d&apos;Urbervilles</i>
+              , the show received standing ovations at workshop performances in
+              The Other Place at the RSC in Stratford-upon-Avon.
+            </Text>
+            <Text color={"var(--white)"}>
+              His debut original stage play, <i>Rasputin&apos;s Mother</i>, won
+              the national playwriting competition and was professionally
+              produced in Yorkshire and Birmingham.
+            </Text>
+            <Text color={"var(--white)"}>
+              His monologue <i>South Sea Bubble</i> was shortlisted for the
+              Lyric Hammersmith/ Warwick Arts Centre Playwriting Competition.
+            </Text>
+            <Text color={"var(--white)"}>
+              His play <i>Reality</i> received a staged reading at the Royal &
+              Derngate, Northampton, directed by Gary Sefton and starring Robert
+              Daws and Michael Fenton Stevens, while his Shakespeare-themed
+              farce <i>MacHamLear</i> toured the UK and Ireland in the summer of
+              2023.
+            </Text>
+            <Text color={"var(--white)"}>
+              After a successful career editing newspapers, Michael graduated
+              with an MA in TV Scriptwriting from De Montfort University and has
+              a wide portfolio of television scripts. He has also written radio
+              plays, one of which has Sir Derek Jacobi attached and is currently
+              being taken through the BBC’s commissioning process by a Radio 4
+              staff producer. Other work includes feature films, corporate and
+              online scripts and short stories.
+            </Text>
+            <Text color={"var(--white)"}>
+              Michael has been a professional theatre critic for 30 years. His
+              work has appeared in national newspapers and he has been a regular
+              reviewer for <i>The Stage</i>, as well as serving as resident
+              critic for a host of regional titles. His reviews can be read at
+              whatsonstage.com as well as on his own website,
+              www.stagereviews.co.uk
             </Text>
           </TextContentContainer>
         </ContentContainer>

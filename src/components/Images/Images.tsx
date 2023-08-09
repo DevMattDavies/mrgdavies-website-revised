@@ -19,8 +19,8 @@ export const SectionImage = ({ src, alt }: ImageProps): JSX.Element => {
     imageBorder = "2px solid white";
     imageMargin = "0";
   } else if (isDesktop) {
-    imageWidth = "15rem";
-    imageHeight = "auto";
+    imageWidth = "auto";
+    imageHeight = "25rem";
     imageBorder = "2px solid white";
     imageMargin = "0";
   }
@@ -29,8 +29,8 @@ export const SectionImage = ({ src, alt }: ImageProps): JSX.Element => {
     <Image
       src={src}
       alt={alt}
-      width={1000}
-      height={1000}
+      width={2000}
+      height={2000}
       style={{
         width: imageWidth,
         height: imageHeight,

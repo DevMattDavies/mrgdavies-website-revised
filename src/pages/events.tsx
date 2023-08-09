@@ -1,1 +1,4 @@
-export { EventsPage as default } from "../components/EventsPage/EventsPage";
+export {
+  EventsPage as default,
+  getStaticProps,
+} from "../components/EventsPage/EventsPage";

@@ -1,5 +1,7 @@
 import { useContext, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { router } from "next/client";
 import { DeviceContext, WritingAndPerformingDataContext } from "@/context";
 import { ColorStop, NavLink, DropdownLink } from "@/styles/Text/Text.styles";
 import { LinksContainer, NavDropdown } from "@/styles/Navbar/Navbar.styles";
@@ -9,6 +11,8 @@ import { Device } from "@/types/device";
 const NavLinks = ({ closeModalOnClick }: any): JSX.Element => {
   const [isWritingHovered, setIsWritingHovered] = useState(false);
   const [isPerformingHovered, setIsPerformingHovered] = useState(false);
+
+  const router = useRouter();
 
   const { isDesktop }: Device = useContext(DeviceContext);
 
@@ -24,6 +28,11 @@ const NavLinks = ({ closeModalOnClick }: any): JSX.Element => {
     setIsPerformingHovered((isPerformingHovered) => !isPerformingHovered);
   };
 
+  const handleAllPostsRoute = (e: any) => {
+    e.preventDefault();
+    router.push("/posts");
+  };
+
   return (
     <LinksContainer>
       <Link href="/" passHref legacyBehavior>
@@ -32,7 +41,7 @@ const NavLinks = ({ closeModalOnClick }: any): JSX.Element => {
           <ColorStop color={"var(--red)"}>.</ColorStop>
         </NavLink>
       </Link>
-      <Link href="/writing" passHref legacyBehavior>
+      <Link href="/writing" legacyBehavior>
         <NavLink
           onClick={isDesktop ? updateSubtitle : closeModalOnClick}
           onMouseEnter={handleWritingHover}
@@ -41,6 +50,9 @@ const NavLinks = ({ closeModalOnClick }: any): JSX.Element => {
           Writing<ColorStop color={"var(--red)"}>.</ColorStop>
           {isDesktop && isWritingHovered && (
             <NavDropdown>
+              <DropdownLink onClick={handleAllPostsRoute}>
+                Blog Posts<ColorStop color={"var(--red)"}>.</ColorStop>
+              </DropdownLink>
               <DropdownLink onClick={updateSubtitle}>
                 Fiction<ColorStop color={"var(--red)"}>.</ColorStop>
               </DropdownLink>

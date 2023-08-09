@@ -16,6 +16,7 @@ import {
 
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { FacebookOutlined } from "@mui/icons-material";
 import LanguageIcon from "@mui/icons-material/Language";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
@@ -28,14 +29,14 @@ export const ContactPage = (): JSX.Element => {
           <Subtitle color={"var(--white)"}>
             Contact<ColorStop color={"var(--black)"}>.</ColorStop>
           </Subtitle>
-          <TextContentContainer style={{ gap: "3rem" }}>
+          <TextContentContainer style={{ gap: "2rem" }}>
             <ContactContainer>
               <MailOutlineIcon style={{ fontSize: "2rem", color: "white" }} />
               <ContactLink
-                href="mailto: mrgdavies@aol.com"
+                href="mailto: mrgdavies@icloud.com"
                 color={"var(--white)"}
               >
-                Email me
+                mrgdavies@icloud.com
               </ContactLink>
             </ContactContainer>
             <ContactContainer>
@@ -46,6 +47,16 @@ export const ContactPage = (): JSX.Element => {
                 color={"var(--white)"}
               >
                 @mrgdavies
+              </ContactLink>
+            </ContactContainer>
+            <ContactContainer>
+              <FacebookOutlined style={{ fontSize: "2rem", color: "white" }} />
+              <ContactLink
+                href="https://www.facebook.com/profile.php?id=100068331726986"
+                target="_blank"
+                color={"var(--white)"}
+              >
+                Michael Davies - Author
               </ContactLink>
             </ContactContainer>
           </TextContentContainer>

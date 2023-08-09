@@ -82,12 +82,6 @@ export const NewsletterForm = styled.div`
   gap: 1rem;
 `;
 
-export const NewsletterFormLabel = styled.label`
-  font-size: 0.8rem;
-  color: var(--white);
-  font-family: "Montserrat", sans-serif;
-`;
-
 export const NewsletterInput = styled.input`
   font-size: 0.8rem;
   border: none;

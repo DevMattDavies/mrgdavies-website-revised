@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Link from "next/link";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { FacebookOutlined } from "@mui/icons-material";
 import {
   FooterContainer,
   SectionContainer,
@@ -70,9 +71,9 @@ const Footer = (): JSX.Element => {
             <MailOutlineIcon style={{ color: "var(--red)" }} />
             <FooterLink
               style={{ textDecoration: "none" }}
-              href="mailto:mrgdavies@aol.com"
+              href="mailto:mrgdavies@icloud.com"
             >
-              Email
+              mrgdavies@icloud.com
             </FooterLink>
           </SocialsContainer>
           <SocialsContainer>
@@ -82,7 +83,17 @@ const Footer = (): JSX.Element => {
               href="https://twitter.com/mrgdavies"
               target="_blank"
             >
-              Twitter
+              @mrgdavies
+            </FooterLink>
+          </SocialsContainer>
+          <SocialsContainer>
+            <FacebookOutlined style={{ color: "var(--red)" }} />
+            <FooterLink
+              style={{ textDecoration: "none" }}
+              href="https://www.facebook.com/profile.php?id=100068331726986"
+              target="_blank"
+            >
+              Michael Davies - Author
             </FooterLink>
           </SocialsContainer>
         </SectionContainer>

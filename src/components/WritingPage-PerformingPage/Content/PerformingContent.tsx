@@ -69,7 +69,8 @@ const PerformingContent = ({
         </Text>
         <Text>
           Besides a regular slot on a BBC local radio station, Michael has
-          broadcast on national networks including Radio 4 and Radio Five Live.
+          broadcast on national networks including Radio 4, Radio Five Live and
+          Times Radio.
         </Text>
       </>
     );
