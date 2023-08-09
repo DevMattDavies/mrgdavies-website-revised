@@ -13,7 +13,7 @@ import { WritingAndPerformingDataContext } from "@/context";
 import { WritingAndPerformingData } from "@/types/writingAndPerformingData";
 
 import Subtitles from "@/components/WritingPage-PerformingPage/Subtitles/Subtitles";
-import WritingContent from "@/components/WritingPage-PerformingPage/Content/WritingContent";
+import Writing from "@/components/WritingPage-PerformingPage/ContentSections/Writing";
 import { SectionImage } from "@/components/Images/Images";
 
 import outback_cover from "/public/images/outback_cover.png";
@@ -93,7 +93,7 @@ export const WritingPage = (): JSX.Element => {
             />
           </WritingAndPerformingSubtitlesContainer>
           <WritingAndPerformingContainer>
-            <WritingContent writingSubtitle={subtitle} />
+            <Writing writingSubtitle={subtitle} />
           </WritingAndPerformingContainer>
         </RowContentContainer>
       </ContainerBackground>

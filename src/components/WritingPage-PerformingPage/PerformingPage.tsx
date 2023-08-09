@@ -10,7 +10,7 @@ import {
 import { ColorStop, Subtitle, Text } from "@/styles/Text/Text.styles";
 
 import Subtitles from "@/components/WritingPage-PerformingPage/Subtitles/Subtitles";
-import PerformingContent from "@/components/WritingPage-PerformingPage/Content/PerformingContent";
+import Performing from "@/components/WritingPage-PerformingPage/ContentSections/Performing";
 import { SectionImage } from "@/components/Images/Images";
 
 import { WritingAndPerformingData } from "@/types/writingAndPerformingData";
@@ -56,7 +56,7 @@ export const PerformingPage = (): JSX.Element => {
             <Subtitles updateSubtitle={updateSubtitle} subtitle={subtitle} />
           </WritingAndPerformingSubtitlesContainer>
           <WritingAndPerformingContainer>
-            <PerformingContent performingSubtitle={subtitle} />
+            <Performing performingSubtitle={subtitle} />
           </WritingAndPerformingContainer>
         </RowContentContainer>
       </ContainerBackground>
