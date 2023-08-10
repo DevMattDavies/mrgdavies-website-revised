@@ -12,6 +12,7 @@ import { ColorStop, Subtitle, Text } from "@/styles/Text/Text.styles";
 import { WritingAndPerformingDataContext } from "@/context";
 import { WritingAndPerformingData } from "@/types/writingAndPerformingData";
 
+import PageHead from "@/components/PageHead/PageHead";
 import Subtitles from "@/components/WritingPage-PerformingPage/Subtitles/Subtitles";
 import Writing from "@/components/WritingPage-PerformingPage/ContentSections/Writing";
 import { SectionImage } from "@/components/Images/Images";
@@ -25,6 +26,10 @@ export const WritingPage = (): JSX.Element => {
 
   return (
     <>
+      <PageHead
+        title={"Michael Davies Writing"}
+        description={"Read about what writing Michael Davies does"}
+      />
       <ContainerBackground red>
         <ContentContainer>
           <SectionImage src={outback_cover} alt="bagley novel" />

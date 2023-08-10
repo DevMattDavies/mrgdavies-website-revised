@@ -9,12 +9,13 @@ import {
 } from "@/styles/Containers/Container.styles";
 import { ColorStop, Subtitle, Text } from "@/styles/Text/Text.styles";
 
+import { WritingAndPerformingData } from "@/types/writingAndPerformingData";
+import { WritingAndPerformingDataContext } from "@/context";
+
+import PageHead from "@/components/PageHead/PageHead";
 import Subtitles from "@/components/WritingPage-PerformingPage/Subtitles/Subtitles";
 import Performing from "@/components/WritingPage-PerformingPage/ContentSections/Performing";
 import { SectionImage } from "@/components/Images/Images";
-
-import { WritingAndPerformingData } from "@/types/writingAndPerformingData";
-import { WritingAndPerformingDataContext } from "@/context";
 
 import moment_upright from "/public/images/moment_upright.jpg";
 
@@ -25,6 +26,10 @@ export const PerformingPage = (): JSX.Element => {
 
   return (
     <>
+      <PageHead
+        title={"Michael Davies Performing"}
+        description={"Read about what performing Michael Davies does"}
+      />
       <ContainerBackground red>
         <ContentContainer>
           <SectionImage

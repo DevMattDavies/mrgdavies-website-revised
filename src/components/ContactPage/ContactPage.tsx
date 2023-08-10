@@ -10,7 +10,6 @@ import {
   ColorStop,
   Subtitle,
   ContactLink,
-  Text,
   ContactNonLink,
 } from "@/styles/Text/Text.styles";
 
@@ -21,9 +20,15 @@ import LanguageIcon from "@mui/icons-material/Language";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 
+import PageHead from "@/components/PageHead/PageHead";
+
 export const ContactPage = (): JSX.Element => {
   return (
     <>
+      <PageHead
+        title={"Michael Davies Contact"}
+        description={"Contact information for Michael Davies"}
+      />
       <ContainerBackground red>
         <ContentContainer style={{ flexDirection: "column", gap: "3rem" }}>
           <Subtitle color={"var(--white)"}>

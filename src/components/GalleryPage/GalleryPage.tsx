@@ -19,10 +19,16 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
+import PageHead from "@/components/PageHead/PageHead";
+
 export const GalleryPage = (): JSX.Element => {
   const [index, setIndex] = useState(-1);
   return (
     <>
+      <PageHead
+        title={"Michael Davies Gallery"}
+        description={"Browse gallery images of Michael Davies"}
+      />
       <ContainerBackground red>
         <ContentContainer>
           <Subtitle color={"var(--white)"}>

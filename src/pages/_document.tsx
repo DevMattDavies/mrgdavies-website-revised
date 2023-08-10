@@ -39,7 +39,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* Other meta tags, CSS, and other scripts */}
           <script
             dangerouslySetInnerHTML={{
               __html: `

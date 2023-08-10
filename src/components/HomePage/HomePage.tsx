@@ -1,8 +1,8 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import Link from "next/link";
-import EastIcon from "@mui/icons-material/East";
 import getAllPosts from "@/utils/getAllPosts";
 import getAbbreviatedPosts from "@/utils/getAbbreviatedPosts";
+import { Post } from "@/types/posts";
 import {
   PostsContainer,
   ContainerBackground,
@@ -10,17 +10,22 @@ import {
   SeeAllPostsContainer,
   HomeLowerContainer,
 } from "@/styles/Containers/Container.styles";
-import { Post } from "@/types/posts";
 
+import PageHead from "@/components/PageHead/PageHead";
 import Welcome from "@/components/HomePage/Welcome";
 import AbbreviatedPost from "@/components/Posts/AbbreviatedPost";
 import { ColorStop, SeeAllPosts, Subtitle } from "@/styles/Text/Text.styles";
+import EastIcon from "@mui/icons-material/East";
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const HomePage: NextPage = ({ abbreviatedPosts }: PageProps) => {
   return (
     <>
+      <PageHead
+        title={"Michael Davies Homepage"}
+        description={"Welcome to the homepage of Michael Davies - Author"}
+      />
       <Welcome />
       <ContainerBackground>
         <ContentContainer>

@@ -1,6 +1,8 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import getAllPosts from "@/utils/getAllPosts";
 import { Post } from "@/types/posts";
+
+import PageHead from "@/components/PageHead/PageHead";
 import AbbreviatedPost from "@/components/Posts/AbbreviatedPost";
 import getAbbreviatedPosts from "@/utils/getAbbreviatedPosts";
 import {
@@ -14,6 +16,10 @@ type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 export const BlogPostsPage: NextPage = ({ abbreviatedPosts }: PageProps) => {
   return (
     <>
+      <PageHead
+        title={"Michael Davies Blog Posts"}
+        description={"Read all of michael Davies' blog posts"}
+      />
       <ContainerBackground red>
         <ContentContainer>
           <Subtitle color={"var(--white)"}>
