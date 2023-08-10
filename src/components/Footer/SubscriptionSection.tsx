@@ -1,28 +1,52 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import Script from "next/script";
 import {
   NewsletterButton,
   NewsletterForm,
   NewsletterInput,
   NewsletterConfirmation,
+  NewsletterError,
 } from "@/styles/Footer/Footer.styles";
 import { FooterSubheading } from "@/styles/Text/Text.styles";
 
 const SubscriptionSection = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [isFormValid, setIsFormValid] = useState(false);
   const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
+  const [emailError, setEmailError] = useState("");
+  const [nameError, setNameError] = useState("");
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setEmail(e.target.value);
+    setEmailError("");
   };
 
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setName(e.target.value);
+    setNameError("");
   };
+
+  useEffect(() => {
+    const isEmailValid = /\S+@\S+\.\S+/.test(email);
+    const isNameValid = name.trim().length > 0;
+
+    setIsFormValid(isEmailValid && isNameValid);
+  }, [email, name]);
 
   const handleEmailSubmit = async (e: any) => {
     e.preventDefault();
+
+    if (!isFormValid) {
+      if (!name.trim()) {
+        setNameError("Please provide a name");
+      }
+      if (!/\S+@\S+\.\S+/.test(email)) {
+        setEmailError("Please provide a valid email");
+      }
+      return;
+    }
+
     setIsEmailSubmitted(true);
     try {
       const response = await fetch(
@@ -35,12 +59,6 @@ const SubscriptionSection = () => {
           },
         }
       );
-
-      if (response.ok) {
-        setIsEmailSubmitted(true);
-      } else {
-        console.error("Failed to subscribe to MailerLite");
-      }
     } catch (error) {
       console.error("An error occurred while subscribing:", error);
     }
@@ -69,6 +87,7 @@ const SubscriptionSection = () => {
             onChange={handleNameChange}
             value={isEmailSubmitted ? "" : name}
           ></NewsletterInput>
+          {nameError && <NewsletterError>{nameError}</NewsletterError>}
           <NewsletterInput
             aria-label="email"
             aria-required="true"
@@ -82,6 +101,7 @@ const SubscriptionSection = () => {
             onChange={handleEmailChange}
             value={isEmailSubmitted ? "" : email}
           ></NewsletterInput>
+          {emailError && <NewsletterError>{emailError}</NewsletterError>}
           <input type="hidden" name="ml-submit" value="1" />
           {isEmailSubmitted ? (
             <NewsletterConfirmation>

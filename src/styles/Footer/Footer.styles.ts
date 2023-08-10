@@ -115,3 +115,7 @@ export const NewsletterConfirmation = styled.p`
   color: var(--red);
   font-family: "Montserrat", sans-serif;
 `;
+
+export const NewsletterError = styled(NewsletterConfirmation)`
+  color: var(--white);
+`;
