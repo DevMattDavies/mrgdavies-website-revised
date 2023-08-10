@@ -10,10 +10,15 @@ import { FooterSubheading } from "@/styles/Text/Text.styles";
 
 const SubscriptionSection = () => {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setEmail(e.target.value);
+  };
+
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setName(e.target.value);
   };
 
   const handleEmailSubmit = async (e: any) => {
@@ -24,7 +29,7 @@ const SubscriptionSection = () => {
         "https://assets.mailerlite.com/jsonp/512752/forms/94840561898358047/subscribe",
         {
           method: "POST",
-          body: JSON.stringify({ fields: { email } }),
+          body: JSON.stringify({ fields: { email, name } }),
           headers: {
             "Content-Type": "application/json",
           },
@@ -51,6 +56,19 @@ const SubscriptionSection = () => {
         onSubmit={handleEmailSubmit}
       >
         <NewsletterForm>
+          <NewsletterInput
+            aria-label="name"
+            aria-required="true"
+            type="text"
+            className="form-control"
+            data-inputmask=""
+            name="fields[name]"
+            placeholder="Name"
+            autoComplete="name"
+            required
+            onChange={handleNameChange}
+            value={isEmailSubmitted ? "" : name}
+          ></NewsletterInput>
           <NewsletterInput
             aria-label="email"
             aria-required="true"
