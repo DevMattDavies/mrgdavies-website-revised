@@ -27,7 +27,7 @@ import { DeviceContext } from "@/context";
 import { Device } from "@/types/device";
 
 const Footer = (): JSX.Element => {
-  const { isDesktop, isMobile }: Device = useContext(DeviceContext);
+  const { isDesktop }: Device = useContext(DeviceContext);
 
   return (
     <FooterContainer>
