@@ -6,7 +6,7 @@ export const FooterContainer = styled.footer`
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 30rem;
+  height: 38rem;
   position: absolute;
   bottom: 0;
 
@@ -27,7 +27,7 @@ export const InnerContainer = styled.div`
   justify-content: space-around;
   padding: 2rem 1rem;
   height: 100%;
-  gap: 1rem;
+  gap: 2rem;
 
   @media screen and ${device.tablet} {
     flex-direction: row;
@@ -52,7 +52,7 @@ export const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 0.6rem;
+  gap: 0.8rem;
 
   @media screen and ${device.tablet} {
     border-left: 2px solid var(--white);

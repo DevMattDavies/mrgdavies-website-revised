@@ -4,7 +4,7 @@ import * as Types from "@/types/styles";
 
 // General containers
 export const MainContainer = styled.div`
-  padding-bottom: 30rem;
+  padding-bottom: 38rem;
 
   @media screen and ${device.tablet} {
     padding-bottom: 20rem;
