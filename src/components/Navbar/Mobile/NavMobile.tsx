@@ -25,11 +25,15 @@ const NavMobile = (): JSX.Element => {
     isModalOpen && setIsModalOpen(false);
   };
 
-  if (isModalOpen) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
+  useEffect(() => {
+    if (isModalOpen) {
+      setTimeout(() => {
+        document.body.style.overflow = "hidden";
+      }, 1);
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isModalOpen]);
 
   return (
     <NavContainer>
