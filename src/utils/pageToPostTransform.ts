@@ -1,12 +1,15 @@
 import { Posts } from "@/types/posts";
 import { format } from "date-fns";
 import { enGB } from "date-fns/locale";
+import { zonedTimeToUtc } from "date-fns-tz";
 
 export const pageToPostTransform = (page: any): Posts => {
   const { id, properties } = page;
   const date = properties.Date.date.start;
   const slug = properties.slug.formula.string;
   const cover = page.cover?.external.url;
+  const dateFromNotion = new Date(date);
+  const timeZone = "Europe/London";
 
   let title;
   let formattedDate;
