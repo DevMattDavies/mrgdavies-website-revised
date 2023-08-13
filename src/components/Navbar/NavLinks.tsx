@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { router } from "next/client";
 import { DeviceContext, WritingAndPerformingDataContext } from "@/context";
 import { ColorStop, NavLink, DropdownLink } from "@/styles/Text/Text.styles";
 import { LinksContainer, NavDropdown } from "@/styles/Navbar/Navbar.styles";
