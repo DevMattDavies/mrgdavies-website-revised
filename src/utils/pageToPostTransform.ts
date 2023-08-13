@@ -8,22 +8,18 @@ export const pageToPostTransform = (page: any): Posts => {
   const date = properties.Date.date.start;
   const slug = properties.slug.formula.string;
   const cover = page.cover?.external.url;
-  const dateFromNotion = new Date(date);
-  const timeZone = "Europe/London";
 
   let title;
   let formattedDate;
 
   if (properties.post_title) {
     title = properties.post_title.title[0].plain_text;
-    formattedDate = format(new Date(date), "MMMM dd, yyyy", { locale: enGB });
+    formattedDate = format(new Date(date), "MMMM dd, yyyy");
   }
 
   if (properties.event_title) {
     title = properties.event_title.title[0].plain_text;
-    formattedDate = format(new Date(date), "MMMM dd, yyyy h:mmaaa", {
-      locale: enGB,
-    });
+    formattedDate = format(new Date(date), "MMMM dd, yyyy h:mmaaa");
   }
 
   return { id, title, slug, cover, formattedDate };
