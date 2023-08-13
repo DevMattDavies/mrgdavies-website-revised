@@ -88,7 +88,6 @@ export const NavDropdown = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  //border: 1px solid var(--red);
   box-shadow: 10px 8px 15px rgba(0, 0, 0, 0.3);
 `;
 
