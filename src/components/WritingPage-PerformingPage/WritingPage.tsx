@@ -42,8 +42,8 @@ export const WritingPage = (): JSX.Element => {
               t&apos;Interweb and the printed page.
             </Text>
             <Text color={"var(--white)"}>
-              He&apos;s currently writing a new Bill Kemp novel, Thin Ice, as a
-              sequel to 2023&apos;s <i>Outback</i>.
+              He&apos;s currently writing a new Bill Kemp novel, <i>Thin Ice</i>
+              , as a sequel to 2023&apos;s <i>Outback</i>.
             </Text>
             <Text color={"var(--white)"}>
               He wrote the book and lyrics for the musical <i>Tess</i>,

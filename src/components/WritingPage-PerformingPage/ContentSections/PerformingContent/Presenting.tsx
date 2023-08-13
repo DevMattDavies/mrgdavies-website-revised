@@ -25,7 +25,8 @@ export const Presenting = (): JSX.Element => {
         series of archive interviews with former artistic directors and stars,
         including Adrian Noble, Sir Michael Boyd and Sir Antony Sher, while live
         conversations have included Collabro, Lee Mead and pre- and post-show
-        talks for the RSC, Royal & Derngate and Floating Festivals.
+        talks for the RSC, Royal & Derngate, Blackpool Winter Gardens and
+        Floating Festivals.
       </Text>
     </>
   );

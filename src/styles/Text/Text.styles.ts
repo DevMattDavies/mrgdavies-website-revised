@@ -3,8 +3,8 @@ import * as Types from "@/types/styles";
 
 // Text styles
 export const Text = styled.p<Types.TextProps>`
-  font-size: 1rem;
-  font-family: "Lora", serif;
+  font-size: 1.2rem;
+  font-family: "Source-Serif", serif;
   font-style: ${(props) => (props.italic ? "italic" : "normal")};
   color: ${(props) => props.color};
 `;
@@ -20,8 +20,8 @@ export const BlogTitle = styled.h2`
 `;
 
 export const BlogDate = styled.p`
-  font-size: 1rem;
-  font-family: "Lora", serif;
+  font-size: 1.2rem;
+  font-family: "Source-Serif", serif;
   font-style: italic;
   font-weight: bold;
   color: var(--black);
@@ -80,7 +80,7 @@ export const NavLink = styled.a`
 `;
 
 export const DropdownLink = styled(NavLink)`
-  font-size: 1rem;
+  font-size: 1.2rem;
   width: max-content;
 
   &:after {
@@ -90,7 +90,7 @@ export const DropdownLink = styled(NavLink)`
 
 export const ContactLink = styled.a`
   font-size: 1.2rem;
-  font-family: "Lora", serif;
+  font-family: "Source-Serif", serif;
   color: ${(props) => props.color};
   text-decoration: none;
 
@@ -102,13 +102,13 @@ export const ContactLink = styled.a`
 
 export const ContactNonLink = styled.p`
   font-size: 1.2rem;
-  font-family: "Lora", serif;
+  font-family: "Source-Serif", serif;
   color: ${(props) => props.color};
 `;
 
 export const SeeAllPosts = styled(NavLink)`
   font-size: 1rem;
-  font-family: "Lora", serif;
+  font-family: "Source-Serif", serif;
   text-align: right;
   font-style: italic;
   &:after {

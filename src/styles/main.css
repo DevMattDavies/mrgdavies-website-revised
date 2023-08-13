@@ -5,6 +5,11 @@
 }
 
 @font-face {
+  font-family: "Source-Serif";
+  src: url("../../public/fonts/SourceSerif4-Light.otf.woff2") format("woff2");
+}
+
+@font-face {
   font-family: "Asterone";
   src: url("../../public/fonts/Asterone-Regular.woff2") format("woff2");
   font-style: normal;

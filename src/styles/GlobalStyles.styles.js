@@ -15,11 +15,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   * {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lora", serif;
+    font-family: "Source-Serif", serif;
   }
 
   body {

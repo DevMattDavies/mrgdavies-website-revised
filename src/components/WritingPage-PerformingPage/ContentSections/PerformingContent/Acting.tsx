@@ -19,21 +19,19 @@ export const Acting = (): JSX.Element => {
       </RowImageContainer>
       <Text color={"var(--black)"}>
         Under his stage name Michael Crask-Davies, Michael’s professional debut
-        came in Sir Alan Ayckbourn’s <i>Man of the Moment</i> (Roal & Derngate,
+        came in Sir Alan Ayckbourn’s <i>Man of the Moment</i> (Royal & Derngate,
         Northampton), directed by the playwright himself. Michael also performed
         the world premiere of <i>CurvAture</i>, a one-man play by William
         Morris, at Leicester’s Curve Theatre.
       </Text>
       <Text>
         Other roles include the leading man in musicals such as{" "}
-        <i>Kiss Me Kate</i>
-        and <i>Smike</i>, and plays including the two-hander <i>Sleuth</i>. In
-        addition, his musical expertise has led him to act as musical director
-        on a number of shows, including Carousel and Sondheim’s{" "}
+        <i>Kiss Me Kate</i> and <i>Smike</i>, and plays including the two-hander{" "}
+        <i>Sleuth</i>. In addition, his musical expertise has led him to act as
+        musical director on a number of shows, including Carousel and Sondheim’s{" "}
         <i>A Funny Thing Happened On The Way To The Forum</i>, as well as for
         his own work, such as the originally-scored pantomime <i>Robin Hood</i>{" "}
-        and a musical for schools,
-        <i>Luigi Da Squigi (and the Wise Guys)</i>.
+        and a musical for schools, <i>Luigi Da Squigi (and the Wise Guys)</i>.
       </Text>
     </>
   );

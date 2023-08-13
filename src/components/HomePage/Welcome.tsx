@@ -25,7 +25,7 @@ const Welcome = (): JSX.Element => {
           >{`Please feel free to browse the pages to see what I’m up to. At the moment I’m particularly focused on my novels, which are thrillers in the vein of classic writers such as Desmond Bagley (you’ll find plenty more about him on the site). But I’m also an award-winning playwright, poet, short story writer and journalist, as well as dabbling in presenting and performing.`}</Text>
           <Text
             color={"var(--white)"}
-          >{`Do let me know what you think and sign up for my author newsletter – I’d love to hear from you.`}</Text>
+          >{`Do let me know what you think and sign up for my author newsletter at the bottom of this page – I’d love to hear from you.`}</Text>
         </HomeTextContentContainer>
       </ContentContainer>
     </ContainerBackground>
