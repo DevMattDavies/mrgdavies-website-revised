@@ -1,7 +1,6 @@
 import { Posts } from "@/types/posts";
 import { format } from "date-fns";
-import { enGB } from "date-fns/locale";
-import { zonedTimeToUtc } from "date-fns-tz";
+import { utcToZonedTime } from "date-fns-tz";
 
 export const pageToPostTransform = (page: any): Posts => {
   const { id, properties } = page;
@@ -18,8 +17,10 @@ export const pageToPostTransform = (page: any): Posts => {
   }
 
   if (properties.event_title) {
+    const timeZone = "GB";
+    const zonedDate = utcToZonedTime(new Date(date), timeZone);
+    formattedDate = format(zonedDate, "MMMM dd, yyyy h:mmaaa");
     title = properties.event_title.title[0].plain_text;
-    formattedDate = format(new Date(date), "MMMM dd, yyyy h:mmaaa");
   }
 
   return { id, title, slug, cover, formattedDate };
