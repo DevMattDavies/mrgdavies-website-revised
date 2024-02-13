@@ -39,10 +39,10 @@ export const ContactPage = (): JSX.Element => {
             <ContactContainer>
               <MailOutlineIcon style={{ fontSize: "2rem", color: "white" }} />
               <ContactLink
-                href="mailto: mrgdavies@icloud.com"
+                href="mailto: michael@mrgdavies.com"
                 color={"var(--white)"}
               >
-                mrgdavies@icloud.com
+                michael@mrgdavies.com
               </ContactLink>
             </ContactContainer>
             <ContactContainer>

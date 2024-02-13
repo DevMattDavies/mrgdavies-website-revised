@@ -71,9 +71,9 @@ const Footer = (): JSX.Element => {
             <MailOutlineIcon style={{ color: "var(--red)" }} />
             <FooterLink
               style={{ textDecoration: "none" }}
-              href="mailto:mrgdavies@icloud.com"
+              href="mailto:michael@mrgdavies.com"
             >
-              mrgdavies@icloud.com
+              michael@mrgdavies.com
             </FooterLink>
           </SocialsContainer>
           <SocialsContainer>
