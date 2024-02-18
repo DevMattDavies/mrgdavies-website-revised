@@ -14,14 +14,13 @@ import {
 } from "@/styles/Text/Text.styles";
 
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import TwitterIcon from "@mui/icons-material/X";
 import { FacebookOutlined } from "@mui/icons-material";
 import LanguageIcon from "@mui/icons-material/Language";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 
 import PageHead from "@/components/PageHead/PageHead";
-import SubscriptionSection from "@/components/Footer/SubscriptionSection";
 
 export const ContactPage = (): JSX.Element => {
   return (

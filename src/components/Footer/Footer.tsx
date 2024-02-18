@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Link from "next/link";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import TwitterIcon from "@mui/icons-material/X";
 import { FacebookOutlined } from "@mui/icons-material";
 import {
   FooterContainer,
