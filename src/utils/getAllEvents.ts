@@ -19,7 +19,7 @@ const getAllEvents = () => {
       sorts: [
         {
           property: "Date",
-          direction: "ascending",
+          direction: "descending",
         },
       ],
     });

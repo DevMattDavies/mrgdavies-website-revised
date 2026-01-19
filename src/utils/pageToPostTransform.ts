@@ -3,6 +3,7 @@ import { format } from "date-fns";
 import { utcToZonedTime } from "date-fns-tz";
 
 export const pageToPostTransform = (page: any): Posts => {
+  console.log(page);
   const { id, properties } = page;
   const date = properties.Date.date.start;
   const slug = properties.slug.formula.string;

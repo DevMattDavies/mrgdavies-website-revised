@@ -31,7 +31,7 @@
     "react-photo-album": "^2.2.2",
     "react-player": "^2.12.0",
     "react-youtube": "^10.1.0",
-    "sharp": "^0.32.4",
+    "sharp": "^0.34.2",
     "styled-components": "^5.3.9",
     "typescript": "5.0.2",
     "yet-another-react-lightbox": "^3.9.0"
@@ -42,5 +42,6 @@
   },
   "resolutions": {
     "styled-components": "^5"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

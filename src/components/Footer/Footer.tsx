@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Link from "next/link";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import TwitterIcon from "@mui/icons-material/X";
+import {Instagram} from "@mui/icons-material";
 import { FacebookOutlined } from "@mui/icons-material";
 import {
   FooterContainer,
@@ -77,13 +77,13 @@ const Footer = (): JSX.Element => {
             </FooterLink>
           </SocialsContainer>
           <SocialsContainer>
-            <TwitterIcon style={{ color: "var(--red)" }} />
+            <Instagram style={{ color: "var(--red)" }} />
             <FooterLink
               style={{ textDecoration: "none" }}
-              href="https://twitter.com/mrgdavies"
+              href="https://instagram.com/michaeldaviesauthor"
               target="_blank"
             >
-              @mrgdavies
+              michaeldaviesauthor
             </FooterLink>
           </SocialsContainer>
           <SocialsContainer>

@@ -14,7 +14,7 @@ import {
 } from "@/styles/Text/Text.styles";
 
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import TwitterIcon from "@mui/icons-material/X";
+import {Instagram} from "@mui/icons-material";
 import { FacebookOutlined } from "@mui/icons-material";
 import LanguageIcon from "@mui/icons-material/Language";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
@@ -45,13 +45,13 @@ export const ContactPage = (): JSX.Element => {
               </ContactLink>
             </ContactContainer>
             <ContactContainer>
-              <TwitterIcon style={{ fontSize: "2rem", color: "white" }} />
+              <Instagram style={{ fontSize: "2rem", color: "white" }} />
               <ContactLink
-                href="https://twitter.com/mrgdavies"
+                  href="https://instagram.com/michaeldaviesauthor"
                 target="_blank"
                 color={"var(--white)"}
               >
-                @mrgdavies
+                michaeldaviesauthor
               </ContactLink>
             </ContactContainer>
             <ContactContainer>
@@ -69,53 +69,6 @@ export const ContactPage = (): JSX.Element => {
       </ContainerBackground>
       <ContainerBackground>
         <ContactContentContainer>
-          <LowerContactContainer>
-            <Subtitle color={"var(--red)"}>
-              Acting representation
-              <ColorStop color={"var(--black)"}>.</ColorStop>
-            </Subtitle>
-            <Subtitle color={"var(--black)"}>
-              Robert Wilkinson (Red Talent Management)
-            </Subtitle>
-            <ContactContainer>
-              <MailOutlineIcon
-                style={{ fontSize: "2rem", color: "var(--black)" }}
-              />
-              <ContactLink
-                href="mailto: info@redtalentmanagement.com"
-                color={"var(--black)"}
-              >
-                info@redtalentmanagement.com
-              </ContactLink>
-            </ContactContainer>
-            <ContactContainer>
-              <LanguageIcon
-                style={{ fontSize: "2rem", color: "var(--black)" }}
-              />
-              <ContactLink
-                href="https://www.redtalentmanagement.com/"
-                color={"var(--black)"}
-              >
-                redtalentmanagement.com
-              </ContactLink>
-            </ContactContainer>
-            <ContactContainer>
-              <PhoneEnabledIcon
-                style={{ fontSize: "2rem", color: "var(--black)" }}
-              />
-              <ContactNonLink color={"var(--black)"}>
-                02476 691 900
-              </ContactNonLink>
-            </ContactContainer>
-            <ContactContainer>
-              <PhoneAndroidIcon
-                style={{ fontSize: "2rem", color: "var(--black)" }}
-              />
-              <ContactNonLink color={"var(--black)"}>
-                07941 133 812
-              </ContactNonLink>
-            </ContactContainer>
-          </LowerContactContainer>
           <LowerContactContainer>
             <Subtitle color={"var(--red)"}>
               Website management
